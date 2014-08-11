@@ -1,0 +1,26 @@
+domain wildfire_mdp {
+  requirements = {
+  };
+  types {
+    y_pos : object;
+    x_pos : object;
+  };
+  pvariables {
+    put-out(x_pos, y_pos) : {action-fluent, bool, default = false};
+    cut-out(x_pos, y_pos) : {action-fluent, bool, default = false};
+    COST_PUTOUT : {non-fluent, real, default = -10};
+    TARGET(x_pos, y_pos) : {non-fluent, bool, default = false};
+    out-of-fuel(x_pos, y_pos) : {state-fluent, bool, default = false};
+    NEIGHBOR(x_pos, y_pos, x_pos, y_pos) : {non-fluent, bool, default = false};
+    PENALTY_NONTARGET_BURN : {non-fluent, real, default = -5};
+    PENALTY_TARGET_BURN : {non-fluent, real, default = -100};
+    burning(x_pos, y_pos) : {state-fluent, bool, default = false};
+    COST_CUTOUT : {non-fluent, real, default = -5};
+  };
+  cpfs {
+    (out-of-fuel' ?x ?y) = (| (out-of-fuel ?x ?y) (burning ?x ?y) (^ (~ (TARGET ?x ?y)) (cut-out ?x ?y) ) );
+    (burning' ?x ?y) = (if (put-out ?x ?y) then false else (if (^ (~ (out-of-fuel ?x ?y)) (~ (burning ?x ?y)) ) then (if (^ (TARGET ?x ?y) (~ (exists ( (?x2 : x_pos) (?y2 : y_pos) ) (^ (NEIGHBOR ?x ?y ?x2 ?y2) (burning ?x2 ?y2) ))) ) then false else (Bernoulli (/ 1.0 (+ 1.0 (exp (- 4.5 (sum ( (?x2 : x_pos) (?y2 : y_pos) ) (^ (NEIGHBOR ?x ?y ?x2 ?y2) (burning ?x2 ?y2) )))))))) else (burning ?x ?y)));
+  };
+  reward = (+ (+ (+ (sum ( (?x : x_pos) (?y : y_pos) ) (* (COST_CUTOUT) (cut-out ?x ?y))) (sum ( (?x : x_pos) (?y : y_pos) ) (* (COST_PUTOUT) (put-out ?x ?y)))) (sum ( (?x : x_pos) (?y : y_pos) ) (* (PENALTY_TARGET_BURN) (^ (| (burning ?x ?y) (out-of-fuel ?x ?y) ) (TARGET ?x ?y) )))) (sum ( (?x : x_pos) (?y : y_pos) ) (* (PENALTY_NONTARGET_BURN) (^ (burning ?x ?y) (~ (TARGET ?x ?y)) ))));
+}
+

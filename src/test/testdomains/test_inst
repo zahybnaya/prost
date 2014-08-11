@@ -1,0 +1,18 @@
+non-fluents nf_test {
+    domain = test_mdp;
+    objects {dummy : {d1};};
+    non-fluents {};
+}
+
+instance test_inst {
+    domain = test_mdp;
+    non-fluents = nf_test;
+    init-state {
+        a;
+        b;
+    };
+    max-nondef-actions = 1;
+    horizon = 40;
+    discount = 1.0;
+}
+

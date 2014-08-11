@@ -1,0 +1,31 @@
+syntax: glob
+*~
+*.o
+*.pyc
+*.q
+*.log
+*.err
+tags
+src/rddl_parser/Makefile.depend
+src/rddl_parser/rddl-parser
+src/rddl_parser/rddl-parser-debug
+src/rddl_parser/runTests
+src/rddl_parser/.obj/*
+src/search/Makefile.depend
+src/search/prost
+src/search/prost-debug
+src/search/runTests
+src/search/.obj/*
+testbed/highscores/*/*.bz2
+testbed/highscores/*/*.log
+testbed/highscores/*/*.err
+testbed/rddlsim/*
+testbed/results/*
+testbed/benchmarks/test/*
+testbed/benchmarks/*/rddl_prefix/*
+testbed/benchmarks/*/prost/*
+scripts/tex/*
+coverage/
+
+syntax: regexp
+.*\#.*\#$

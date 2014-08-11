@@ -1,0 +1,18 @@
+domain test_mdp {
+    requirements = {};
+    types {dummy : object;};
+    pvariables {
+    a : {state-fluent, bool, default = false};
+    b : {state-fluent, bool, default = false};
+    c : {state-fluent, bool, default = false};
+    d : {state-fluent, bool, default = false};
+    e : {state-fluent, bool, default = false};
+    f : {state-fluent, bool, default = false};
+    g : {state-fluent, bool, default = false};
+    a1 : {action-fluent, bool, default = false};
+    a2 : {action-fluent, bool, default = false};
+    a3 : {action-fluent, bool, default = false};
+    };
+    
+    reward = (+ (a) (b));
+}

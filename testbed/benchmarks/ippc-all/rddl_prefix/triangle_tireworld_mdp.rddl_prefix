@@ -1,0 +1,29 @@
+domain triangle_tireworld_mdp {
+  requirements = {
+  };
+  types {
+    location : object;
+  };
+  pvariables {
+    spare-in(location) : {state-fluent, bool, default = false};
+    loadtire(location) : {action-fluent, bool, default = false};
+    vehicle-at(location) : {state-fluent, bool, default = false};
+    FLAT-PROB : {non-fluent, real, default = 0.49};
+    move-car(location, location) : {action-fluent, bool, default = false};
+    hasspare : {state-fluent, bool, default = false};
+    changetire : {action-fluent, bool, default = false};
+    road(location, location) : {non-fluent, bool, default = false};
+    not-flattire : {state-fluent, bool, default = false};
+    goal-reward-received : {state-fluent, bool, default = false};
+    goal-location(location) : {non-fluent, bool, default = false};
+  };
+  cpfs {
+    (spare-in' ?l) = (if (^ (loadtire ?l) (vehicle-at ?l) (spare-in ?l) ) then false else (spare-in ?l));
+    (vehicle-at' ?l) = (if (exists ( (?from : location) ) (^ (move-car ?from ?l) (vehicle-at ?from) (road ?from ?l) (not-flattire) )) then true else (if (exists ( (?to : location) ) (^ (move-car ?l ?to) (vehicle-at ?l) (road ?l ?to) (not-flattire) )) then false else (vehicle-at ?l)));
+    (hasspare') = (if (^ (changetire) (hasspare) ) then false else (if (exists ( (?l : location) ) (^ (loadtire ?l) (vehicle-at ?l) (spare-in ?l) )) then true else (hasspare)));
+    (goal-reward-received') = (| (goal-reward-received) (exists ( (?l : location) ) (^ (vehicle-at ?l) (goal-location ?l) )) );
+    (not-flattire') = (if (exists ( (?from : location) (?to : location) ) (^ (move-car ?from ?to) (vehicle-at ?from) (road ?from ?to) (not-flattire) )) then (Bernoulli (FLAT-PROB)) else (if (^ (changetire) (hasspare) ) then true else (not-flattire)));
+  };
+  reward = (if (^ (~ (goal-reward-received)) (exists ( (?l : location) ) (^ (vehicle-at ?l) (goal-location ?l) )) ) then 100 else (if (goal-reward-received) then 0 else (- 0 1)));
+}
+

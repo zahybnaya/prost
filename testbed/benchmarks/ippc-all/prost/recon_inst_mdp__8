@@ -1,0 +1,10970 @@
+#####TASK#####
+## name
+recon_inst_mdp__8
+## horizon
+40
+## discount factor
+1
+## number of action fluents
+27
+## number of det state fluents
+53
+## number of prob state fluents
+16
+## number of preconds
+0
+## number of actions
+28
+## number of hashing functions
+70
+## initial state
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## 1 if task is deterministic
+0
+## 1 if state hashing possible
+0
+## 1 if kleene state hashing possible
+0
+## method to calculate the final reward
+BEST_OF_CANDIDATE_SET
+## set of candidates to calculate final reward (first line is the number)
+8
+0 8 9 10 11 12 13 14 
+## 1 if reward formula allows reward lock detection and a reward lock was found during task analysis
+0
+## 1 if an unreasonable action was detected
+1
+## 1 if an unreasonable action was detected in the determinization
+1
+## number of states that were encountered during task analysis
+1366
+## number of unique states that were encountered during task analysis
+473
+## number of states with only one applicable reasonable action that were encountered during task analysis
+0
+## number of unique states with only one applicable reasonable action that were encountered during task analysis
+0
+
+
+#####ACTION FLUENTS#####
+## index
+0
+## name
+down(a1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+1
+## name
+left(a1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+2
+## name
+repair(a1, l1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+3
+## name
+repair(a1, w1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+4
+## name
+right(a1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+5
+## name
+up(a1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+6
+## name
+useToolOn(a1, l1, o0)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+7
+## name
+useToolOn(a1, l1, o1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+8
+## name
+useToolOn(a1, l1, o2)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+9
+## name
+useToolOn(a1, l1, o3)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+10
+## name
+useToolOn(a1, l1, o4)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+11
+## name
+useToolOn(a1, l1, o5)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+12
+## name
+useToolOn(a1, l1, o6)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+13
+## name
+useToolOn(a1, p1, o0)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+14
+## name
+useToolOn(a1, p1, o1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+15
+## name
+useToolOn(a1, p1, o2)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+16
+## name
+useToolOn(a1, p1, o3)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+17
+## name
+useToolOn(a1, p1, o4)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+18
+## name
+useToolOn(a1, p1, o5)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+19
+## name
+useToolOn(a1, p1, o6)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+20
+## name
+useToolOn(a1, w1, o0)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+21
+## name
+useToolOn(a1, w1, o1)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+22
+## name
+useToolOn(a1, w1, o2)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+23
+## name
+useToolOn(a1, w1, o3)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+24
+## name
+useToolOn(a1, w1, o4)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+25
+## name
+useToolOn(a1, w1, o5)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+26
+## name
+useToolOn(a1, w1, o6)
+## number of values
+2
+## values
+0 false
+1 true
+
+
+
+#####DET STATE FLUENTS AND CPFS#####
+## index
+0
+## name
+agentAt(a1, x0, y0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(0) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) or($s(0) $s(5))) and($a(0) or($s(0) $s(1))))
+## hash index
+0
+## caching type 
+VECTOR
+## precomputed results
+40
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 0
+8 1
+9 1
+10 0
+11 0
+12 0
+13 0
+14 1
+15 1
+16 0
+17 0
+18 1
+19 1
+20 0
+21 0
+22 0
+23 1
+24 0
+25 1
+26 0
+27 0
+28 1
+29 1
+30 0
+31 0
+32 0
+33 1
+34 1
+35 1
+36 0
+37 0
+38 1
+39 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+135
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+1
+## name
+agentAt(a1, x0, y1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(1) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) or($s(1) $s(6))) and($a(5) $s(0)) and($a(0) $s(2)))
+## hash index
+1
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 1
+11 0
+12 0
+13 1
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 1
+27 0
+28 0
+29 1
+30 1
+31 0
+32 0
+33 1
+34 1
+35 1
+36 1
+37 0
+38 1
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 1
+47 0
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 0
+55 1
+56 1
+57 0
+58 1
+59 0
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 1
+67 0
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 1
+77 0
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+2
+## name
+agentAt(a1, x0, y2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(2) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) or($s(2) $s(7))) and($a(5) $s(1)) and($a(0) $s(3)))
+## hash index
+2
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 1
+11 0
+12 0
+13 1
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 1
+27 0
+28 0
+29 1
+30 1
+31 0
+32 0
+33 1
+34 1
+35 1
+36 1
+37 0
+38 1
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 1
+47 0
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 0
+55 1
+56 1
+57 0
+58 1
+59 0
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 1
+67 0
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 1
+77 0
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+3
+## name
+agentAt(a1, x0, y3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(3) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) or($s(3) $s(8))) and($a(5) $s(2)) and($a(0) $s(4)))
+## hash index
+3
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 1
+11 0
+12 0
+13 1
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 1
+27 0
+28 0
+29 1
+30 1
+31 0
+32 0
+33 1
+34 1
+35 1
+36 1
+37 0
+38 1
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 1
+47 0
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 0
+55 1
+56 1
+57 0
+58 1
+59 0
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 1
+67 0
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 1
+77 0
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+4
+## name
+agentAt(a1, x0, y4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(4) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) or($s(4) $s(9))) and($a(5) or($s(3) $s(4))))
+## hash index
+4
+## caching type 
+VECTOR
+## precomputed results
+40
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 1
+11 1
+12 0
+13 1
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 1
+24 0
+25 0
+26 1
+27 0
+28 1
+29 0
+30 1
+31 1
+32 0
+33 1
+34 0
+35 1
+36 1
+37 0
+38 1
+39 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+135
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+5
+## name
+agentAt(a1, x1, y0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(5) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(10)) and($a(4) $s(0)) and($a(0) or($s(5) $s(6))))
+## hash index
+5
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 1
+11 0
+12 0
+13 0
+14 1
+15 1
+16 0
+17 1
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 0
+27 1
+28 0
+29 1
+30 1
+31 0
+32 0
+33 0
+34 1
+35 1
+36 0
+37 1
+38 0
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 1
+55 1
+56 0
+57 1
+58 1
+59 1
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 0
+67 1
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 0
+77 1
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+6
+## name
+agentAt(a1, x1, y1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(6) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(11)) and($a(4) $s(1)) and($a(5) $s(5)) and($a(0) $s(7)))
+## hash index
+6
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+7
+## name
+agentAt(a1, x1, y2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(7) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(12)) and($a(4) $s(2)) and($a(5) $s(6)) and($a(0) $s(8)))
+## hash index
+7
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+8
+## name
+agentAt(a1, x1, y3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(8) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(13)) and($a(4) $s(3)) and($a(5) $s(7)) and($a(0) $s(9)))
+## hash index
+8
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+9
+## name
+agentAt(a1, x1, y4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(9) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(14)) and($a(4) $s(4)) and($a(5) or($s(8) $s(9))))
+## hash index
+9
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 1
+22 0
+23 0
+24 0
+25 1
+26 1
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 0
+51 1
+52 0
+53 1
+54 0
+55 0
+56 1
+57 1
+58 1
+59 0
+60 1
+61 1
+62 0
+63 1
+64 0
+65 1
+66 1
+67 1
+68 1
+69 0
+70 1
+71 1
+72 0
+73 1
+74 0
+75 1
+76 1
+77 1
+78 1
+79 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+10
+## name
+agentAt(a1, x2, y0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(10) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(15)) and($a(4) $s(5)) and($a(0) or($s(10) $s(11))))
+## hash index
+10
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 1
+11 0
+12 0
+13 0
+14 1
+15 1
+16 0
+17 1
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 0
+27 1
+28 0
+29 1
+30 1
+31 0
+32 0
+33 0
+34 1
+35 1
+36 0
+37 1
+38 0
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 1
+55 1
+56 0
+57 1
+58 1
+59 1
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 0
+67 1
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 0
+77 1
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+11
+## name
+agentAt(a1, x2, y1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(11) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(16)) and($a(4) $s(6)) and($a(5) $s(10)) and($a(0) $s(12)))
+## hash index
+11
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+12
+## name
+agentAt(a1, x2, y2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(12) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(17)) and($a(4) $s(7)) and($a(5) $s(11)) and($a(0) $s(13)))
+## hash index
+12
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+13
+## name
+agentAt(a1, x2, y3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(13) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(18)) and($a(4) $s(8)) and($a(5) $s(12)) and($a(0) $s(14)))
+## hash index
+13
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+14
+## name
+agentAt(a1, x2, y4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(14) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(19)) and($a(4) $s(9)) and($a(5) or($s(13) $s(14))))
+## hash index
+14
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 1
+22 0
+23 0
+24 0
+25 1
+26 1
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 0
+51 1
+52 0
+53 1
+54 0
+55 0
+56 1
+57 1
+58 1
+59 0
+60 1
+61 1
+62 0
+63 1
+64 0
+65 1
+66 1
+67 1
+68 1
+69 0
+70 1
+71 1
+72 0
+73 1
+74 0
+75 1
+76 1
+77 1
+78 1
+79 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+15
+## name
+agentAt(a1, x3, y0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(15) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(20)) and($a(4) $s(10)) and($a(0) or($s(15) $s(16))))
+## hash index
+15
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 1
+11 0
+12 0
+13 0
+14 1
+15 1
+16 0
+17 1
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 0
+27 1
+28 0
+29 1
+30 1
+31 0
+32 0
+33 0
+34 1
+35 1
+36 0
+37 1
+38 0
+39 1
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 1
+51 0
+52 0
+53 1
+54 1
+55 1
+56 0
+57 1
+58 1
+59 1
+60 0
+61 0
+62 0
+63 1
+64 1
+65 0
+66 0
+67 1
+68 1
+69 1
+70 1
+71 0
+72 0
+73 1
+74 1
+75 1
+76 0
+77 1
+78 1
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+16
+## name
+agentAt(a1, x3, y1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(16) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(21)) and($a(4) $s(11)) and($a(5) $s(15)) and($a(0) $s(17)))
+## hash index
+16
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+17
+## name
+agentAt(a1, x3, y2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(17) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(22)) and($a(4) $s(12)) and($a(5) $s(16)) and($a(0) $s(18)))
+## hash index
+17
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+18
+## name
+agentAt(a1, x3, y3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(18) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(23)) and($a(4) $s(13)) and($a(5) $s(17)) and($a(0) $s(19)))
+## hash index
+18
+## caching type 
+VECTOR
+## precomputed results
+160
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 0
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 0
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+80 0
+81 0
+82 0
+83 1
+84 0
+85 0
+86 0
+87 1
+88 1
+89 0
+90 0
+91 1
+92 0
+93 1
+94 0
+95 0
+96 1
+97 1
+98 1
+99 0
+100 1
+101 0
+102 0
+103 1
+104 0
+105 1
+106 0
+107 1
+108 1
+109 0
+110 1
+111 1
+112 0
+113 1
+114 0
+115 1
+116 1
+117 1
+118 1
+119 0
+120 0
+121 0
+122 0
+123 1
+124 1
+125 0
+126 0
+127 1
+128 1
+129 1
+130 0
+131 1
+132 0
+133 1
+134 1
+135 0
+136 1
+137 1
+138 1
+139 1
+140 1
+141 0
+142 0
+143 1
+144 1
+145 1
+146 0
+147 1
+148 1
+149 1
+150 1
+151 1
+152 0
+153 1
+154 1
+155 1
+156 1
+157 1
+158 1
+159 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+1215
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+19
+## name
+agentAt(a1, x3, y4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(19) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(1) $s(24)) and($a(4) $s(14)) and($a(5) or($s(18) $s(19))))
+## hash index
+19
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 1
+22 0
+23 0
+24 0
+25 1
+26 1
+27 1
+28 0
+29 0
+30 1
+31 1
+32 0
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 1
+44 0
+45 0
+46 0
+47 1
+48 1
+49 0
+50 0
+51 1
+52 0
+53 1
+54 0
+55 0
+56 1
+57 1
+58 1
+59 0
+60 1
+61 1
+62 0
+63 1
+64 0
+65 1
+66 1
+67 1
+68 1
+69 0
+70 1
+71 1
+72 0
+73 1
+74 0
+75 1
+76 1
+77 1
+78 1
+79 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+20
+## name
+agentAt(a1, x4, y0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(20) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(4) or($s(15) $s(20))) and($a(0) or($s(20) $s(21))))
+## hash index
+20
+## caching type 
+VECTOR
+## precomputed results
+40
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 1
+11 0
+12 1
+13 0
+14 1
+15 1
+16 0
+17 1
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 0
+27 1
+28 0
+29 1
+30 1
+31 0
+32 1
+33 0
+34 1
+35 1
+36 0
+37 1
+38 0
+39 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+135
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+21
+## name
+agentAt(a1, x4, y1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(21) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(4) or($s(16) $s(21))) and($a(5) $s(20)) and($a(0) $s(22)))
+## hash index
+21
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 1
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 1
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 1
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 1
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+22
+## name
+agentAt(a1, x4, y2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(22) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(4) or($s(17) $s(22))) and($a(5) $s(21)) and($a(0) $s(23)))
+## hash index
+22
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 1
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 1
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 1
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 1
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+23
+## name
+agentAt(a1, x4, y3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(23) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(4) or($s(18) $s(23))) and($a(5) $s(22)) and($a(0) $s(24)))
+## hash index
+23
+## caching type 
+VECTOR
+## precomputed results
+80
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 0
+22 1
+23 0
+24 0
+25 1
+26 0
+27 1
+28 0
+29 0
+30 1
+31 1
+32 1
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+40 0
+41 0
+42 0
+43 0
+44 1
+45 0
+46 0
+47 1
+48 0
+49 1
+50 0
+51 1
+52 0
+53 0
+54 1
+55 0
+56 1
+57 1
+58 0
+59 1
+60 1
+61 0
+62 1
+63 0
+64 1
+65 1
+66 0
+67 1
+68 0
+69 1
+70 1
+71 1
+72 1
+73 0
+74 1
+75 1
+76 1
+77 1
+78 0
+79 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+405
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+24
+## name
+agentAt(a1, x4, y4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(24) ~(or($a(5) $a(0) $a(4) $a(1)))) and($a(4) or($s(19) $s(24))) and($a(5) or($s(23) $s(24))))
+## hash index
+24
+## caching type 
+VECTOR
+## precomputed results
+40
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 1
+17 1
+18 0
+19 0
+20 1
+21 1
+22 1
+23 0
+24 0
+25 1
+26 1
+27 1
+28 0
+29 0
+30 1
+31 1
+32 1
+33 0
+34 0
+35 1
+36 1
+37 1
+38 0
+39 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+135
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 1
+23 2
+24 0
+25 0
+26 3
+27 4
+
+## index
+25
+## name
+lifeChecked(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(25) and($s(20) $a(6)))
+## hash index
+25
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 1
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+26
+## name
+lifeChecked(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(26) and($s(19) $a(7)))
+## hash index
+26
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+27
+## name
+lifeChecked(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(27) and($s(14) $a(8)))
+## hash index
+27
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+28
+## name
+lifeChecked(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(28) and($s(17) $a(9)))
+## hash index
+28
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+29
+## name
+lifeChecked(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(29) and($s(24) $a(10)))
+## hash index
+29
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 1
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+30
+## name
+lifeChecked(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(30) and($s(0) $a(11)))
+## hash index
+30
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 1
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+31
+## name
+lifeChecked(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(31) and($s(10) $a(12)))
+## hash index
+31
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 1
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+32
+## name
+lifeChecked2(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(32) and($s(25) $s(20) $a(6)))
+## hash index
+32
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 1
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+33
+## name
+lifeChecked2(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(33) and($s(26) $s(19) $a(7)))
+## hash index
+33
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+34
+## name
+lifeChecked2(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(34) and($s(27) $s(14) $a(8)))
+## hash index
+34
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+35
+## name
+lifeChecked2(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(35) and($s(28) $s(17) $a(9)))
+## hash index
+35
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+36
+## name
+lifeChecked2(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(36) and($s(29) $s(24) $a(10)))
+## hash index
+36
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 1
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+37
+## name
+lifeChecked2(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(37) and($s(30) $s(0) $a(11)))
+## hash index
+37
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 1
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+38
+## name
+lifeChecked2(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(38) and($s(31) $s(10) $a(12)))
+## hash index
+38
+## caching type 
+VECTOR
+## precomputed results
+16
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 1
+9 1
+10 1
+11 1
+12 1
+13 1
+14 1
+15 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+54
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 1
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+39
+## name
+pictureTaken(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(20) $a(13))
+## hash index
+39
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 1
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+40
+## name
+pictureTaken(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(19) $a(14))
+## hash index
+40
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 1
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+41
+## name
+pictureTaken(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(14) $a(15))
+## hash index
+41
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 1
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+42
+## name
+pictureTaken(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(17) $a(16))
+## hash index
+42
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 1
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+43
+## name
+pictureTaken(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(24) $a(17))
+## hash index
+43
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 1
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+44
+## name
+pictureTaken(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(0) $a(18))
+## hash index
+44
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 1
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+45
+## name
+pictureTaken(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+and($s(10) $a(19))
+## hash index
+45
+## caching type 
+VECTOR
+## precomputed results
+4
+0 0
+1 0
+2 0
+3 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 1
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+46
+## name
+waterChecked(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(46) and($s(20) $a(20)))
+## hash index
+46
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+47
+## name
+waterChecked(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(47) and($s(19) $a(21)))
+## hash index
+47
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+48
+## name
+waterChecked(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(48) and($s(14) $a(22)))
+## hash index
+48
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+49
+## name
+waterChecked(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(49) and($s(17) $a(23)))
+## hash index
+49
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+50
+## name
+waterChecked(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(50) and($s(24) $a(24)))
+## hash index
+50
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+51
+## name
+waterChecked(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(51) and($s(0) $a(25)))
+## hash index
+51
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 0
+2 1
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+52
+## name
+waterChecked(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or($s(52) and($s(10) $a(26)))
+## hash index
+52
+## caching type 
+VECTOR
+## precomputed results
+8
+0 0
+1 0
+2 0
+3 1
+4 1
+5 1
+6 1
+7 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+18
+## action hash keys
+0 0
+1 1
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+
+
+#####PROB STATE FLUENTS AND CPFS#####
+## index
+0
+## name
+damaged(l1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(53) ~(and($s(8) $a(2)))) : $c(1)) (or($s(5) $s(7)) : Bernoulli($c(0.26840475))) (or($s(0) $s(2) $s(10) $s(12)) : Bernoulli($c(0.134202375))) (or($s(5) $s(6) $s(6)) : Bernoulli($c(0.134202375))) ($c(1) : $c(0)) )
+## determinized formula
+switch( (and($s(53) ~(and($s(8) $a(2)))) : $c(1)) (or($s(5) $s(7)) : $c(0)) (or($s(0) $s(2) $s(10) $s(12)) : $c(0)) (or($s(5) $s(6) $s(6)) : $c(0)) ($c(1) : $c(0)) )
+## hash index
+53
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+1024
+0 0 1 0 1
+1 0 1 0 1
+2 0 2 0 0.865797625 1 0.134202375
+3 0 2 0 0.865797625 1 0.134202375
+4 0 2 0 0.865797625 1 0.134202375
+5 0 2 0 0.865797625 1 0.134202375
+6 0 2 0 0.865797625 1 0.134202375
+7 0 2 0 0.865797625 1 0.134202375
+8 0 2 0 0.73159525 1 0.26840475
+9 0 2 0 0.73159525 1 0.26840475
+10 0 2 0 0.73159525 1 0.26840475
+11 0 2 0 0.73159525 1 0.26840475
+12 0 2 0 0.73159525 1 0.26840475
+13 0 2 0 0.73159525 1 0.26840475
+14 0 2 0 0.73159525 1 0.26840475
+15 0 2 0 0.73159525 1 0.26840475
+16 0 2 0 0.865797625 1 0.134202375
+17 0 2 0 0.865797625 1 0.134202375
+18 0 2 0 0.865797625 1 0.134202375
+19 0 2 0 0.865797625 1 0.134202375
+20 0 2 0 0.865797625 1 0.134202375
+21 0 2 0 0.865797625 1 0.134202375
+22 0 2 0 0.865797625 1 0.134202375
+23 0 2 0 0.865797625 1 0.134202375
+24 0 2 0 0.73159525 1 0.26840475
+25 0 2 0 0.73159525 1 0.26840475
+26 0 2 0 0.73159525 1 0.26840475
+27 0 2 0 0.73159525 1 0.26840475
+28 0 2 0 0.73159525 1 0.26840475
+29 0 2 0 0.73159525 1 0.26840475
+30 0 2 0 0.73159525 1 0.26840475
+31 0 2 0 0.73159525 1 0.26840475
+32 0 2 0 0.73159525 1 0.26840475
+33 0 2 0 0.73159525 1 0.26840475
+34 0 2 0 0.73159525 1 0.26840475
+35 0 2 0 0.73159525 1 0.26840475
+36 0 2 0 0.73159525 1 0.26840475
+37 0 2 0 0.73159525 1 0.26840475
+38 0 2 0 0.73159525 1 0.26840475
+39 0 2 0 0.73159525 1 0.26840475
+40 0 2 0 0.73159525 1 0.26840475
+41 0 2 0 0.73159525 1 0.26840475
+42 0 2 0 0.73159525 1 0.26840475
+43 0 2 0 0.73159525 1 0.26840475
+44 0 2 0 0.73159525 1 0.26840475
+45 0 2 0 0.73159525 1 0.26840475
+46 0 2 0 0.73159525 1 0.26840475
+47 0 2 0 0.73159525 1 0.26840475
+48 0 2 0 0.73159525 1 0.26840475
+49 0 2 0 0.73159525 1 0.26840475
+50 0 2 0 0.73159525 1 0.26840475
+51 0 2 0 0.73159525 1 0.26840475
+52 0 2 0 0.73159525 1 0.26840475
+53 0 2 0 0.73159525 1 0.26840475
+54 0 2 0 0.73159525 1 0.26840475
+55 0 2 0 0.73159525 1 0.26840475
+56 0 2 0 0.73159525 1 0.26840475
+57 0 2 0 0.73159525 1 0.26840475
+58 0 2 0 0.73159525 1 0.26840475
+59 0 2 0 0.73159525 1 0.26840475
+60 0 2 0 0.73159525 1 0.26840475
+61 0 2 0 0.73159525 1 0.26840475
+62 0 2 0 0.73159525 1 0.26840475
+63 0 2 0 0.73159525 1 0.26840475
+64 0 1 0 1
+65 0 1 0 1
+66 0 2 0 0.865797625 1 0.134202375
+67 0 2 0 0.865797625 1 0.134202375
+68 0 2 0 0.865797625 1 0.134202375
+69 0 2 0 0.865797625 1 0.134202375
+70 0 2 0 0.865797625 1 0.134202375
+71 0 2 0 0.865797625 1 0.134202375
+72 0 2 0 0.73159525 1 0.26840475
+73 0 2 0 0.73159525 1 0.26840475
+74 0 2 0 0.73159525 1 0.26840475
+75 0 2 0 0.73159525 1 0.26840475
+76 0 2 0 0.73159525 1 0.26840475
+77 0 2 0 0.73159525 1 0.26840475
+78 0 2 0 0.73159525 1 0.26840475
+79 0 2 0 0.73159525 1 0.26840475
+80 0 2 0 0.865797625 1 0.134202375
+81 0 2 0 0.865797625 1 0.134202375
+82 0 2 0 0.865797625 1 0.134202375
+83 0 2 0 0.865797625 1 0.134202375
+84 0 2 0 0.865797625 1 0.134202375
+85 0 2 0 0.865797625 1 0.134202375
+86 0 2 0 0.865797625 1 0.134202375
+87 0 2 0 0.865797625 1 0.134202375
+88 0 2 0 0.73159525 1 0.26840475
+89 0 2 0 0.73159525 1 0.26840475
+90 0 2 0 0.73159525 1 0.26840475
+91 0 2 0 0.73159525 1 0.26840475
+92 0 2 0 0.73159525 1 0.26840475
+93 0 2 0 0.73159525 1 0.26840475
+94 0 2 0 0.73159525 1 0.26840475
+95 0 2 0 0.73159525 1 0.26840475
+96 0 2 0 0.73159525 1 0.26840475
+97 0 2 0 0.73159525 1 0.26840475
+98 0 2 0 0.73159525 1 0.26840475
+99 0 2 0 0.73159525 1 0.26840475
+100 0 2 0 0.73159525 1 0.26840475
+101 0 2 0 0.73159525 1 0.26840475
+102 0 2 0 0.73159525 1 0.26840475
+103 0 2 0 0.73159525 1 0.26840475
+104 0 2 0 0.73159525 1 0.26840475
+105 0 2 0 0.73159525 1 0.26840475
+106 0 2 0 0.73159525 1 0.26840475
+107 0 2 0 0.73159525 1 0.26840475
+108 0 2 0 0.73159525 1 0.26840475
+109 0 2 0 0.73159525 1 0.26840475
+110 0 2 0 0.73159525 1 0.26840475
+111 0 2 0 0.73159525 1 0.26840475
+112 0 2 0 0.73159525 1 0.26840475
+113 0 2 0 0.73159525 1 0.26840475
+114 0 2 0 0.73159525 1 0.26840475
+115 0 2 0 0.73159525 1 0.26840475
+116 0 2 0 0.73159525 1 0.26840475
+117 0 2 0 0.73159525 1 0.26840475
+118 0 2 0 0.73159525 1 0.26840475
+119 0 2 0 0.73159525 1 0.26840475
+120 0 2 0 0.73159525 1 0.26840475
+121 0 2 0 0.73159525 1 0.26840475
+122 0 2 0 0.73159525 1 0.26840475
+123 0 2 0 0.73159525 1 0.26840475
+124 0 2 0 0.73159525 1 0.26840475
+125 0 2 0 0.73159525 1 0.26840475
+126 0 2 0 0.73159525 1 0.26840475
+127 0 2 0 0.73159525 1 0.26840475
+128 0 2 0 0.865797625 1 0.134202375
+129 0 2 0 0.865797625 1 0.134202375
+130 0 2 0 0.865797625 1 0.134202375
+131 0 2 0 0.865797625 1 0.134202375
+132 0 2 0 0.865797625 1 0.134202375
+133 0 2 0 0.865797625 1 0.134202375
+134 0 2 0 0.865797625 1 0.134202375
+135 0 2 0 0.865797625 1 0.134202375
+136 0 2 0 0.73159525 1 0.26840475
+137 0 2 0 0.73159525 1 0.26840475
+138 0 2 0 0.73159525 1 0.26840475
+139 0 2 0 0.73159525 1 0.26840475
+140 0 2 0 0.73159525 1 0.26840475
+141 0 2 0 0.73159525 1 0.26840475
+142 0 2 0 0.73159525 1 0.26840475
+143 0 2 0 0.73159525 1 0.26840475
+144 0 2 0 0.865797625 1 0.134202375
+145 0 2 0 0.865797625 1 0.134202375
+146 0 2 0 0.865797625 1 0.134202375
+147 0 2 0 0.865797625 1 0.134202375
+148 0 2 0 0.865797625 1 0.134202375
+149 0 2 0 0.865797625 1 0.134202375
+150 0 2 0 0.865797625 1 0.134202375
+151 0 2 0 0.865797625 1 0.134202375
+152 0 2 0 0.73159525 1 0.26840475
+153 0 2 0 0.73159525 1 0.26840475
+154 0 2 0 0.73159525 1 0.26840475
+155 0 2 0 0.73159525 1 0.26840475
+156 0 2 0 0.73159525 1 0.26840475
+157 0 2 0 0.73159525 1 0.26840475
+158 0 2 0 0.73159525 1 0.26840475
+159 0 2 0 0.73159525 1 0.26840475
+160 0 2 0 0.73159525 1 0.26840475
+161 0 2 0 0.73159525 1 0.26840475
+162 0 2 0 0.73159525 1 0.26840475
+163 0 2 0 0.73159525 1 0.26840475
+164 0 2 0 0.73159525 1 0.26840475
+165 0 2 0 0.73159525 1 0.26840475
+166 0 2 0 0.73159525 1 0.26840475
+167 0 2 0 0.73159525 1 0.26840475
+168 0 2 0 0.73159525 1 0.26840475
+169 0 2 0 0.73159525 1 0.26840475
+170 0 2 0 0.73159525 1 0.26840475
+171 0 2 0 0.73159525 1 0.26840475
+172 0 2 0 0.73159525 1 0.26840475
+173 0 2 0 0.73159525 1 0.26840475
+174 0 2 0 0.73159525 1 0.26840475
+175 0 2 0 0.73159525 1 0.26840475
+176 0 2 0 0.73159525 1 0.26840475
+177 0 2 0 0.73159525 1 0.26840475
+178 0 2 0 0.73159525 1 0.26840475
+179 0 2 0 0.73159525 1 0.26840475
+180 0 2 0 0.73159525 1 0.26840475
+181 0 2 0 0.73159525 1 0.26840475
+182 0 2 0 0.73159525 1 0.26840475
+183 0 2 0 0.73159525 1 0.26840475
+184 0 2 0 0.73159525 1 0.26840475
+185 0 2 0 0.73159525 1 0.26840475
+186 0 2 0 0.73159525 1 0.26840475
+187 0 2 0 0.73159525 1 0.26840475
+188 0 2 0 0.73159525 1 0.26840475
+189 0 2 0 0.73159525 1 0.26840475
+190 0 2 0 0.73159525 1 0.26840475
+191 0 2 0 0.73159525 1 0.26840475
+192 0 2 0 0.865797625 1 0.134202375
+193 0 2 0 0.865797625 1 0.134202375
+194 0 2 0 0.865797625 1 0.134202375
+195 0 2 0 0.865797625 1 0.134202375
+196 0 2 0 0.865797625 1 0.134202375
+197 0 2 0 0.865797625 1 0.134202375
+198 0 2 0 0.865797625 1 0.134202375
+199 0 2 0 0.865797625 1 0.134202375
+200 0 2 0 0.73159525 1 0.26840475
+201 0 2 0 0.73159525 1 0.26840475
+202 0 2 0 0.73159525 1 0.26840475
+203 0 2 0 0.73159525 1 0.26840475
+204 0 2 0 0.73159525 1 0.26840475
+205 0 2 0 0.73159525 1 0.26840475
+206 0 2 0 0.73159525 1 0.26840475
+207 0 2 0 0.73159525 1 0.26840475
+208 0 2 0 0.865797625 1 0.134202375
+209 0 2 0 0.865797625 1 0.134202375
+210 0 2 0 0.865797625 1 0.134202375
+211 0 2 0 0.865797625 1 0.134202375
+212 0 2 0 0.865797625 1 0.134202375
+213 0 2 0 0.865797625 1 0.134202375
+214 0 2 0 0.865797625 1 0.134202375
+215 0 2 0 0.865797625 1 0.134202375
+216 0 2 0 0.73159525 1 0.26840475
+217 0 2 0 0.73159525 1 0.26840475
+218 0 2 0 0.73159525 1 0.26840475
+219 0 2 0 0.73159525 1 0.26840475
+220 0 2 0 0.73159525 1 0.26840475
+221 0 2 0 0.73159525 1 0.26840475
+222 0 2 0 0.73159525 1 0.26840475
+223 0 2 0 0.73159525 1 0.26840475
+224 0 2 0 0.73159525 1 0.26840475
+225 0 2 0 0.73159525 1 0.26840475
+226 0 2 0 0.73159525 1 0.26840475
+227 0 2 0 0.73159525 1 0.26840475
+228 0 2 0 0.73159525 1 0.26840475
+229 0 2 0 0.73159525 1 0.26840475
+230 0 2 0 0.73159525 1 0.26840475
+231 0 2 0 0.73159525 1 0.26840475
+232 0 2 0 0.73159525 1 0.26840475
+233 0 2 0 0.73159525 1 0.26840475
+234 0 2 0 0.73159525 1 0.26840475
+235 0 2 0 0.73159525 1 0.26840475
+236 0 2 0 0.73159525 1 0.26840475
+237 0 2 0 0.73159525 1 0.26840475
+238 0 2 0 0.73159525 1 0.26840475
+239 0 2 0 0.73159525 1 0.26840475
+240 0 2 0 0.73159525 1 0.26840475
+241 0 2 0 0.73159525 1 0.26840475
+242 0 2 0 0.73159525 1 0.26840475
+243 0 2 0 0.73159525 1 0.26840475
+244 0 2 0 0.73159525 1 0.26840475
+245 0 2 0 0.73159525 1 0.26840475
+246 0 2 0 0.73159525 1 0.26840475
+247 0 2 0 0.73159525 1 0.26840475
+248 0 2 0 0.73159525 1 0.26840475
+249 0 2 0 0.73159525 1 0.26840475
+250 0 2 0 0.73159525 1 0.26840475
+251 0 2 0 0.73159525 1 0.26840475
+252 0 2 0 0.73159525 1 0.26840475
+253 0 2 0 0.73159525 1 0.26840475
+254 0 2 0 0.73159525 1 0.26840475
+255 0 2 0 0.73159525 1 0.26840475
+256 0 2 0 0.865797625 1 0.134202375
+257 0 2 0 0.865797625 1 0.134202375
+258 0 2 0 0.865797625 1 0.134202375
+259 0 2 0 0.865797625 1 0.134202375
+260 0 2 0 0.865797625 1 0.134202375
+261 0 2 0 0.865797625 1 0.134202375
+262 0 2 0 0.865797625 1 0.134202375
+263 0 2 0 0.865797625 1 0.134202375
+264 0 2 0 0.73159525 1 0.26840475
+265 0 2 0 0.73159525 1 0.26840475
+266 0 2 0 0.73159525 1 0.26840475
+267 0 2 0 0.73159525 1 0.26840475
+268 0 2 0 0.73159525 1 0.26840475
+269 0 2 0 0.73159525 1 0.26840475
+270 0 2 0 0.73159525 1 0.26840475
+271 0 2 0 0.73159525 1 0.26840475
+272 0 2 0 0.865797625 1 0.134202375
+273 0 2 0 0.865797625 1 0.134202375
+274 0 2 0 0.865797625 1 0.134202375
+275 0 2 0 0.865797625 1 0.134202375
+276 0 2 0 0.865797625 1 0.134202375
+277 0 2 0 0.865797625 1 0.134202375
+278 0 2 0 0.865797625 1 0.134202375
+279 0 2 0 0.865797625 1 0.134202375
+280 0 2 0 0.73159525 1 0.26840475
+281 0 2 0 0.73159525 1 0.26840475
+282 0 2 0 0.73159525 1 0.26840475
+283 0 2 0 0.73159525 1 0.26840475
+284 0 2 0 0.73159525 1 0.26840475
+285 0 2 0 0.73159525 1 0.26840475
+286 0 2 0 0.73159525 1 0.26840475
+287 0 2 0 0.73159525 1 0.26840475
+288 0 2 0 0.73159525 1 0.26840475
+289 0 2 0 0.73159525 1 0.26840475
+290 0 2 0 0.73159525 1 0.26840475
+291 0 2 0 0.73159525 1 0.26840475
+292 0 2 0 0.73159525 1 0.26840475
+293 0 2 0 0.73159525 1 0.26840475
+294 0 2 0 0.73159525 1 0.26840475
+295 0 2 0 0.73159525 1 0.26840475
+296 0 2 0 0.73159525 1 0.26840475
+297 0 2 0 0.73159525 1 0.26840475
+298 0 2 0 0.73159525 1 0.26840475
+299 0 2 0 0.73159525 1 0.26840475
+300 0 2 0 0.73159525 1 0.26840475
+301 0 2 0 0.73159525 1 0.26840475
+302 0 2 0 0.73159525 1 0.26840475
+303 0 2 0 0.73159525 1 0.26840475
+304 0 2 0 0.73159525 1 0.26840475
+305 0 2 0 0.73159525 1 0.26840475
+306 0 2 0 0.73159525 1 0.26840475
+307 0 2 0 0.73159525 1 0.26840475
+308 0 2 0 0.73159525 1 0.26840475
+309 0 2 0 0.73159525 1 0.26840475
+310 0 2 0 0.73159525 1 0.26840475
+311 0 2 0 0.73159525 1 0.26840475
+312 0 2 0 0.73159525 1 0.26840475
+313 0 2 0 0.73159525 1 0.26840475
+314 0 2 0 0.73159525 1 0.26840475
+315 0 2 0 0.73159525 1 0.26840475
+316 0 2 0 0.73159525 1 0.26840475
+317 0 2 0 0.73159525 1 0.26840475
+318 0 2 0 0.73159525 1 0.26840475
+319 0 2 0 0.73159525 1 0.26840475
+320 0 2 0 0.865797625 1 0.134202375
+321 0 2 0 0.865797625 1 0.134202375
+322 0 2 0 0.865797625 1 0.134202375
+323 0 2 0 0.865797625 1 0.134202375
+324 0 2 0 0.865797625 1 0.134202375
+325 0 2 0 0.865797625 1 0.134202375
+326 0 2 0 0.865797625 1 0.134202375
+327 0 2 0 0.865797625 1 0.134202375
+328 0 2 0 0.73159525 1 0.26840475
+329 0 2 0 0.73159525 1 0.26840475
+330 0 2 0 0.73159525 1 0.26840475
+331 0 2 0 0.73159525 1 0.26840475
+332 0 2 0 0.73159525 1 0.26840475
+333 0 2 0 0.73159525 1 0.26840475
+334 0 2 0 0.73159525 1 0.26840475
+335 0 2 0 0.73159525 1 0.26840475
+336 0 2 0 0.865797625 1 0.134202375
+337 0 2 0 0.865797625 1 0.134202375
+338 0 2 0 0.865797625 1 0.134202375
+339 0 2 0 0.865797625 1 0.134202375
+340 0 2 0 0.865797625 1 0.134202375
+341 0 2 0 0.865797625 1 0.134202375
+342 0 2 0 0.865797625 1 0.134202375
+343 0 2 0 0.865797625 1 0.134202375
+344 0 2 0 0.73159525 1 0.26840475
+345 0 2 0 0.73159525 1 0.26840475
+346 0 2 0 0.73159525 1 0.26840475
+347 0 2 0 0.73159525 1 0.26840475
+348 0 2 0 0.73159525 1 0.26840475
+349 0 2 0 0.73159525 1 0.26840475
+350 0 2 0 0.73159525 1 0.26840475
+351 0 2 0 0.73159525 1 0.26840475
+352 0 2 0 0.73159525 1 0.26840475
+353 0 2 0 0.73159525 1 0.26840475
+354 0 2 0 0.73159525 1 0.26840475
+355 0 2 0 0.73159525 1 0.26840475
+356 0 2 0 0.73159525 1 0.26840475
+357 0 2 0 0.73159525 1 0.26840475
+358 0 2 0 0.73159525 1 0.26840475
+359 0 2 0 0.73159525 1 0.26840475
+360 0 2 0 0.73159525 1 0.26840475
+361 0 2 0 0.73159525 1 0.26840475
+362 0 2 0 0.73159525 1 0.26840475
+363 0 2 0 0.73159525 1 0.26840475
+364 0 2 0 0.73159525 1 0.26840475
+365 0 2 0 0.73159525 1 0.26840475
+366 0 2 0 0.73159525 1 0.26840475
+367 0 2 0 0.73159525 1 0.26840475
+368 0 2 0 0.73159525 1 0.26840475
+369 0 2 0 0.73159525 1 0.26840475
+370 0 2 0 0.73159525 1 0.26840475
+371 0 2 0 0.73159525 1 0.26840475
+372 0 2 0 0.73159525 1 0.26840475
+373 0 2 0 0.73159525 1 0.26840475
+374 0 2 0 0.73159525 1 0.26840475
+375 0 2 0 0.73159525 1 0.26840475
+376 0 2 0 0.73159525 1 0.26840475
+377 0 2 0 0.73159525 1 0.26840475
+378 0 2 0 0.73159525 1 0.26840475
+379 0 2 0 0.73159525 1 0.26840475
+380 0 2 0 0.73159525 1 0.26840475
+381 0 2 0 0.73159525 1 0.26840475
+382 0 2 0 0.73159525 1 0.26840475
+383 0 2 0 0.73159525 1 0.26840475
+384 0 2 0 0.865797625 1 0.134202375
+385 0 2 0 0.865797625 1 0.134202375
+386 0 2 0 0.865797625 1 0.134202375
+387 0 2 0 0.865797625 1 0.134202375
+388 0 2 0 0.865797625 1 0.134202375
+389 0 2 0 0.865797625 1 0.134202375
+390 0 2 0 0.865797625 1 0.134202375
+391 0 2 0 0.865797625 1 0.134202375
+392 0 2 0 0.73159525 1 0.26840475
+393 0 2 0 0.73159525 1 0.26840475
+394 0 2 0 0.73159525 1 0.26840475
+395 0 2 0 0.73159525 1 0.26840475
+396 0 2 0 0.73159525 1 0.26840475
+397 0 2 0 0.73159525 1 0.26840475
+398 0 2 0 0.73159525 1 0.26840475
+399 0 2 0 0.73159525 1 0.26840475
+400 0 2 0 0.865797625 1 0.134202375
+401 0 2 0 0.865797625 1 0.134202375
+402 0 2 0 0.865797625 1 0.134202375
+403 0 2 0 0.865797625 1 0.134202375
+404 0 2 0 0.865797625 1 0.134202375
+405 0 2 0 0.865797625 1 0.134202375
+406 0 2 0 0.865797625 1 0.134202375
+407 0 2 0 0.865797625 1 0.134202375
+408 0 2 0 0.73159525 1 0.26840475
+409 0 2 0 0.73159525 1 0.26840475
+410 0 2 0 0.73159525 1 0.26840475
+411 0 2 0 0.73159525 1 0.26840475
+412 0 2 0 0.73159525 1 0.26840475
+413 0 2 0 0.73159525 1 0.26840475
+414 0 2 0 0.73159525 1 0.26840475
+415 0 2 0 0.73159525 1 0.26840475
+416 0 2 0 0.73159525 1 0.26840475
+417 0 2 0 0.73159525 1 0.26840475
+418 0 2 0 0.73159525 1 0.26840475
+419 0 2 0 0.73159525 1 0.26840475
+420 0 2 0 0.73159525 1 0.26840475
+421 0 2 0 0.73159525 1 0.26840475
+422 0 2 0 0.73159525 1 0.26840475
+423 0 2 0 0.73159525 1 0.26840475
+424 0 2 0 0.73159525 1 0.26840475
+425 0 2 0 0.73159525 1 0.26840475
+426 0 2 0 0.73159525 1 0.26840475
+427 0 2 0 0.73159525 1 0.26840475
+428 0 2 0 0.73159525 1 0.26840475
+429 0 2 0 0.73159525 1 0.26840475
+430 0 2 0 0.73159525 1 0.26840475
+431 0 2 0 0.73159525 1 0.26840475
+432 0 2 0 0.73159525 1 0.26840475
+433 0 2 0 0.73159525 1 0.26840475
+434 0 2 0 0.73159525 1 0.26840475
+435 0 2 0 0.73159525 1 0.26840475
+436 0 2 0 0.73159525 1 0.26840475
+437 0 2 0 0.73159525 1 0.26840475
+438 0 2 0 0.73159525 1 0.26840475
+439 0 2 0 0.73159525 1 0.26840475
+440 0 2 0 0.73159525 1 0.26840475
+441 0 2 0 0.73159525 1 0.26840475
+442 0 2 0 0.73159525 1 0.26840475
+443 0 2 0 0.73159525 1 0.26840475
+444 0 2 0 0.73159525 1 0.26840475
+445 0 2 0 0.73159525 1 0.26840475
+446 0 2 0 0.73159525 1 0.26840475
+447 0 2 0 0.73159525 1 0.26840475
+448 0 2 0 0.865797625 1 0.134202375
+449 0 2 0 0.865797625 1 0.134202375
+450 0 2 0 0.865797625 1 0.134202375
+451 0 2 0 0.865797625 1 0.134202375
+452 0 2 0 0.865797625 1 0.134202375
+453 0 2 0 0.865797625 1 0.134202375
+454 0 2 0 0.865797625 1 0.134202375
+455 0 2 0 0.865797625 1 0.134202375
+456 0 2 0 0.73159525 1 0.26840475
+457 0 2 0 0.73159525 1 0.26840475
+458 0 2 0 0.73159525 1 0.26840475
+459 0 2 0 0.73159525 1 0.26840475
+460 0 2 0 0.73159525 1 0.26840475
+461 0 2 0 0.73159525 1 0.26840475
+462 0 2 0 0.73159525 1 0.26840475
+463 0 2 0 0.73159525 1 0.26840475
+464 0 2 0 0.865797625 1 0.134202375
+465 0 2 0 0.865797625 1 0.134202375
+466 0 2 0 0.865797625 1 0.134202375
+467 0 2 0 0.865797625 1 0.134202375
+468 0 2 0 0.865797625 1 0.134202375
+469 0 2 0 0.865797625 1 0.134202375
+470 0 2 0 0.865797625 1 0.134202375
+471 0 2 0 0.865797625 1 0.134202375
+472 0 2 0 0.73159525 1 0.26840475
+473 0 2 0 0.73159525 1 0.26840475
+474 0 2 0 0.73159525 1 0.26840475
+475 0 2 0 0.73159525 1 0.26840475
+476 0 2 0 0.73159525 1 0.26840475
+477 0 2 0 0.73159525 1 0.26840475
+478 0 2 0 0.73159525 1 0.26840475
+479 0 2 0 0.73159525 1 0.26840475
+480 0 2 0 0.73159525 1 0.26840475
+481 0 2 0 0.73159525 1 0.26840475
+482 0 2 0 0.73159525 1 0.26840475
+483 0 2 0 0.73159525 1 0.26840475
+484 0 2 0 0.73159525 1 0.26840475
+485 0 2 0 0.73159525 1 0.26840475
+486 0 2 0 0.73159525 1 0.26840475
+487 0 2 0 0.73159525 1 0.26840475
+488 0 2 0 0.73159525 1 0.26840475
+489 0 2 0 0.73159525 1 0.26840475
+490 0 2 0 0.73159525 1 0.26840475
+491 0 2 0 0.73159525 1 0.26840475
+492 0 2 0 0.73159525 1 0.26840475
+493 0 2 0 0.73159525 1 0.26840475
+494 0 2 0 0.73159525 1 0.26840475
+495 0 2 0 0.73159525 1 0.26840475
+496 0 2 0 0.73159525 1 0.26840475
+497 0 2 0 0.73159525 1 0.26840475
+498 0 2 0 0.73159525 1 0.26840475
+499 0 2 0 0.73159525 1 0.26840475
+500 0 2 0 0.73159525 1 0.26840475
+501 0 2 0 0.73159525 1 0.26840475
+502 0 2 0 0.73159525 1 0.26840475
+503 0 2 0 0.73159525 1 0.26840475
+504 0 2 0 0.73159525 1 0.26840475
+505 0 2 0 0.73159525 1 0.26840475
+506 0 2 0 0.73159525 1 0.26840475
+507 0 2 0 0.73159525 1 0.26840475
+508 0 2 0 0.73159525 1 0.26840475
+509 0 2 0 0.73159525 1 0.26840475
+510 0 2 0 0.73159525 1 0.26840475
+511 0 2 0 0.73159525 1 0.26840475
+512 1 1 1 1
+513 1 1 1 1
+514 1 1 1 1
+515 1 1 1 1
+516 1 1 1 1
+517 1 1 1 1
+518 1 1 1 1
+519 1 1 1 1
+520 1 1 1 1
+521 1 1 1 1
+522 1 1 1 1
+523 1 1 1 1
+524 1 1 1 1
+525 1 1 1 1
+526 1 1 1 1
+527 1 1 1 1
+528 1 1 1 1
+529 1 1 1 1
+530 1 1 1 1
+531 1 1 1 1
+532 1 1 1 1
+533 1 1 1 1
+534 1 1 1 1
+535 1 1 1 1
+536 1 1 1 1
+537 1 1 1 1
+538 1 1 1 1
+539 1 1 1 1
+540 1 1 1 1
+541 1 1 1 1
+542 1 1 1 1
+543 1 1 1 1
+544 1 1 1 1
+545 1 1 1 1
+546 1 1 1 1
+547 1 1 1 1
+548 1 1 1 1
+549 1 1 1 1
+550 1 1 1 1
+551 1 1 1 1
+552 1 1 1 1
+553 1 1 1 1
+554 1 1 1 1
+555 1 1 1 1
+556 1 1 1 1
+557 1 1 1 1
+558 1 1 1 1
+559 1 1 1 1
+560 1 1 1 1
+561 1 1 1 1
+562 1 1 1 1
+563 1 1 1 1
+564 1 1 1 1
+565 1 1 1 1
+566 1 1 1 1
+567 1 1 1 1
+568 1 1 1 1
+569 1 1 1 1
+570 1 1 1 1
+571 1 1 1 1
+572 1 1 1 1
+573 1 1 1 1
+574 1 1 1 1
+575 1 1 1 1
+576 1 1 1 1
+577 0 1 0 1
+578 1 1 1 1
+579 0 2 0 0.865797625 1 0.134202375
+580 1 1 1 1
+581 0 2 0 0.865797625 1 0.134202375
+582 1 1 1 1
+583 0 2 0 0.865797625 1 0.134202375
+584 1 1 1 1
+585 0 2 0 0.73159525 1 0.26840475
+586 1 1 1 1
+587 0 2 0 0.73159525 1 0.26840475
+588 1 1 1 1
+589 0 2 0 0.73159525 1 0.26840475
+590 1 1 1 1
+591 0 2 0 0.73159525 1 0.26840475
+592 1 1 1 1
+593 0 2 0 0.865797625 1 0.134202375
+594 1 1 1 1
+595 0 2 0 0.865797625 1 0.134202375
+596 1 1 1 1
+597 0 2 0 0.865797625 1 0.134202375
+598 1 1 1 1
+599 0 2 0 0.865797625 1 0.134202375
+600 1 1 1 1
+601 0 2 0 0.73159525 1 0.26840475
+602 1 1 1 1
+603 0 2 0 0.73159525 1 0.26840475
+604 1 1 1 1
+605 0 2 0 0.73159525 1 0.26840475
+606 1 1 1 1
+607 0 2 0 0.73159525 1 0.26840475
+608 1 1 1 1
+609 0 2 0 0.73159525 1 0.26840475
+610 1 1 1 1
+611 0 2 0 0.73159525 1 0.26840475
+612 1 1 1 1
+613 0 2 0 0.73159525 1 0.26840475
+614 1 1 1 1
+615 0 2 0 0.73159525 1 0.26840475
+616 1 1 1 1
+617 0 2 0 0.73159525 1 0.26840475
+618 1 1 1 1
+619 0 2 0 0.73159525 1 0.26840475
+620 1 1 1 1
+621 0 2 0 0.73159525 1 0.26840475
+622 1 1 1 1
+623 0 2 0 0.73159525 1 0.26840475
+624 1 1 1 1
+625 0 2 0 0.73159525 1 0.26840475
+626 1 1 1 1
+627 0 2 0 0.73159525 1 0.26840475
+628 1 1 1 1
+629 0 2 0 0.73159525 1 0.26840475
+630 1 1 1 1
+631 0 2 0 0.73159525 1 0.26840475
+632 1 1 1 1
+633 0 2 0 0.73159525 1 0.26840475
+634 1 1 1 1
+635 0 2 0 0.73159525 1 0.26840475
+636 1 1 1 1
+637 0 2 0 0.73159525 1 0.26840475
+638 1 1 1 1
+639 0 2 0 0.73159525 1 0.26840475
+640 1 1 1 1
+641 1 1 1 1
+642 1 1 1 1
+643 1 1 1 1
+644 1 1 1 1
+645 1 1 1 1
+646 1 1 1 1
+647 1 1 1 1
+648 1 1 1 1
+649 1 1 1 1
+650 1 1 1 1
+651 1 1 1 1
+652 1 1 1 1
+653 1 1 1 1
+654 1 1 1 1
+655 1 1 1 1
+656 1 1 1 1
+657 1 1 1 1
+658 1 1 1 1
+659 1 1 1 1
+660 1 1 1 1
+661 1 1 1 1
+662 1 1 1 1
+663 1 1 1 1
+664 1 1 1 1
+665 1 1 1 1
+666 1 1 1 1
+667 1 1 1 1
+668 1 1 1 1
+669 1 1 1 1
+670 1 1 1 1
+671 1 1 1 1
+672 1 1 1 1
+673 1 1 1 1
+674 1 1 1 1
+675 1 1 1 1
+676 1 1 1 1
+677 1 1 1 1
+678 1 1 1 1
+679 1 1 1 1
+680 1 1 1 1
+681 1 1 1 1
+682 1 1 1 1
+683 1 1 1 1
+684 1 1 1 1
+685 1 1 1 1
+686 1 1 1 1
+687 1 1 1 1
+688 1 1 1 1
+689 1 1 1 1
+690 1 1 1 1
+691 1 1 1 1
+692 1 1 1 1
+693 1 1 1 1
+694 1 1 1 1
+695 1 1 1 1
+696 1 1 1 1
+697 1 1 1 1
+698 1 1 1 1
+699 1 1 1 1
+700 1 1 1 1
+701 1 1 1 1
+702 1 1 1 1
+703 1 1 1 1
+704 1 1 1 1
+705 0 2 0 0.865797625 1 0.134202375
+706 1 1 1 1
+707 0 2 0 0.865797625 1 0.134202375
+708 1 1 1 1
+709 0 2 0 0.865797625 1 0.134202375
+710 1 1 1 1
+711 0 2 0 0.865797625 1 0.134202375
+712 1 1 1 1
+713 0 2 0 0.73159525 1 0.26840475
+714 1 1 1 1
+715 0 2 0 0.73159525 1 0.26840475
+716 1 1 1 1
+717 0 2 0 0.73159525 1 0.26840475
+718 1 1 1 1
+719 0 2 0 0.73159525 1 0.26840475
+720 1 1 1 1
+721 0 2 0 0.865797625 1 0.134202375
+722 1 1 1 1
+723 0 2 0 0.865797625 1 0.134202375
+724 1 1 1 1
+725 0 2 0 0.865797625 1 0.134202375
+726 1 1 1 1
+727 0 2 0 0.865797625 1 0.134202375
+728 1 1 1 1
+729 0 2 0 0.73159525 1 0.26840475
+730 1 1 1 1
+731 0 2 0 0.73159525 1 0.26840475
+732 1 1 1 1
+733 0 2 0 0.73159525 1 0.26840475
+734 1 1 1 1
+735 0 2 0 0.73159525 1 0.26840475
+736 1 1 1 1
+737 0 2 0 0.73159525 1 0.26840475
+738 1 1 1 1
+739 0 2 0 0.73159525 1 0.26840475
+740 1 1 1 1
+741 0 2 0 0.73159525 1 0.26840475
+742 1 1 1 1
+743 0 2 0 0.73159525 1 0.26840475
+744 1 1 1 1
+745 0 2 0 0.73159525 1 0.26840475
+746 1 1 1 1
+747 0 2 0 0.73159525 1 0.26840475
+748 1 1 1 1
+749 0 2 0 0.73159525 1 0.26840475
+750 1 1 1 1
+751 0 2 0 0.73159525 1 0.26840475
+752 1 1 1 1
+753 0 2 0 0.73159525 1 0.26840475
+754 1 1 1 1
+755 0 2 0 0.73159525 1 0.26840475
+756 1 1 1 1
+757 0 2 0 0.73159525 1 0.26840475
+758 1 1 1 1
+759 0 2 0 0.73159525 1 0.26840475
+760 1 1 1 1
+761 0 2 0 0.73159525 1 0.26840475
+762 1 1 1 1
+763 0 2 0 0.73159525 1 0.26840475
+764 1 1 1 1
+765 0 2 0 0.73159525 1 0.26840475
+766 1 1 1 1
+767 0 2 0 0.73159525 1 0.26840475
+768 1 1 1 1
+769 1 1 1 1
+770 1 1 1 1
+771 1 1 1 1
+772 1 1 1 1
+773 1 1 1 1
+774 1 1 1 1
+775 1 1 1 1
+776 1 1 1 1
+777 1 1 1 1
+778 1 1 1 1
+779 1 1 1 1
+780 1 1 1 1
+781 1 1 1 1
+782 1 1 1 1
+783 1 1 1 1
+784 1 1 1 1
+785 1 1 1 1
+786 1 1 1 1
+787 1 1 1 1
+788 1 1 1 1
+789 1 1 1 1
+790 1 1 1 1
+791 1 1 1 1
+792 1 1 1 1
+793 1 1 1 1
+794 1 1 1 1
+795 1 1 1 1
+796 1 1 1 1
+797 1 1 1 1
+798 1 1 1 1
+799 1 1 1 1
+800 1 1 1 1
+801 1 1 1 1
+802 1 1 1 1
+803 1 1 1 1
+804 1 1 1 1
+805 1 1 1 1
+806 1 1 1 1
+807 1 1 1 1
+808 1 1 1 1
+809 1 1 1 1
+810 1 1 1 1
+811 1 1 1 1
+812 1 1 1 1
+813 1 1 1 1
+814 1 1 1 1
+815 1 1 1 1
+816 1 1 1 1
+817 1 1 1 1
+818 1 1 1 1
+819 1 1 1 1
+820 1 1 1 1
+821 1 1 1 1
+822 1 1 1 1
+823 1 1 1 1
+824 1 1 1 1
+825 1 1 1 1
+826 1 1 1 1
+827 1 1 1 1
+828 1 1 1 1
+829 1 1 1 1
+830 1 1 1 1
+831 1 1 1 1
+832 1 1 1 1
+833 0 2 0 0.865797625 1 0.134202375
+834 1 1 1 1
+835 0 2 0 0.865797625 1 0.134202375
+836 1 1 1 1
+837 0 2 0 0.865797625 1 0.134202375
+838 1 1 1 1
+839 0 2 0 0.865797625 1 0.134202375
+840 1 1 1 1
+841 0 2 0 0.73159525 1 0.26840475
+842 1 1 1 1
+843 0 2 0 0.73159525 1 0.26840475
+844 1 1 1 1
+845 0 2 0 0.73159525 1 0.26840475
+846 1 1 1 1
+847 0 2 0 0.73159525 1 0.26840475
+848 1 1 1 1
+849 0 2 0 0.865797625 1 0.134202375
+850 1 1 1 1
+851 0 2 0 0.865797625 1 0.134202375
+852 1 1 1 1
+853 0 2 0 0.865797625 1 0.134202375
+854 1 1 1 1
+855 0 2 0 0.865797625 1 0.134202375
+856 1 1 1 1
+857 0 2 0 0.73159525 1 0.26840475
+858 1 1 1 1
+859 0 2 0 0.73159525 1 0.26840475
+860 1 1 1 1
+861 0 2 0 0.73159525 1 0.26840475
+862 1 1 1 1
+863 0 2 0 0.73159525 1 0.26840475
+864 1 1 1 1
+865 0 2 0 0.73159525 1 0.26840475
+866 1 1 1 1
+867 0 2 0 0.73159525 1 0.26840475
+868 1 1 1 1
+869 0 2 0 0.73159525 1 0.26840475
+870 1 1 1 1
+871 0 2 0 0.73159525 1 0.26840475
+872 1 1 1 1
+873 0 2 0 0.73159525 1 0.26840475
+874 1 1 1 1
+875 0 2 0 0.73159525 1 0.26840475
+876 1 1 1 1
+877 0 2 0 0.73159525 1 0.26840475
+878 1 1 1 1
+879 0 2 0 0.73159525 1 0.26840475
+880 1 1 1 1
+881 0 2 0 0.73159525 1 0.26840475
+882 1 1 1 1
+883 0 2 0 0.73159525 1 0.26840475
+884 1 1 1 1
+885 0 2 0 0.73159525 1 0.26840475
+886 1 1 1 1
+887 0 2 0 0.73159525 1 0.26840475
+888 1 1 1 1
+889 0 2 0 0.73159525 1 0.26840475
+890 1 1 1 1
+891 0 2 0 0.73159525 1 0.26840475
+892 1 1 1 1
+893 0 2 0 0.73159525 1 0.26840475
+894 1 1 1 1
+895 0 2 0 0.73159525 1 0.26840475
+896 1 1 1 1
+897 1 1 1 1
+898 1 1 1 1
+899 1 1 1 1
+900 1 1 1 1
+901 1 1 1 1
+902 1 1 1 1
+903 1 1 1 1
+904 1 1 1 1
+905 1 1 1 1
+906 1 1 1 1
+907 1 1 1 1
+908 1 1 1 1
+909 1 1 1 1
+910 1 1 1 1
+911 1 1 1 1
+912 1 1 1 1
+913 1 1 1 1
+914 1 1 1 1
+915 1 1 1 1
+916 1 1 1 1
+917 1 1 1 1
+918 1 1 1 1
+919 1 1 1 1
+920 1 1 1 1
+921 1 1 1 1
+922 1 1 1 1
+923 1 1 1 1
+924 1 1 1 1
+925 1 1 1 1
+926 1 1 1 1
+927 1 1 1 1
+928 1 1 1 1
+929 1 1 1 1
+930 1 1 1 1
+931 1 1 1 1
+932 1 1 1 1
+933 1 1 1 1
+934 1 1 1 1
+935 1 1 1 1
+936 1 1 1 1
+937 1 1 1 1
+938 1 1 1 1
+939 1 1 1 1
+940 1 1 1 1
+941 1 1 1 1
+942 1 1 1 1
+943 1 1 1 1
+944 1 1 1 1
+945 1 1 1 1
+946 1 1 1 1
+947 1 1 1 1
+948 1 1 1 1
+949 1 1 1 1
+950 1 1 1 1
+951 1 1 1 1
+952 1 1 1 1
+953 1 1 1 1
+954 1 1 1 1
+955 1 1 1 1
+956 1 1 1 1
+957 1 1 1 1
+958 1 1 1 1
+959 1 1 1 1
+960 1 1 1 1
+961 0 2 0 0.865797625 1 0.134202375
+962 1 1 1 1
+963 0 2 0 0.865797625 1 0.134202375
+964 1 1 1 1
+965 0 2 0 0.865797625 1 0.134202375
+966 1 1 1 1
+967 0 2 0 0.865797625 1 0.134202375
+968 1 1 1 1
+969 0 2 0 0.73159525 1 0.26840475
+970 1 1 1 1
+971 0 2 0 0.73159525 1 0.26840475
+972 1 1 1 1
+973 0 2 0 0.73159525 1 0.26840475
+974 1 1 1 1
+975 0 2 0 0.73159525 1 0.26840475
+976 1 1 1 1
+977 0 2 0 0.865797625 1 0.134202375
+978 1 1 1 1
+979 0 2 0 0.865797625 1 0.134202375
+980 1 1 1 1
+981 0 2 0 0.865797625 1 0.134202375
+982 1 1 1 1
+983 0 2 0 0.865797625 1 0.134202375
+984 1 1 1 1
+985 0 2 0 0.73159525 1 0.26840475
+986 1 1 1 1
+987 0 2 0 0.73159525 1 0.26840475
+988 1 1 1 1
+989 0 2 0 0.73159525 1 0.26840475
+990 1 1 1 1
+991 0 2 0 0.73159525 1 0.26840475
+992 1 1 1 1
+993 0 2 0 0.73159525 1 0.26840475
+994 1 1 1 1
+995 0 2 0 0.73159525 1 0.26840475
+996 1 1 1 1
+997 0 2 0 0.73159525 1 0.26840475
+998 1 1 1 1
+999 0 2 0 0.73159525 1 0.26840475
+1000 1 1 1 1
+1001 0 2 0 0.73159525 1 0.26840475
+1002 1 1 1 1
+1003 0 2 0 0.73159525 1 0.26840475
+1004 1 1 1 1
+1005 0 2 0 0.73159525 1 0.26840475
+1006 1 1 1 1
+1007 0 2 0 0.73159525 1 0.26840475
+1008 1 1 1 1
+1009 0 2 0 0.73159525 1 0.26840475
+1010 1 1 1 1
+1011 0 2 0 0.73159525 1 0.26840475
+1012 1 1 1 1
+1013 0 2 0 0.73159525 1 0.26840475
+1014 1 1 1 1
+1015 0 2 0 0.73159525 1 0.26840475
+1016 1 1 1 1
+1017 0 2 0 0.73159525 1 0.26840475
+1018 1 1 1 1
+1019 0 2 0 0.73159525 1 0.26840475
+1020 1 1 1 1
+1021 0 2 0 0.73159525 1 0.26840475
+1022 1 1 1 1
+1023 0 2 0 0.73159525 1 0.26840475
+## kleene caching type
+VECTOR
+## kleene caching vec size
+39366
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 1
+26 0
+27 0
+
+## index
+1
+## name
+damaged(w1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(54) ~(and($s(8) $a(3)))) : $c(1)) (or($s(5) $s(7)) : Bernoulli($c(0.3081831))) (or($s(0) $s(2) $s(10) $s(12)) : Bernoulli($c(0.15409155))) (or($s(5) $s(6) $s(6)) : Bernoulli($c(0.15409155))) ($c(1) : $c(0)) )
+## determinized formula
+switch( (and($s(54) ~(and($s(8) $a(3)))) : $c(1)) (or($s(5) $s(7)) : $c(0)) (or($s(0) $s(2) $s(10) $s(12)) : $c(0)) (or($s(5) $s(6) $s(6)) : $c(0)) ($c(1) : $c(0)) )
+## hash index
+54
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+1024
+0 0 1 0 1
+1 0 1 0 1
+2 0 2 0 0.84590845 1 0.15409155
+3 0 2 0 0.84590845 1 0.15409155
+4 0 2 0 0.84590845 1 0.15409155
+5 0 2 0 0.84590845 1 0.15409155
+6 0 2 0 0.84590845 1 0.15409155
+7 0 2 0 0.84590845 1 0.15409155
+8 0 2 0 0.6918169 1 0.3081831
+9 0 2 0 0.6918169 1 0.3081831
+10 0 2 0 0.6918169 1 0.3081831
+11 0 2 0 0.6918169 1 0.3081831
+12 0 2 0 0.6918169 1 0.3081831
+13 0 2 0 0.6918169 1 0.3081831
+14 0 2 0 0.6918169 1 0.3081831
+15 0 2 0 0.6918169 1 0.3081831
+16 0 2 0 0.84590845 1 0.15409155
+17 0 2 0 0.84590845 1 0.15409155
+18 0 2 0 0.84590845 1 0.15409155
+19 0 2 0 0.84590845 1 0.15409155
+20 0 2 0 0.84590845 1 0.15409155
+21 0 2 0 0.84590845 1 0.15409155
+22 0 2 0 0.84590845 1 0.15409155
+23 0 2 0 0.84590845 1 0.15409155
+24 0 2 0 0.6918169 1 0.3081831
+25 0 2 0 0.6918169 1 0.3081831
+26 0 2 0 0.6918169 1 0.3081831
+27 0 2 0 0.6918169 1 0.3081831
+28 0 2 0 0.6918169 1 0.3081831
+29 0 2 0 0.6918169 1 0.3081831
+30 0 2 0 0.6918169 1 0.3081831
+31 0 2 0 0.6918169 1 0.3081831
+32 0 2 0 0.6918169 1 0.3081831
+33 0 2 0 0.6918169 1 0.3081831
+34 0 2 0 0.6918169 1 0.3081831
+35 0 2 0 0.6918169 1 0.3081831
+36 0 2 0 0.6918169 1 0.3081831
+37 0 2 0 0.6918169 1 0.3081831
+38 0 2 0 0.6918169 1 0.3081831
+39 0 2 0 0.6918169 1 0.3081831
+40 0 2 0 0.6918169 1 0.3081831
+41 0 2 0 0.6918169 1 0.3081831
+42 0 2 0 0.6918169 1 0.3081831
+43 0 2 0 0.6918169 1 0.3081831
+44 0 2 0 0.6918169 1 0.3081831
+45 0 2 0 0.6918169 1 0.3081831
+46 0 2 0 0.6918169 1 0.3081831
+47 0 2 0 0.6918169 1 0.3081831
+48 0 2 0 0.6918169 1 0.3081831
+49 0 2 0 0.6918169 1 0.3081831
+50 0 2 0 0.6918169 1 0.3081831
+51 0 2 0 0.6918169 1 0.3081831
+52 0 2 0 0.6918169 1 0.3081831
+53 0 2 0 0.6918169 1 0.3081831
+54 0 2 0 0.6918169 1 0.3081831
+55 0 2 0 0.6918169 1 0.3081831
+56 0 2 0 0.6918169 1 0.3081831
+57 0 2 0 0.6918169 1 0.3081831
+58 0 2 0 0.6918169 1 0.3081831
+59 0 2 0 0.6918169 1 0.3081831
+60 0 2 0 0.6918169 1 0.3081831
+61 0 2 0 0.6918169 1 0.3081831
+62 0 2 0 0.6918169 1 0.3081831
+63 0 2 0 0.6918169 1 0.3081831
+64 0 1 0 1
+65 0 1 0 1
+66 0 2 0 0.84590845 1 0.15409155
+67 0 2 0 0.84590845 1 0.15409155
+68 0 2 0 0.84590845 1 0.15409155
+69 0 2 0 0.84590845 1 0.15409155
+70 0 2 0 0.84590845 1 0.15409155
+71 0 2 0 0.84590845 1 0.15409155
+72 0 2 0 0.6918169 1 0.3081831
+73 0 2 0 0.6918169 1 0.3081831
+74 0 2 0 0.6918169 1 0.3081831
+75 0 2 0 0.6918169 1 0.3081831
+76 0 2 0 0.6918169 1 0.3081831
+77 0 2 0 0.6918169 1 0.3081831
+78 0 2 0 0.6918169 1 0.3081831
+79 0 2 0 0.6918169 1 0.3081831
+80 0 2 0 0.84590845 1 0.15409155
+81 0 2 0 0.84590845 1 0.15409155
+82 0 2 0 0.84590845 1 0.15409155
+83 0 2 0 0.84590845 1 0.15409155
+84 0 2 0 0.84590845 1 0.15409155
+85 0 2 0 0.84590845 1 0.15409155
+86 0 2 0 0.84590845 1 0.15409155
+87 0 2 0 0.84590845 1 0.15409155
+88 0 2 0 0.6918169 1 0.3081831
+89 0 2 0 0.6918169 1 0.3081831
+90 0 2 0 0.6918169 1 0.3081831
+91 0 2 0 0.6918169 1 0.3081831
+92 0 2 0 0.6918169 1 0.3081831
+93 0 2 0 0.6918169 1 0.3081831
+94 0 2 0 0.6918169 1 0.3081831
+95 0 2 0 0.6918169 1 0.3081831
+96 0 2 0 0.6918169 1 0.3081831
+97 0 2 0 0.6918169 1 0.3081831
+98 0 2 0 0.6918169 1 0.3081831
+99 0 2 0 0.6918169 1 0.3081831
+100 0 2 0 0.6918169 1 0.3081831
+101 0 2 0 0.6918169 1 0.3081831
+102 0 2 0 0.6918169 1 0.3081831
+103 0 2 0 0.6918169 1 0.3081831
+104 0 2 0 0.6918169 1 0.3081831
+105 0 2 0 0.6918169 1 0.3081831
+106 0 2 0 0.6918169 1 0.3081831
+107 0 2 0 0.6918169 1 0.3081831
+108 0 2 0 0.6918169 1 0.3081831
+109 0 2 0 0.6918169 1 0.3081831
+110 0 2 0 0.6918169 1 0.3081831
+111 0 2 0 0.6918169 1 0.3081831
+112 0 2 0 0.6918169 1 0.3081831
+113 0 2 0 0.6918169 1 0.3081831
+114 0 2 0 0.6918169 1 0.3081831
+115 0 2 0 0.6918169 1 0.3081831
+116 0 2 0 0.6918169 1 0.3081831
+117 0 2 0 0.6918169 1 0.3081831
+118 0 2 0 0.6918169 1 0.3081831
+119 0 2 0 0.6918169 1 0.3081831
+120 0 2 0 0.6918169 1 0.3081831
+121 0 2 0 0.6918169 1 0.3081831
+122 0 2 0 0.6918169 1 0.3081831
+123 0 2 0 0.6918169 1 0.3081831
+124 0 2 0 0.6918169 1 0.3081831
+125 0 2 0 0.6918169 1 0.3081831
+126 0 2 0 0.6918169 1 0.3081831
+127 0 2 0 0.6918169 1 0.3081831
+128 0 2 0 0.84590845 1 0.15409155
+129 0 2 0 0.84590845 1 0.15409155
+130 0 2 0 0.84590845 1 0.15409155
+131 0 2 0 0.84590845 1 0.15409155
+132 0 2 0 0.84590845 1 0.15409155
+133 0 2 0 0.84590845 1 0.15409155
+134 0 2 0 0.84590845 1 0.15409155
+135 0 2 0 0.84590845 1 0.15409155
+136 0 2 0 0.6918169 1 0.3081831
+137 0 2 0 0.6918169 1 0.3081831
+138 0 2 0 0.6918169 1 0.3081831
+139 0 2 0 0.6918169 1 0.3081831
+140 0 2 0 0.6918169 1 0.3081831
+141 0 2 0 0.6918169 1 0.3081831
+142 0 2 0 0.6918169 1 0.3081831
+143 0 2 0 0.6918169 1 0.3081831
+144 0 2 0 0.84590845 1 0.15409155
+145 0 2 0 0.84590845 1 0.15409155
+146 0 2 0 0.84590845 1 0.15409155
+147 0 2 0 0.84590845 1 0.15409155
+148 0 2 0 0.84590845 1 0.15409155
+149 0 2 0 0.84590845 1 0.15409155
+150 0 2 0 0.84590845 1 0.15409155
+151 0 2 0 0.84590845 1 0.15409155
+152 0 2 0 0.6918169 1 0.3081831
+153 0 2 0 0.6918169 1 0.3081831
+154 0 2 0 0.6918169 1 0.3081831
+155 0 2 0 0.6918169 1 0.3081831
+156 0 2 0 0.6918169 1 0.3081831
+157 0 2 0 0.6918169 1 0.3081831
+158 0 2 0 0.6918169 1 0.3081831
+159 0 2 0 0.6918169 1 0.3081831
+160 0 2 0 0.6918169 1 0.3081831
+161 0 2 0 0.6918169 1 0.3081831
+162 0 2 0 0.6918169 1 0.3081831
+163 0 2 0 0.6918169 1 0.3081831
+164 0 2 0 0.6918169 1 0.3081831
+165 0 2 0 0.6918169 1 0.3081831
+166 0 2 0 0.6918169 1 0.3081831
+167 0 2 0 0.6918169 1 0.3081831
+168 0 2 0 0.6918169 1 0.3081831
+169 0 2 0 0.6918169 1 0.3081831
+170 0 2 0 0.6918169 1 0.3081831
+171 0 2 0 0.6918169 1 0.3081831
+172 0 2 0 0.6918169 1 0.3081831
+173 0 2 0 0.6918169 1 0.3081831
+174 0 2 0 0.6918169 1 0.3081831
+175 0 2 0 0.6918169 1 0.3081831
+176 0 2 0 0.6918169 1 0.3081831
+177 0 2 0 0.6918169 1 0.3081831
+178 0 2 0 0.6918169 1 0.3081831
+179 0 2 0 0.6918169 1 0.3081831
+180 0 2 0 0.6918169 1 0.3081831
+181 0 2 0 0.6918169 1 0.3081831
+182 0 2 0 0.6918169 1 0.3081831
+183 0 2 0 0.6918169 1 0.3081831
+184 0 2 0 0.6918169 1 0.3081831
+185 0 2 0 0.6918169 1 0.3081831
+186 0 2 0 0.6918169 1 0.3081831
+187 0 2 0 0.6918169 1 0.3081831
+188 0 2 0 0.6918169 1 0.3081831
+189 0 2 0 0.6918169 1 0.3081831
+190 0 2 0 0.6918169 1 0.3081831
+191 0 2 0 0.6918169 1 0.3081831
+192 0 2 0 0.84590845 1 0.15409155
+193 0 2 0 0.84590845 1 0.15409155
+194 0 2 0 0.84590845 1 0.15409155
+195 0 2 0 0.84590845 1 0.15409155
+196 0 2 0 0.84590845 1 0.15409155
+197 0 2 0 0.84590845 1 0.15409155
+198 0 2 0 0.84590845 1 0.15409155
+199 0 2 0 0.84590845 1 0.15409155
+200 0 2 0 0.6918169 1 0.3081831
+201 0 2 0 0.6918169 1 0.3081831
+202 0 2 0 0.6918169 1 0.3081831
+203 0 2 0 0.6918169 1 0.3081831
+204 0 2 0 0.6918169 1 0.3081831
+205 0 2 0 0.6918169 1 0.3081831
+206 0 2 0 0.6918169 1 0.3081831
+207 0 2 0 0.6918169 1 0.3081831
+208 0 2 0 0.84590845 1 0.15409155
+209 0 2 0 0.84590845 1 0.15409155
+210 0 2 0 0.84590845 1 0.15409155
+211 0 2 0 0.84590845 1 0.15409155
+212 0 2 0 0.84590845 1 0.15409155
+213 0 2 0 0.84590845 1 0.15409155
+214 0 2 0 0.84590845 1 0.15409155
+215 0 2 0 0.84590845 1 0.15409155
+216 0 2 0 0.6918169 1 0.3081831
+217 0 2 0 0.6918169 1 0.3081831
+218 0 2 0 0.6918169 1 0.3081831
+219 0 2 0 0.6918169 1 0.3081831
+220 0 2 0 0.6918169 1 0.3081831
+221 0 2 0 0.6918169 1 0.3081831
+222 0 2 0 0.6918169 1 0.3081831
+223 0 2 0 0.6918169 1 0.3081831
+224 0 2 0 0.6918169 1 0.3081831
+225 0 2 0 0.6918169 1 0.3081831
+226 0 2 0 0.6918169 1 0.3081831
+227 0 2 0 0.6918169 1 0.3081831
+228 0 2 0 0.6918169 1 0.3081831
+229 0 2 0 0.6918169 1 0.3081831
+230 0 2 0 0.6918169 1 0.3081831
+231 0 2 0 0.6918169 1 0.3081831
+232 0 2 0 0.6918169 1 0.3081831
+233 0 2 0 0.6918169 1 0.3081831
+234 0 2 0 0.6918169 1 0.3081831
+235 0 2 0 0.6918169 1 0.3081831
+236 0 2 0 0.6918169 1 0.3081831
+237 0 2 0 0.6918169 1 0.3081831
+238 0 2 0 0.6918169 1 0.3081831
+239 0 2 0 0.6918169 1 0.3081831
+240 0 2 0 0.6918169 1 0.3081831
+241 0 2 0 0.6918169 1 0.3081831
+242 0 2 0 0.6918169 1 0.3081831
+243 0 2 0 0.6918169 1 0.3081831
+244 0 2 0 0.6918169 1 0.3081831
+245 0 2 0 0.6918169 1 0.3081831
+246 0 2 0 0.6918169 1 0.3081831
+247 0 2 0 0.6918169 1 0.3081831
+248 0 2 0 0.6918169 1 0.3081831
+249 0 2 0 0.6918169 1 0.3081831
+250 0 2 0 0.6918169 1 0.3081831
+251 0 2 0 0.6918169 1 0.3081831
+252 0 2 0 0.6918169 1 0.3081831
+253 0 2 0 0.6918169 1 0.3081831
+254 0 2 0 0.6918169 1 0.3081831
+255 0 2 0 0.6918169 1 0.3081831
+256 0 2 0 0.84590845 1 0.15409155
+257 0 2 0 0.84590845 1 0.15409155
+258 0 2 0 0.84590845 1 0.15409155
+259 0 2 0 0.84590845 1 0.15409155
+260 0 2 0 0.84590845 1 0.15409155
+261 0 2 0 0.84590845 1 0.15409155
+262 0 2 0 0.84590845 1 0.15409155
+263 0 2 0 0.84590845 1 0.15409155
+264 0 2 0 0.6918169 1 0.3081831
+265 0 2 0 0.6918169 1 0.3081831
+266 0 2 0 0.6918169 1 0.3081831
+267 0 2 0 0.6918169 1 0.3081831
+268 0 2 0 0.6918169 1 0.3081831
+269 0 2 0 0.6918169 1 0.3081831
+270 0 2 0 0.6918169 1 0.3081831
+271 0 2 0 0.6918169 1 0.3081831
+272 0 2 0 0.84590845 1 0.15409155
+273 0 2 0 0.84590845 1 0.15409155
+274 0 2 0 0.84590845 1 0.15409155
+275 0 2 0 0.84590845 1 0.15409155
+276 0 2 0 0.84590845 1 0.15409155
+277 0 2 0 0.84590845 1 0.15409155
+278 0 2 0 0.84590845 1 0.15409155
+279 0 2 0 0.84590845 1 0.15409155
+280 0 2 0 0.6918169 1 0.3081831
+281 0 2 0 0.6918169 1 0.3081831
+282 0 2 0 0.6918169 1 0.3081831
+283 0 2 0 0.6918169 1 0.3081831
+284 0 2 0 0.6918169 1 0.3081831
+285 0 2 0 0.6918169 1 0.3081831
+286 0 2 0 0.6918169 1 0.3081831
+287 0 2 0 0.6918169 1 0.3081831
+288 0 2 0 0.6918169 1 0.3081831
+289 0 2 0 0.6918169 1 0.3081831
+290 0 2 0 0.6918169 1 0.3081831
+291 0 2 0 0.6918169 1 0.3081831
+292 0 2 0 0.6918169 1 0.3081831
+293 0 2 0 0.6918169 1 0.3081831
+294 0 2 0 0.6918169 1 0.3081831
+295 0 2 0 0.6918169 1 0.3081831
+296 0 2 0 0.6918169 1 0.3081831
+297 0 2 0 0.6918169 1 0.3081831
+298 0 2 0 0.6918169 1 0.3081831
+299 0 2 0 0.6918169 1 0.3081831
+300 0 2 0 0.6918169 1 0.3081831
+301 0 2 0 0.6918169 1 0.3081831
+302 0 2 0 0.6918169 1 0.3081831
+303 0 2 0 0.6918169 1 0.3081831
+304 0 2 0 0.6918169 1 0.3081831
+305 0 2 0 0.6918169 1 0.3081831
+306 0 2 0 0.6918169 1 0.3081831
+307 0 2 0 0.6918169 1 0.3081831
+308 0 2 0 0.6918169 1 0.3081831
+309 0 2 0 0.6918169 1 0.3081831
+310 0 2 0 0.6918169 1 0.3081831
+311 0 2 0 0.6918169 1 0.3081831
+312 0 2 0 0.6918169 1 0.3081831
+313 0 2 0 0.6918169 1 0.3081831
+314 0 2 0 0.6918169 1 0.3081831
+315 0 2 0 0.6918169 1 0.3081831
+316 0 2 0 0.6918169 1 0.3081831
+317 0 2 0 0.6918169 1 0.3081831
+318 0 2 0 0.6918169 1 0.3081831
+319 0 2 0 0.6918169 1 0.3081831
+320 0 2 0 0.84590845 1 0.15409155
+321 0 2 0 0.84590845 1 0.15409155
+322 0 2 0 0.84590845 1 0.15409155
+323 0 2 0 0.84590845 1 0.15409155
+324 0 2 0 0.84590845 1 0.15409155
+325 0 2 0 0.84590845 1 0.15409155
+326 0 2 0 0.84590845 1 0.15409155
+327 0 2 0 0.84590845 1 0.15409155
+328 0 2 0 0.6918169 1 0.3081831
+329 0 2 0 0.6918169 1 0.3081831
+330 0 2 0 0.6918169 1 0.3081831
+331 0 2 0 0.6918169 1 0.3081831
+332 0 2 0 0.6918169 1 0.3081831
+333 0 2 0 0.6918169 1 0.3081831
+334 0 2 0 0.6918169 1 0.3081831
+335 0 2 0 0.6918169 1 0.3081831
+336 0 2 0 0.84590845 1 0.15409155
+337 0 2 0 0.84590845 1 0.15409155
+338 0 2 0 0.84590845 1 0.15409155
+339 0 2 0 0.84590845 1 0.15409155
+340 0 2 0 0.84590845 1 0.15409155
+341 0 2 0 0.84590845 1 0.15409155
+342 0 2 0 0.84590845 1 0.15409155
+343 0 2 0 0.84590845 1 0.15409155
+344 0 2 0 0.6918169 1 0.3081831
+345 0 2 0 0.6918169 1 0.3081831
+346 0 2 0 0.6918169 1 0.3081831
+347 0 2 0 0.6918169 1 0.3081831
+348 0 2 0 0.6918169 1 0.3081831
+349 0 2 0 0.6918169 1 0.3081831
+350 0 2 0 0.6918169 1 0.3081831
+351 0 2 0 0.6918169 1 0.3081831
+352 0 2 0 0.6918169 1 0.3081831
+353 0 2 0 0.6918169 1 0.3081831
+354 0 2 0 0.6918169 1 0.3081831
+355 0 2 0 0.6918169 1 0.3081831
+356 0 2 0 0.6918169 1 0.3081831
+357 0 2 0 0.6918169 1 0.3081831
+358 0 2 0 0.6918169 1 0.3081831
+359 0 2 0 0.6918169 1 0.3081831
+360 0 2 0 0.6918169 1 0.3081831
+361 0 2 0 0.6918169 1 0.3081831
+362 0 2 0 0.6918169 1 0.3081831
+363 0 2 0 0.6918169 1 0.3081831
+364 0 2 0 0.6918169 1 0.3081831
+365 0 2 0 0.6918169 1 0.3081831
+366 0 2 0 0.6918169 1 0.3081831
+367 0 2 0 0.6918169 1 0.3081831
+368 0 2 0 0.6918169 1 0.3081831
+369 0 2 0 0.6918169 1 0.3081831
+370 0 2 0 0.6918169 1 0.3081831
+371 0 2 0 0.6918169 1 0.3081831
+372 0 2 0 0.6918169 1 0.3081831
+373 0 2 0 0.6918169 1 0.3081831
+374 0 2 0 0.6918169 1 0.3081831
+375 0 2 0 0.6918169 1 0.3081831
+376 0 2 0 0.6918169 1 0.3081831
+377 0 2 0 0.6918169 1 0.3081831
+378 0 2 0 0.6918169 1 0.3081831
+379 0 2 0 0.6918169 1 0.3081831
+380 0 2 0 0.6918169 1 0.3081831
+381 0 2 0 0.6918169 1 0.3081831
+382 0 2 0 0.6918169 1 0.3081831
+383 0 2 0 0.6918169 1 0.3081831
+384 0 2 0 0.84590845 1 0.15409155
+385 0 2 0 0.84590845 1 0.15409155
+386 0 2 0 0.84590845 1 0.15409155
+387 0 2 0 0.84590845 1 0.15409155
+388 0 2 0 0.84590845 1 0.15409155
+389 0 2 0 0.84590845 1 0.15409155
+390 0 2 0 0.84590845 1 0.15409155
+391 0 2 0 0.84590845 1 0.15409155
+392 0 2 0 0.6918169 1 0.3081831
+393 0 2 0 0.6918169 1 0.3081831
+394 0 2 0 0.6918169 1 0.3081831
+395 0 2 0 0.6918169 1 0.3081831
+396 0 2 0 0.6918169 1 0.3081831
+397 0 2 0 0.6918169 1 0.3081831
+398 0 2 0 0.6918169 1 0.3081831
+399 0 2 0 0.6918169 1 0.3081831
+400 0 2 0 0.84590845 1 0.15409155
+401 0 2 0 0.84590845 1 0.15409155
+402 0 2 0 0.84590845 1 0.15409155
+403 0 2 0 0.84590845 1 0.15409155
+404 0 2 0 0.84590845 1 0.15409155
+405 0 2 0 0.84590845 1 0.15409155
+406 0 2 0 0.84590845 1 0.15409155
+407 0 2 0 0.84590845 1 0.15409155
+408 0 2 0 0.6918169 1 0.3081831
+409 0 2 0 0.6918169 1 0.3081831
+410 0 2 0 0.6918169 1 0.3081831
+411 0 2 0 0.6918169 1 0.3081831
+412 0 2 0 0.6918169 1 0.3081831
+413 0 2 0 0.6918169 1 0.3081831
+414 0 2 0 0.6918169 1 0.3081831
+415 0 2 0 0.6918169 1 0.3081831
+416 0 2 0 0.6918169 1 0.3081831
+417 0 2 0 0.6918169 1 0.3081831
+418 0 2 0 0.6918169 1 0.3081831
+419 0 2 0 0.6918169 1 0.3081831
+420 0 2 0 0.6918169 1 0.3081831
+421 0 2 0 0.6918169 1 0.3081831
+422 0 2 0 0.6918169 1 0.3081831
+423 0 2 0 0.6918169 1 0.3081831
+424 0 2 0 0.6918169 1 0.3081831
+425 0 2 0 0.6918169 1 0.3081831
+426 0 2 0 0.6918169 1 0.3081831
+427 0 2 0 0.6918169 1 0.3081831
+428 0 2 0 0.6918169 1 0.3081831
+429 0 2 0 0.6918169 1 0.3081831
+430 0 2 0 0.6918169 1 0.3081831
+431 0 2 0 0.6918169 1 0.3081831
+432 0 2 0 0.6918169 1 0.3081831
+433 0 2 0 0.6918169 1 0.3081831
+434 0 2 0 0.6918169 1 0.3081831
+435 0 2 0 0.6918169 1 0.3081831
+436 0 2 0 0.6918169 1 0.3081831
+437 0 2 0 0.6918169 1 0.3081831
+438 0 2 0 0.6918169 1 0.3081831
+439 0 2 0 0.6918169 1 0.3081831
+440 0 2 0 0.6918169 1 0.3081831
+441 0 2 0 0.6918169 1 0.3081831
+442 0 2 0 0.6918169 1 0.3081831
+443 0 2 0 0.6918169 1 0.3081831
+444 0 2 0 0.6918169 1 0.3081831
+445 0 2 0 0.6918169 1 0.3081831
+446 0 2 0 0.6918169 1 0.3081831
+447 0 2 0 0.6918169 1 0.3081831
+448 0 2 0 0.84590845 1 0.15409155
+449 0 2 0 0.84590845 1 0.15409155
+450 0 2 0 0.84590845 1 0.15409155
+451 0 2 0 0.84590845 1 0.15409155
+452 0 2 0 0.84590845 1 0.15409155
+453 0 2 0 0.84590845 1 0.15409155
+454 0 2 0 0.84590845 1 0.15409155
+455 0 2 0 0.84590845 1 0.15409155
+456 0 2 0 0.6918169 1 0.3081831
+457 0 2 0 0.6918169 1 0.3081831
+458 0 2 0 0.6918169 1 0.3081831
+459 0 2 0 0.6918169 1 0.3081831
+460 0 2 0 0.6918169 1 0.3081831
+461 0 2 0 0.6918169 1 0.3081831
+462 0 2 0 0.6918169 1 0.3081831
+463 0 2 0 0.6918169 1 0.3081831
+464 0 2 0 0.84590845 1 0.15409155
+465 0 2 0 0.84590845 1 0.15409155
+466 0 2 0 0.84590845 1 0.15409155
+467 0 2 0 0.84590845 1 0.15409155
+468 0 2 0 0.84590845 1 0.15409155
+469 0 2 0 0.84590845 1 0.15409155
+470 0 2 0 0.84590845 1 0.15409155
+471 0 2 0 0.84590845 1 0.15409155
+472 0 2 0 0.6918169 1 0.3081831
+473 0 2 0 0.6918169 1 0.3081831
+474 0 2 0 0.6918169 1 0.3081831
+475 0 2 0 0.6918169 1 0.3081831
+476 0 2 0 0.6918169 1 0.3081831
+477 0 2 0 0.6918169 1 0.3081831
+478 0 2 0 0.6918169 1 0.3081831
+479 0 2 0 0.6918169 1 0.3081831
+480 0 2 0 0.6918169 1 0.3081831
+481 0 2 0 0.6918169 1 0.3081831
+482 0 2 0 0.6918169 1 0.3081831
+483 0 2 0 0.6918169 1 0.3081831
+484 0 2 0 0.6918169 1 0.3081831
+485 0 2 0 0.6918169 1 0.3081831
+486 0 2 0 0.6918169 1 0.3081831
+487 0 2 0 0.6918169 1 0.3081831
+488 0 2 0 0.6918169 1 0.3081831
+489 0 2 0 0.6918169 1 0.3081831
+490 0 2 0 0.6918169 1 0.3081831
+491 0 2 0 0.6918169 1 0.3081831
+492 0 2 0 0.6918169 1 0.3081831
+493 0 2 0 0.6918169 1 0.3081831
+494 0 2 0 0.6918169 1 0.3081831
+495 0 2 0 0.6918169 1 0.3081831
+496 0 2 0 0.6918169 1 0.3081831
+497 0 2 0 0.6918169 1 0.3081831
+498 0 2 0 0.6918169 1 0.3081831
+499 0 2 0 0.6918169 1 0.3081831
+500 0 2 0 0.6918169 1 0.3081831
+501 0 2 0 0.6918169 1 0.3081831
+502 0 2 0 0.6918169 1 0.3081831
+503 0 2 0 0.6918169 1 0.3081831
+504 0 2 0 0.6918169 1 0.3081831
+505 0 2 0 0.6918169 1 0.3081831
+506 0 2 0 0.6918169 1 0.3081831
+507 0 2 0 0.6918169 1 0.3081831
+508 0 2 0 0.6918169 1 0.3081831
+509 0 2 0 0.6918169 1 0.3081831
+510 0 2 0 0.6918169 1 0.3081831
+511 0 2 0 0.6918169 1 0.3081831
+512 1 1 1 1
+513 1 1 1 1
+514 1 1 1 1
+515 1 1 1 1
+516 1 1 1 1
+517 1 1 1 1
+518 1 1 1 1
+519 1 1 1 1
+520 1 1 1 1
+521 1 1 1 1
+522 1 1 1 1
+523 1 1 1 1
+524 1 1 1 1
+525 1 1 1 1
+526 1 1 1 1
+527 1 1 1 1
+528 1 1 1 1
+529 1 1 1 1
+530 1 1 1 1
+531 1 1 1 1
+532 1 1 1 1
+533 1 1 1 1
+534 1 1 1 1
+535 1 1 1 1
+536 1 1 1 1
+537 1 1 1 1
+538 1 1 1 1
+539 1 1 1 1
+540 1 1 1 1
+541 1 1 1 1
+542 1 1 1 1
+543 1 1 1 1
+544 1 1 1 1
+545 1 1 1 1
+546 1 1 1 1
+547 1 1 1 1
+548 1 1 1 1
+549 1 1 1 1
+550 1 1 1 1
+551 1 1 1 1
+552 1 1 1 1
+553 1 1 1 1
+554 1 1 1 1
+555 1 1 1 1
+556 1 1 1 1
+557 1 1 1 1
+558 1 1 1 1
+559 1 1 1 1
+560 1 1 1 1
+561 1 1 1 1
+562 1 1 1 1
+563 1 1 1 1
+564 1 1 1 1
+565 1 1 1 1
+566 1 1 1 1
+567 1 1 1 1
+568 1 1 1 1
+569 1 1 1 1
+570 1 1 1 1
+571 1 1 1 1
+572 1 1 1 1
+573 1 1 1 1
+574 1 1 1 1
+575 1 1 1 1
+576 1 1 1 1
+577 0 1 0 1
+578 1 1 1 1
+579 0 2 0 0.84590845 1 0.15409155
+580 1 1 1 1
+581 0 2 0 0.84590845 1 0.15409155
+582 1 1 1 1
+583 0 2 0 0.84590845 1 0.15409155
+584 1 1 1 1
+585 0 2 0 0.6918169 1 0.3081831
+586 1 1 1 1
+587 0 2 0 0.6918169 1 0.3081831
+588 1 1 1 1
+589 0 2 0 0.6918169 1 0.3081831
+590 1 1 1 1
+591 0 2 0 0.6918169 1 0.3081831
+592 1 1 1 1
+593 0 2 0 0.84590845 1 0.15409155
+594 1 1 1 1
+595 0 2 0 0.84590845 1 0.15409155
+596 1 1 1 1
+597 0 2 0 0.84590845 1 0.15409155
+598 1 1 1 1
+599 0 2 0 0.84590845 1 0.15409155
+600 1 1 1 1
+601 0 2 0 0.6918169 1 0.3081831
+602 1 1 1 1
+603 0 2 0 0.6918169 1 0.3081831
+604 1 1 1 1
+605 0 2 0 0.6918169 1 0.3081831
+606 1 1 1 1
+607 0 2 0 0.6918169 1 0.3081831
+608 1 1 1 1
+609 0 2 0 0.6918169 1 0.3081831
+610 1 1 1 1
+611 0 2 0 0.6918169 1 0.3081831
+612 1 1 1 1
+613 0 2 0 0.6918169 1 0.3081831
+614 1 1 1 1
+615 0 2 0 0.6918169 1 0.3081831
+616 1 1 1 1
+617 0 2 0 0.6918169 1 0.3081831
+618 1 1 1 1
+619 0 2 0 0.6918169 1 0.3081831
+620 1 1 1 1
+621 0 2 0 0.6918169 1 0.3081831
+622 1 1 1 1
+623 0 2 0 0.6918169 1 0.3081831
+624 1 1 1 1
+625 0 2 0 0.6918169 1 0.3081831
+626 1 1 1 1
+627 0 2 0 0.6918169 1 0.3081831
+628 1 1 1 1
+629 0 2 0 0.6918169 1 0.3081831
+630 1 1 1 1
+631 0 2 0 0.6918169 1 0.3081831
+632 1 1 1 1
+633 0 2 0 0.6918169 1 0.3081831
+634 1 1 1 1
+635 0 2 0 0.6918169 1 0.3081831
+636 1 1 1 1
+637 0 2 0 0.6918169 1 0.3081831
+638 1 1 1 1
+639 0 2 0 0.6918169 1 0.3081831
+640 1 1 1 1
+641 1 1 1 1
+642 1 1 1 1
+643 1 1 1 1
+644 1 1 1 1
+645 1 1 1 1
+646 1 1 1 1
+647 1 1 1 1
+648 1 1 1 1
+649 1 1 1 1
+650 1 1 1 1
+651 1 1 1 1
+652 1 1 1 1
+653 1 1 1 1
+654 1 1 1 1
+655 1 1 1 1
+656 1 1 1 1
+657 1 1 1 1
+658 1 1 1 1
+659 1 1 1 1
+660 1 1 1 1
+661 1 1 1 1
+662 1 1 1 1
+663 1 1 1 1
+664 1 1 1 1
+665 1 1 1 1
+666 1 1 1 1
+667 1 1 1 1
+668 1 1 1 1
+669 1 1 1 1
+670 1 1 1 1
+671 1 1 1 1
+672 1 1 1 1
+673 1 1 1 1
+674 1 1 1 1
+675 1 1 1 1
+676 1 1 1 1
+677 1 1 1 1
+678 1 1 1 1
+679 1 1 1 1
+680 1 1 1 1
+681 1 1 1 1
+682 1 1 1 1
+683 1 1 1 1
+684 1 1 1 1
+685 1 1 1 1
+686 1 1 1 1
+687 1 1 1 1
+688 1 1 1 1
+689 1 1 1 1
+690 1 1 1 1
+691 1 1 1 1
+692 1 1 1 1
+693 1 1 1 1
+694 1 1 1 1
+695 1 1 1 1
+696 1 1 1 1
+697 1 1 1 1
+698 1 1 1 1
+699 1 1 1 1
+700 1 1 1 1
+701 1 1 1 1
+702 1 1 1 1
+703 1 1 1 1
+704 1 1 1 1
+705 0 2 0 0.84590845 1 0.15409155
+706 1 1 1 1
+707 0 2 0 0.84590845 1 0.15409155
+708 1 1 1 1
+709 0 2 0 0.84590845 1 0.15409155
+710 1 1 1 1
+711 0 2 0 0.84590845 1 0.15409155
+712 1 1 1 1
+713 0 2 0 0.6918169 1 0.3081831
+714 1 1 1 1
+715 0 2 0 0.6918169 1 0.3081831
+716 1 1 1 1
+717 0 2 0 0.6918169 1 0.3081831
+718 1 1 1 1
+719 0 2 0 0.6918169 1 0.3081831
+720 1 1 1 1
+721 0 2 0 0.84590845 1 0.15409155
+722 1 1 1 1
+723 0 2 0 0.84590845 1 0.15409155
+724 1 1 1 1
+725 0 2 0 0.84590845 1 0.15409155
+726 1 1 1 1
+727 0 2 0 0.84590845 1 0.15409155
+728 1 1 1 1
+729 0 2 0 0.6918169 1 0.3081831
+730 1 1 1 1
+731 0 2 0 0.6918169 1 0.3081831
+732 1 1 1 1
+733 0 2 0 0.6918169 1 0.3081831
+734 1 1 1 1
+735 0 2 0 0.6918169 1 0.3081831
+736 1 1 1 1
+737 0 2 0 0.6918169 1 0.3081831
+738 1 1 1 1
+739 0 2 0 0.6918169 1 0.3081831
+740 1 1 1 1
+741 0 2 0 0.6918169 1 0.3081831
+742 1 1 1 1
+743 0 2 0 0.6918169 1 0.3081831
+744 1 1 1 1
+745 0 2 0 0.6918169 1 0.3081831
+746 1 1 1 1
+747 0 2 0 0.6918169 1 0.3081831
+748 1 1 1 1
+749 0 2 0 0.6918169 1 0.3081831
+750 1 1 1 1
+751 0 2 0 0.6918169 1 0.3081831
+752 1 1 1 1
+753 0 2 0 0.6918169 1 0.3081831
+754 1 1 1 1
+755 0 2 0 0.6918169 1 0.3081831
+756 1 1 1 1
+757 0 2 0 0.6918169 1 0.3081831
+758 1 1 1 1
+759 0 2 0 0.6918169 1 0.3081831
+760 1 1 1 1
+761 0 2 0 0.6918169 1 0.3081831
+762 1 1 1 1
+763 0 2 0 0.6918169 1 0.3081831
+764 1 1 1 1
+765 0 2 0 0.6918169 1 0.3081831
+766 1 1 1 1
+767 0 2 0 0.6918169 1 0.3081831
+768 1 1 1 1
+769 1 1 1 1
+770 1 1 1 1
+771 1 1 1 1
+772 1 1 1 1
+773 1 1 1 1
+774 1 1 1 1
+775 1 1 1 1
+776 1 1 1 1
+777 1 1 1 1
+778 1 1 1 1
+779 1 1 1 1
+780 1 1 1 1
+781 1 1 1 1
+782 1 1 1 1
+783 1 1 1 1
+784 1 1 1 1
+785 1 1 1 1
+786 1 1 1 1
+787 1 1 1 1
+788 1 1 1 1
+789 1 1 1 1
+790 1 1 1 1
+791 1 1 1 1
+792 1 1 1 1
+793 1 1 1 1
+794 1 1 1 1
+795 1 1 1 1
+796 1 1 1 1
+797 1 1 1 1
+798 1 1 1 1
+799 1 1 1 1
+800 1 1 1 1
+801 1 1 1 1
+802 1 1 1 1
+803 1 1 1 1
+804 1 1 1 1
+805 1 1 1 1
+806 1 1 1 1
+807 1 1 1 1
+808 1 1 1 1
+809 1 1 1 1
+810 1 1 1 1
+811 1 1 1 1
+812 1 1 1 1
+813 1 1 1 1
+814 1 1 1 1
+815 1 1 1 1
+816 1 1 1 1
+817 1 1 1 1
+818 1 1 1 1
+819 1 1 1 1
+820 1 1 1 1
+821 1 1 1 1
+822 1 1 1 1
+823 1 1 1 1
+824 1 1 1 1
+825 1 1 1 1
+826 1 1 1 1
+827 1 1 1 1
+828 1 1 1 1
+829 1 1 1 1
+830 1 1 1 1
+831 1 1 1 1
+832 1 1 1 1
+833 0 2 0 0.84590845 1 0.15409155
+834 1 1 1 1
+835 0 2 0 0.84590845 1 0.15409155
+836 1 1 1 1
+837 0 2 0 0.84590845 1 0.15409155
+838 1 1 1 1
+839 0 2 0 0.84590845 1 0.15409155
+840 1 1 1 1
+841 0 2 0 0.6918169 1 0.3081831
+842 1 1 1 1
+843 0 2 0 0.6918169 1 0.3081831
+844 1 1 1 1
+845 0 2 0 0.6918169 1 0.3081831
+846 1 1 1 1
+847 0 2 0 0.6918169 1 0.3081831
+848 1 1 1 1
+849 0 2 0 0.84590845 1 0.15409155
+850 1 1 1 1
+851 0 2 0 0.84590845 1 0.15409155
+852 1 1 1 1
+853 0 2 0 0.84590845 1 0.15409155
+854 1 1 1 1
+855 0 2 0 0.84590845 1 0.15409155
+856 1 1 1 1
+857 0 2 0 0.6918169 1 0.3081831
+858 1 1 1 1
+859 0 2 0 0.6918169 1 0.3081831
+860 1 1 1 1
+861 0 2 0 0.6918169 1 0.3081831
+862 1 1 1 1
+863 0 2 0 0.6918169 1 0.3081831
+864 1 1 1 1
+865 0 2 0 0.6918169 1 0.3081831
+866 1 1 1 1
+867 0 2 0 0.6918169 1 0.3081831
+868 1 1 1 1
+869 0 2 0 0.6918169 1 0.3081831
+870 1 1 1 1
+871 0 2 0 0.6918169 1 0.3081831
+872 1 1 1 1
+873 0 2 0 0.6918169 1 0.3081831
+874 1 1 1 1
+875 0 2 0 0.6918169 1 0.3081831
+876 1 1 1 1
+877 0 2 0 0.6918169 1 0.3081831
+878 1 1 1 1
+879 0 2 0 0.6918169 1 0.3081831
+880 1 1 1 1
+881 0 2 0 0.6918169 1 0.3081831
+882 1 1 1 1
+883 0 2 0 0.6918169 1 0.3081831
+884 1 1 1 1
+885 0 2 0 0.6918169 1 0.3081831
+886 1 1 1 1
+887 0 2 0 0.6918169 1 0.3081831
+888 1 1 1 1
+889 0 2 0 0.6918169 1 0.3081831
+890 1 1 1 1
+891 0 2 0 0.6918169 1 0.3081831
+892 1 1 1 1
+893 0 2 0 0.6918169 1 0.3081831
+894 1 1 1 1
+895 0 2 0 0.6918169 1 0.3081831
+896 1 1 1 1
+897 1 1 1 1
+898 1 1 1 1
+899 1 1 1 1
+900 1 1 1 1
+901 1 1 1 1
+902 1 1 1 1
+903 1 1 1 1
+904 1 1 1 1
+905 1 1 1 1
+906 1 1 1 1
+907 1 1 1 1
+908 1 1 1 1
+909 1 1 1 1
+910 1 1 1 1
+911 1 1 1 1
+912 1 1 1 1
+913 1 1 1 1
+914 1 1 1 1
+915 1 1 1 1
+916 1 1 1 1
+917 1 1 1 1
+918 1 1 1 1
+919 1 1 1 1
+920 1 1 1 1
+921 1 1 1 1
+922 1 1 1 1
+923 1 1 1 1
+924 1 1 1 1
+925 1 1 1 1
+926 1 1 1 1
+927 1 1 1 1
+928 1 1 1 1
+929 1 1 1 1
+930 1 1 1 1
+931 1 1 1 1
+932 1 1 1 1
+933 1 1 1 1
+934 1 1 1 1
+935 1 1 1 1
+936 1 1 1 1
+937 1 1 1 1
+938 1 1 1 1
+939 1 1 1 1
+940 1 1 1 1
+941 1 1 1 1
+942 1 1 1 1
+943 1 1 1 1
+944 1 1 1 1
+945 1 1 1 1
+946 1 1 1 1
+947 1 1 1 1
+948 1 1 1 1
+949 1 1 1 1
+950 1 1 1 1
+951 1 1 1 1
+952 1 1 1 1
+953 1 1 1 1
+954 1 1 1 1
+955 1 1 1 1
+956 1 1 1 1
+957 1 1 1 1
+958 1 1 1 1
+959 1 1 1 1
+960 1 1 1 1
+961 0 2 0 0.84590845 1 0.15409155
+962 1 1 1 1
+963 0 2 0 0.84590845 1 0.15409155
+964 1 1 1 1
+965 0 2 0 0.84590845 1 0.15409155
+966 1 1 1 1
+967 0 2 0 0.84590845 1 0.15409155
+968 1 1 1 1
+969 0 2 0 0.6918169 1 0.3081831
+970 1 1 1 1
+971 0 2 0 0.6918169 1 0.3081831
+972 1 1 1 1
+973 0 2 0 0.6918169 1 0.3081831
+974 1 1 1 1
+975 0 2 0 0.6918169 1 0.3081831
+976 1 1 1 1
+977 0 2 0 0.84590845 1 0.15409155
+978 1 1 1 1
+979 0 2 0 0.84590845 1 0.15409155
+980 1 1 1 1
+981 0 2 0 0.84590845 1 0.15409155
+982 1 1 1 1
+983 0 2 0 0.84590845 1 0.15409155
+984 1 1 1 1
+985 0 2 0 0.6918169 1 0.3081831
+986 1 1 1 1
+987 0 2 0 0.6918169 1 0.3081831
+988 1 1 1 1
+989 0 2 0 0.6918169 1 0.3081831
+990 1 1 1 1
+991 0 2 0 0.6918169 1 0.3081831
+992 1 1 1 1
+993 0 2 0 0.6918169 1 0.3081831
+994 1 1 1 1
+995 0 2 0 0.6918169 1 0.3081831
+996 1 1 1 1
+997 0 2 0 0.6918169 1 0.3081831
+998 1 1 1 1
+999 0 2 0 0.6918169 1 0.3081831
+1000 1 1 1 1
+1001 0 2 0 0.6918169 1 0.3081831
+1002 1 1 1 1
+1003 0 2 0 0.6918169 1 0.3081831
+1004 1 1 1 1
+1005 0 2 0 0.6918169 1 0.3081831
+1006 1 1 1 1
+1007 0 2 0 0.6918169 1 0.3081831
+1008 1 1 1 1
+1009 0 2 0 0.6918169 1 0.3081831
+1010 1 1 1 1
+1011 0 2 0 0.6918169 1 0.3081831
+1012 1 1 1 1
+1013 0 2 0 0.6918169 1 0.3081831
+1014 1 1 1 1
+1015 0 2 0 0.6918169 1 0.3081831
+1016 1 1 1 1
+1017 0 2 0 0.6918169 1 0.3081831
+1018 1 1 1 1
+1019 0 2 0 0.6918169 1 0.3081831
+1020 1 1 1 1
+1021 0 2 0 0.6918169 1 0.3081831
+1022 1 1 1 1
+1023 0 2 0 0.6918169 1 0.3081831
+## kleene caching type
+VECTOR
+## kleene caching vec size
+39366
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 1
+25 0
+26 0
+27 0
+
+## index
+2
+## name
+lifeDetected(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(55) : $c(1)) (or($s(32) ~($s(62))) : $c(0)) (and($s(53) $s(20) $a(6)) : Bernoulli($c(0.4))) (and($s(20) $a(6)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(55) : $c(1)) (or($s(32) ~($s(62))) : $c(0)) (and($s(53) $s(20) $a(6)) : $c(0)) (and($s(20) $a(6)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+55
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 1
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+3
+## name
+lifeDetected(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(56) : $c(1)) (or($s(33) ~($s(63))) : $c(0)) (and($s(53) $s(19) $a(7)) : Bernoulli($c(0.4))) (and($s(19) $a(7)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(56) : $c(1)) (or($s(33) ~($s(63))) : $c(0)) (and($s(53) $s(19) $a(7)) : $c(0)) (and($s(19) $a(7)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+56
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 1
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+4
+## name
+lifeDetected(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(57) : $c(1)) (or($s(34) ~($s(64))) : $c(0)) (and($s(53) $s(14) $a(8)) : Bernoulli($c(0.4))) (and($s(14) $a(8)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(57) : $c(1)) (or($s(34) ~($s(64))) : $c(0)) (and($s(53) $s(14) $a(8)) : $c(0)) (and($s(14) $a(8)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+57
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 1
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+5
+## name
+lifeDetected(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(58) : $c(1)) (or($s(35) ~($s(65))) : $c(0)) (and($s(53) $s(17) $a(9)) : Bernoulli($c(0.4))) (and($s(17) $a(9)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(58) : $c(1)) (or($s(35) ~($s(65))) : $c(0)) (and($s(53) $s(17) $a(9)) : $c(0)) (and($s(17) $a(9)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+58
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 1
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+6
+## name
+lifeDetected(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(59) : $c(1)) (or($s(36) ~($s(66))) : $c(0)) (and($s(53) $s(24) $a(10)) : Bernoulli($c(0.4))) (and($s(24) $a(10)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(59) : $c(1)) (or($s(36) ~($s(66))) : $c(0)) (and($s(53) $s(24) $a(10)) : $c(0)) (and($s(24) $a(10)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+59
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 1
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+7
+## name
+lifeDetected(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(60) : $c(1)) (or($s(37) ~($s(67))) : $c(0)) (and($s(53) $s(0) $a(11)) : Bernoulli($c(0.4))) (and($s(0) $a(11)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(60) : $c(1)) (or($s(37) ~($s(67))) : $c(0)) (and($s(53) $s(0) $a(11)) : $c(0)) (and($s(0) $a(11)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+60
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 1
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+8
+## name
+lifeDetected(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(61) : $c(1)) (or($s(38) ~($s(68))) : $c(0)) (and($s(53) $s(10) $a(12)) : Bernoulli($c(0.4))) (and($s(10) $a(12)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(61) : $c(1)) (or($s(38) ~($s(68))) : $c(0)) (and($s(53) $s(10) $a(12)) : $c(0)) (and($s(10) $a(12)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+61
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+64
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+32 0 1 0 1
+33 0 1 0 1
+34 0 1 0 1
+35 1 2 0 0.2 1 0.8
+36 0 1 0 1
+37 0 1 0 1
+38 0 1 0 1
+39 0 1 0 1
+40 0 1 0 1
+41 0 1 0 1
+42 0 1 0 1
+43 0 2 0 0.6 1 0.4
+44 0 1 0 1
+45 0 1 0 1
+46 0 1 0 1
+47 0 1 0 1
+48 1 1 1 1
+49 1 1 1 1
+50 1 1 1 1
+51 1 1 1 1
+52 1 1 1 1
+53 1 1 1 1
+54 1 1 1 1
+55 1 1 1 1
+56 1 1 1 1
+57 1 1 1 1
+58 1 1 1 1
+59 1 1 1 1
+60 1 1 1 1
+61 1 1 1 1
+62 1 1 1 1
+63 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+486
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 1
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+9
+## name
+waterDetected(o0)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(62) : $c(1)) ($s(46) : $c(0)) (and($s(54) $s(20) $a(20)) : Bernoulli($c(0.4))) (and($s(20) $a(20)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(62) : $c(1)) ($s(46) : $c(0)) (and($s(54) $s(20) $a(20)) : $c(0)) (and($s(20) $a(20)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+62
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 1
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+10
+## name
+waterDetected(o1)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(63) : $c(1)) ($s(47) : $c(0)) (and($s(54) $s(19) $a(21)) : Bernoulli($c(0.4))) (and($s(19) $a(21)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(63) : $c(1)) ($s(47) : $c(0)) (and($s(54) $s(19) $a(21)) : $c(0)) (and($s(19) $a(21)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+63
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 1
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+11
+## name
+waterDetected(o2)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(64) : $c(1)) ($s(48) : $c(0)) (and($s(54) $s(14) $a(22)) : Bernoulli($c(0.4))) (and($s(14) $a(22)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(64) : $c(1)) ($s(48) : $c(0)) (and($s(54) $s(14) $a(22)) : $c(0)) (and($s(14) $a(22)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+64
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+12
+## name
+waterDetected(o3)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(65) : $c(1)) ($s(49) : $c(0)) (and($s(54) $s(17) $a(23)) : Bernoulli($c(0.4))) (and($s(17) $a(23)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(65) : $c(1)) ($s(49) : $c(0)) (and($s(54) $s(17) $a(23)) : $c(0)) (and($s(17) $a(23)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+65
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+13
+## name
+waterDetected(o4)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(66) : $c(1)) ($s(50) : $c(0)) (and($s(54) $s(24) $a(24)) : Bernoulli($c(0.4))) (and($s(24) $a(24)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(66) : $c(1)) ($s(50) : $c(0)) (and($s(54) $s(24) $a(24)) : $c(0)) (and($s(24) $a(24)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+66
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+14
+## name
+waterDetected(o5)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(67) : $c(1)) ($s(51) : $c(0)) (and($s(54) $s(0) $a(25)) : Bernoulli($c(0.4))) (and($s(0) $a(25)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(67) : $c(1)) ($s(51) : $c(0)) (and($s(54) $s(0) $a(25)) : $c(0)) (and($s(0) $a(25)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+67
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 0
+2 1
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+## index
+15
+## name
+waterDetected(o6)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( ($s(68) : $c(1)) ($s(52) : $c(0)) (and($s(54) $s(10) $a(26)) : Bernoulli($c(0.4))) (and($s(10) $a(26)) : Bernoulli($c(0.8))) ($c(1) : $c(0)) )
+## determinized formula
+switch( ($s(68) : $c(1)) ($s(52) : $c(0)) (and($s(54) $s(10) $a(26)) : $c(0)) (and($s(10) $a(26)) : $c(1)) ($c(1) : $c(0)) )
+## hash index
+68
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+32
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 1 2 0 0.2 1 0.8
+4 0 1 0 1
+5 0 1 0 1
+6 0 1 0 1
+7 0 1 0 1
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 2 0 0.6 1 0.4
+12 0 1 0 1
+13 0 1 0 1
+14 0 1 0 1
+15 0 1 0 1
+16 1 1 1 1
+17 1 1 1 1
+18 1 1 1 1
+19 1 1 1 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 1 1 1
+24 1 1 1 1
+25 1 1 1 1
+26 1 1 1 1
+27 1 1 1 1
+28 1 1 1 1
+29 1 1 1 1
+30 1 1 1 1
+31 1 1 1 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+162
+## action hash keys
+0 0
+1 1
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+
+
+#####REWARD#####
+## formula
++(*(and(~($s(39)) $s(55) $s(20) $a(13)) $c(0.58386946)) *(and(~($s(40)) $s(56) $s(19) $a(14)) $c(0.58386946)) *(and(~($s(41)) $s(57) $s(14) $a(15)) $c(0.58386946)) *(and(~($s(42)) $s(58) $s(17) $a(16)) $c(0.58386946)) *(and(~($s(43)) $s(59) $s(24) $a(17)) $c(0.58386946)) *(and(~($s(44)) $s(60) $s(0) $a(18)) $c(0.58386946)) *(and(~($s(45)) $s(61) $s(10) $a(19)) $c(0.58386946)) -($c(0) *(and(~($s(55)) $s(20) $a(13)) $c(0.28460833))) -($c(0) *(and(~($s(56)) $s(19) $a(14)) $c(0.28460833))) -($c(0) *(and(~($s(57)) $s(14) $a(15)) $c(0.28460833))) -($c(0) *(and(~($s(58)) $s(17) $a(16)) $c(0.28460833))) -($c(0) *(and(~($s(59)) $s(24) $a(17)) $c(0.28460833))) -($c(0) *(and(~($s(60)) $s(0) $a(18)) $c(0.28460833))) -($c(0) *(and(~($s(61)) $s(10) $a(19)) $c(0.28460833))))
+## min
+-0.28460833
+## max
+0.58386946
+## independent from actions
+0
+## hash index
+69
+## caching type
+MAP
+## kleene caching type
+MAP
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 1
+9 2
+10 3
+11 4
+12 5
+13 6
+14 7
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+21 0
+22 0
+23 0
+24 0
+25 0
+26 0
+27 0
+
+
+#####PRECONDITIONS#####
+
+
+#####ACTION STATES#####
+## index
+0
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+1
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+## relevant preconditions
+0
+
+
+## index
+2
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+## relevant preconditions
+0
+
+
+## index
+3
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+## relevant preconditions
+0
+
+
+## index
+4
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+5
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+6
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+7
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+8
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+9
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+10
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+11
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+12
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+13
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+14
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+15
+## state
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+16
+## state
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+17
+## state
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+18
+## state
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+19
+## state
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+20
+## state
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+21
+## state
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+22
+## state
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+23
+## state
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+24
+## state
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+25
+## state
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+26
+## state
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+27
+## state
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+## relevant preconditions
+0
+
+
+
+#####HASH KEYS OF DETERMINISTIC STATE FLUENTS#####
+## index
+0
+
+## state fluent hash keys (first line is the number of keys)
+12
+0 5
+1 5
+5 5
+30 2
+37 2
+44 2
+51 2
+53 2
+54 2
+60 2
+67 2
+69 8
+## kleene state fluent hash keys (first line is the number of keys)
+12
+0 5
+1 5
+5 5
+30 2
+37 2
+44 2
+51 2
+53 2
+54 2
+60 2
+67 2
+69 8
+
+## index
+1
+
+## state fluent hash keys (first line is the number of keys)
+4
+0 10
+1 10
+2 5
+6 5
+## kleene state fluent hash keys (first line is the number of keys)
+4
+0 15
+1 15
+2 5
+6 5
+
+## index
+2
+
+## state fluent hash keys (first line is the number of keys)
+6
+1 20
+2 10
+3 5
+7 5
+53 4
+54 4
+## kleene state fluent hash keys (first line is the number of keys)
+6
+1 45
+2 15
+3 5
+7 5
+53 6
+54 6
+
+## index
+3
+
+## state fluent hash keys (first line is the number of keys)
+4
+2 20
+3 10
+4 5
+8 5
+## kleene state fluent hash keys (first line is the number of keys)
+4
+2 45
+3 15
+4 5
+8 5
+
+## index
+4
+
+## state fluent hash keys (first line is the number of keys)
+3
+3 20
+4 10
+9 5
+## kleene state fluent hash keys (first line is the number of keys)
+3
+3 45
+4 15
+9 5
+
+## index
+5
+
+## state fluent hash keys (first line is the number of keys)
+6
+0 20
+5 10
+6 10
+10 5
+53 8
+54 8
+## kleene state fluent hash keys (first line is the number of keys)
+6
+0 45
+5 15
+6 15
+10 5
+53 18
+54 18
+
+## index
+6
+
+## state fluent hash keys (first line is the number of keys)
+7
+1 40
+5 20
+6 20
+7 10
+11 5
+53 16
+54 16
+## kleene state fluent hash keys (first line is the number of keys)
+7
+1 135
+5 45
+6 45
+7 15
+11 5
+53 54
+54 54
+
+## index
+7
+
+## state fluent hash keys (first line is the number of keys)
+7
+2 40
+6 40
+7 20
+8 10
+12 5
+53 32
+54 32
+## kleene state fluent hash keys (first line is the number of keys)
+7
+2 135
+6 135
+7 45
+8 15
+12 5
+53 162
+54 162
+
+## index
+8
+
+## state fluent hash keys (first line is the number of keys)
+7
+3 40
+7 40
+8 20
+9 10
+13 5
+53 64
+54 64
+## kleene state fluent hash keys (first line is the number of keys)
+7
+3 135
+7 135
+8 45
+9 15
+13 5
+53 486
+54 486
+
+## index
+9
+
+## state fluent hash keys (first line is the number of keys)
+4
+4 20
+8 40
+9 20
+14 5
+## kleene state fluent hash keys (first line is the number of keys)
+4
+4 45
+8 135
+9 45
+14 5
+
+## index
+10
+
+## state fluent hash keys (first line is the number of keys)
+13
+5 40
+10 10
+11 10
+15 5
+31 2
+38 2
+45 2
+52 2
+53 128
+54 128
+61 2
+68 2
+69 16
+## kleene state fluent hash keys (first line is the number of keys)
+13
+5 135
+10 15
+11 15
+15 5
+31 2
+38 2
+45 2
+52 2
+53 1458
+54 1458
+61 2
+68 2
+69 24
+
+## index
+11
+
+## state fluent hash keys (first line is the number of keys)
+5
+6 80
+10 20
+11 20
+12 10
+16 5
+## kleene state fluent hash keys (first line is the number of keys)
+5
+6 405
+10 45
+11 45
+12 15
+16 5
+
+## index
+12
+
+## state fluent hash keys (first line is the number of keys)
+7
+7 80
+11 40
+12 20
+13 10
+17 5
+53 256
+54 256
+## kleene state fluent hash keys (first line is the number of keys)
+7
+7 405
+11 135
+12 45
+13 15
+17 5
+53 4374
+54 4374
+
+## index
+13
+
+## state fluent hash keys (first line is the number of keys)
+5
+8 80
+12 40
+13 20
+14 10
+18 5
+## kleene state fluent hash keys (first line is the number of keys)
+5
+8 405
+12 135
+13 45
+14 15
+18 5
+
+## index
+14
+
+## state fluent hash keys (first line is the number of keys)
+11
+9 40
+13 40
+14 20
+19 5
+27 2
+34 2
+41 2
+48 2
+57 2
+64 2
+69 32
+## kleene state fluent hash keys (first line is the number of keys)
+11
+9 135
+13 135
+14 45
+19 5
+27 2
+34 2
+41 2
+48 2
+57 2
+64 2
+69 72
+
+## index
+15
+
+## state fluent hash keys (first line is the number of keys)
+4
+10 40
+15 10
+16 10
+20 5
+## kleene state fluent hash keys (first line is the number of keys)
+4
+10 135
+15 15
+16 15
+20 5
+
+## index
+16
+
+## state fluent hash keys (first line is the number of keys)
+5
+11 80
+15 20
+16 20
+17 10
+21 5
+## kleene state fluent hash keys (first line is the number of keys)
+5
+11 405
+15 45
+16 45
+17 15
+21 5
+
+## index
+17
+
+## state fluent hash keys (first line is the number of keys)
+12
+12 80
+16 40
+17 20
+18 10
+22 5
+28 2
+35 2
+42 2
+49 2
+58 2
+65 2
+69 64
+## kleene state fluent hash keys (first line is the number of keys)
+12
+12 405
+16 135
+17 45
+18 15
+22 5
+28 2
+35 2
+42 2
+49 2
+58 2
+65 2
+69 216
+
+## index
+18
+
+## state fluent hash keys (first line is the number of keys)
+5
+13 80
+17 40
+18 20
+19 10
+23 5
+## kleene state fluent hash keys (first line is the number of keys)
+5
+13 405
+17 135
+18 45
+19 15
+23 5
+
+## index
+19
+
+## state fluent hash keys (first line is the number of keys)
+11
+14 40
+18 40
+19 20
+24 5
+26 2
+33 2
+40 2
+47 2
+56 2
+63 2
+69 128
+## kleene state fluent hash keys (first line is the number of keys)
+11
+14 135
+18 135
+19 45
+24 5
+26 2
+33 2
+40 2
+47 2
+56 2
+63 2
+69 648
+
+## index
+20
+
+## state fluent hash keys (first line is the number of keys)
+10
+15 40
+20 10
+21 10
+25 2
+32 2
+39 2
+46 2
+55 2
+62 2
+69 256
+## kleene state fluent hash keys (first line is the number of keys)
+10
+15 135
+20 15
+21 15
+25 2
+32 2
+39 2
+46 2
+55 2
+62 2
+69 1944
+
+## index
+21
+
+## state fluent hash keys (first line is the number of keys)
+4
+16 80
+20 20
+21 20
+22 10
+## kleene state fluent hash keys (first line is the number of keys)
+4
+16 405
+20 45
+21 45
+22 15
+
+## index
+22
+
+## state fluent hash keys (first line is the number of keys)
+4
+17 80
+21 40
+22 20
+23 10
+## kleene state fluent hash keys (first line is the number of keys)
+4
+17 405
+21 135
+22 45
+23 15
+
+## index
+23
+
+## state fluent hash keys (first line is the number of keys)
+4
+18 80
+22 40
+23 20
+24 10
+## kleene state fluent hash keys (first line is the number of keys)
+4
+18 405
+22 135
+23 45
+24 15
+
+## index
+24
+
+## state fluent hash keys (first line is the number of keys)
+10
+19 40
+23 40
+24 20
+29 2
+36 2
+43 2
+50 2
+59 2
+66 2
+69 512
+## kleene state fluent hash keys (first line is the number of keys)
+10
+19 135
+23 135
+24 45
+29 2
+36 2
+43 2
+50 2
+59 2
+66 2
+69 5832
+
+## index
+25
+
+## state fluent hash keys (first line is the number of keys)
+2
+25 4
+32 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+25 6
+32 6
+
+## index
+26
+
+## state fluent hash keys (first line is the number of keys)
+2
+26 4
+33 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+26 6
+33 6
+
+## index
+27
+
+## state fluent hash keys (first line is the number of keys)
+2
+27 4
+34 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+27 6
+34 6
+
+## index
+28
+
+## state fluent hash keys (first line is the number of keys)
+2
+28 4
+35 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+28 6
+35 6
+
+## index
+29
+
+## state fluent hash keys (first line is the number of keys)
+2
+29 4
+36 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+29 6
+36 6
+
+## index
+30
+
+## state fluent hash keys (first line is the number of keys)
+2
+30 4
+37 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+30 6
+37 6
+
+## index
+31
+
+## state fluent hash keys (first line is the number of keys)
+2
+31 4
+38 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+31 6
+38 6
+
+## index
+32
+
+## state fluent hash keys (first line is the number of keys)
+2
+32 8
+55 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+32 18
+55 6
+
+## index
+33
+
+## state fluent hash keys (first line is the number of keys)
+2
+33 8
+56 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+33 18
+56 6
+
+## index
+34
+
+## state fluent hash keys (first line is the number of keys)
+2
+34 8
+57 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+34 18
+57 6
+
+## index
+35
+
+## state fluent hash keys (first line is the number of keys)
+2
+35 8
+58 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+35 18
+58 6
+
+## index
+36
+
+## state fluent hash keys (first line is the number of keys)
+2
+36 8
+59 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+36 18
+59 6
+
+## index
+37
+
+## state fluent hash keys (first line is the number of keys)
+2
+37 8
+60 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+37 18
+60 6
+
+## index
+38
+
+## state fluent hash keys (first line is the number of keys)
+2
+38 8
+61 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+38 18
+61 6
+
+## index
+39
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 1024
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 17496
+
+## index
+40
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 2048
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 52488
+
+## index
+41
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 4096
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 157464
+
+## index
+42
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 8192
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 472392
+
+## index
+43
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 16384
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 1417176
+
+## index
+44
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 32768
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 4251528
+
+## index
+45
+
+## state fluent hash keys (first line is the number of keys)
+1
+69 65536
+## kleene state fluent hash keys (first line is the number of keys)
+1
+69 12754584
+
+## index
+46
+
+## state fluent hash keys (first line is the number of keys)
+2
+46 4
+62 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+46 6
+62 6
+
+## index
+47
+
+## state fluent hash keys (first line is the number of keys)
+2
+47 4
+63 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+47 6
+63 6
+
+## index
+48
+
+## state fluent hash keys (first line is the number of keys)
+2
+48 4
+64 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+48 6
+64 6
+
+## index
+49
+
+## state fluent hash keys (first line is the number of keys)
+2
+49 4
+65 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+49 6
+65 6
+
+## index
+50
+
+## state fluent hash keys (first line is the number of keys)
+2
+50 4
+66 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+50 6
+66 6
+
+## index
+51
+
+## state fluent hash keys (first line is the number of keys)
+2
+51 4
+67 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+51 6
+67 6
+
+## index
+52
+
+## state fluent hash keys (first line is the number of keys)
+2
+52 4
+68 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+52 6
+68 6
+
+
+#####HASH KEYS OF PROBABILISTIC STATE FLUENTS#####
+## index
+0
+
+## state fluent hash keys (first line is the number of keys)
+8
+53 512
+55 8
+56 8
+57 8
+58 8
+59 8
+60 8
+61 8
+## kleene state fluent hash keys (first line is the number of keys)
+8
+53 13122
+55 18
+56 18
+57 18
+58 18
+59 18
+60 18
+61 18
+
+## index
+1
+
+## state fluent hash keys (first line is the number of keys)
+8
+54 512
+62 8
+63 8
+64 8
+65 8
+66 8
+67 8
+68 8
+## kleene state fluent hash keys (first line is the number of keys)
+8
+54 13122
+62 18
+63 18
+64 18
+65 18
+66 18
+67 18
+68 18
+
+## index
+2
+
+## state fluent hash keys (first line is the number of keys)
+2
+55 16
+69 131072
+## kleene state fluent hash keys (first line is the number of keys)
+2
+55 54
+69 38263752
+
+## index
+3
+
+## state fluent hash keys (first line is the number of keys)
+2
+56 16
+69 262144
+## kleene state fluent hash keys (first line is the number of keys)
+2
+56 54
+69 114791256
+
+## index
+4
+
+## state fluent hash keys (first line is the number of keys)
+2
+57 16
+69 524288
+## kleene state fluent hash keys (first line is the number of keys)
+2
+57 54
+69 344373768
+
+## index
+5
+
+## state fluent hash keys (first line is the number of keys)
+2
+58 16
+69 1048576
+## kleene state fluent hash keys (first line is the number of keys)
+2
+58 54
+69 1033121304
+
+## index
+6
+
+## state fluent hash keys (first line is the number of keys)
+2
+59 16
+69 2097152
+## kleene state fluent hash keys (first line is the number of keys)
+2
+59 54
+69 3099363912
+
+## index
+7
+
+## state fluent hash keys (first line is the number of keys)
+2
+60 16
+69 4194304
+## kleene state fluent hash keys (first line is the number of keys)
+2
+60 54
+69 9298091736
+
+## index
+8
+
+## state fluent hash keys (first line is the number of keys)
+2
+61 16
+69 8388608
+## kleene state fluent hash keys (first line is the number of keys)
+2
+61 54
+69 27894275208
+
+## index
+9
+
+## state fluent hash keys (first line is the number of keys)
+2
+55 32
+62 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+55 162
+62 54
+
+## index
+10
+
+## state fluent hash keys (first line is the number of keys)
+2
+56 32
+63 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+56 162
+63 54
+
+## index
+11
+
+## state fluent hash keys (first line is the number of keys)
+2
+57 32
+64 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+57 162
+64 54
+
+## index
+12
+
+## state fluent hash keys (first line is the number of keys)
+2
+58 32
+65 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+58 162
+65 54
+
+## index
+13
+
+## state fluent hash keys (first line is the number of keys)
+2
+59 32
+66 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+59 162
+66 54
+
+## index
+14
+
+## state fluent hash keys (first line is the number of keys)
+2
+60 32
+67 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+60 162
+67 54
+
+## index
+15
+
+## state fluent hash keys (first line is the number of keys)
+2
+61 32
+68 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+61 162
+68 54
+
+
+
+#####TRAINING SET#####
+200
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/195/trunk/lib
+END
+xml-apis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/lib/xml-apis.jar
+END
+xercesImpl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/lib/xercesImpl.jar
+END
+grappa1_4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/lib/grappa1_4.jar
+END
+jlex.jar
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/trunk/lib/jlex.jar
+END
+commons-math3-3.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/195/trunk/lib/commons-math3-3.2.jar
+END
+java_cup.jar
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/lib/java_cup.jar
+END

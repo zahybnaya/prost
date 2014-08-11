@@ -1,0 +1,3054 @@
+#####TASK#####
+## name
+earth_observation_inst_mdp__03
+## horizon
+72
+## discount factor
+1
+## number of action fluents
+4
+## number of det state fluents
+15
+## number of prob state fluents
+22
+## number of preconds
+6
+## number of actions
+4
+## number of hashing functions
+44
+## initial state
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 0 1 1 2 1 0 1 2 1 2 
+## 1 if task is deterministic
+0
+## 1 if state hashing possible
+0
+## 1 if kleene state hashing possible
+0
+## method to calculate the final reward
+BEST_OF_CANDIDATE_SET
+## set of candidates to calculate final reward (first line is the number)
+1
+2 
+## 1 if reward formula allows reward lock detection and a reward lock was found during task analysis
+0
+## 1 if an unreasonable action was detected
+1
+## 1 if an unreasonable action was detected in the determinization
+1
+## number of states that were encountered during task analysis
+4766
+## number of unique states that were encountered during task analysis
+4700
+## number of states with only one applicable reasonable action that were encountered during task analysis
+0
+## number of unique states with only one applicable reasonable action that were encountered during task analysis
+0
+
+
+#####ACTION FLUENTS#####
+## index
+0
+## name
+slew(@east)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+1
+## name
+slew(@north-east)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+2
+## name
+slew(@south-east)
+## number of values
+2
+## values
+0 false
+1 true
+
+## index
+3
+## name
+take-image
+## number of values
+2
+## values
+0 false
+1 true
+
+
+
+#####DET STATE FLUENTS AND CPFS#####
+## index
+0
+## name
+is-focal-point(p11)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(10) $a(0)) and($s(11) $a(2)))
+## hash index
+0
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 1
+8 0
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 1
+1 0
+2 2
+3 2
+
+## index
+1
+## name
+is-focal-point(p12)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(10) $a(1)) and($s(11) $a(0)) and($s(12) $a(2)))
+## hash index
+1
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+2
+## name
+is-focal-point(p13)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(11) $a(1)) and($s(12) $a(0)) and($s(13) $a(2)))
+## hash index
+2
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+3
+## name
+is-focal-point(p14)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(12) $a(1)) and($s(13) $a(0)) and($s(14) $a(2)))
+## hash index
+3
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+4
+## name
+is-focal-point(p15)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(13) $a(1)) and($s(14) $a(0)))
+## hash index
+4
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+5
+## name
+is-focal-point(p21)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(0) $a(0)) and($s(1) $a(2)))
+## hash index
+5
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 1
+8 0
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 1
+1 0
+2 2
+3 2
+
+## index
+6
+## name
+is-focal-point(p22)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(0) $a(1)) and($s(1) $a(0)) and($s(2) $a(2)))
+## hash index
+6
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+7
+## name
+is-focal-point(p23)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(1) $a(1)) and($s(2) $a(0)) and($s(3) $a(2)))
+## hash index
+7
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+8
+## name
+is-focal-point(p24)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(2) $a(1)) and($s(3) $a(0)) and($s(4) $a(2)))
+## hash index
+8
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+9
+## name
+is-focal-point(p25)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(3) $a(1)) and($s(4) $a(0)))
+## hash index
+9
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+10
+## name
+is-focal-point(p31)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(5) $a(0)) and($s(6) $a(2)))
+## hash index
+10
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 0
+5 1
+6 0
+7 1
+8 0
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 1
+1 0
+2 2
+3 2
+
+## index
+11
+## name
+is-focal-point(p32)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(5) $a(1)) and($s(6) $a(0)) and($s(7) $a(2)))
+## hash index
+11
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+12
+## name
+is-focal-point(p33)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(6) $a(1)) and($s(7) $a(0)) and($s(8) $a(2)))
+## hash index
+12
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+13
+## name
+is-focal-point(p34)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(7) $a(1)) and($s(8) $a(0)) and($s(9) $a(2)))
+## hash index
+13
+## caching type 
+VECTOR
+## precomputed results
+24
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+12 1
+13 0
+14 0
+15 1
+16 1
+17 0
+18 1
+19 0
+20 1
+21 1
+22 1
+23 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+81
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+## index
+14
+## name
+is-focal-point(p35)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+or(and($s(8) $a(1)) and($s(9) $a(0)))
+## hash index
+14
+## caching type 
+VECTOR
+## precomputed results
+12
+0 0
+1 0
+2 0
+3 0
+4 1
+5 0
+6 0
+7 0
+8 1
+9 0
+10 1
+11 1
+## kleene caching type
+VECTOR
+## kleene caching vec size
+27
+## action hash keys
+0 0
+1 1
+2 2
+3 2
+
+
+
+#####PROB STATE FLUENTS AND CPFS#####
+## index
+0
+## name
+is-target(p13)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(15) $s(2) $a(3) ==($s(24) $c(0))) : Bernoulli($c(0.058949))) (and($s(15) $s(2) $a(3) ==($s(24) $c(1))) : Bernoulli($c(0.308828))) (and($s(15) $s(2) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(15)) )
+## determinized formula
+switch( (and($s(15) $s(2) $a(3) ==($s(24) $c(0))) : $c(0)) (and($s(15) $s(2) $a(3) ==($s(24) $c(1))) : $c(0)) (and($s(15) $s(2) $a(3)) : $c(1)) ($c(1) : $s(15)) )
+## hash index
+15
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+1
+## name
+is-target(p14)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(16) $s(3) $a(3) ==($s(25) $c(0))) : Bernoulli($c(0.058949))) (and($s(16) $s(3) $a(3) ==($s(25) $c(1))) : Bernoulli($c(0.308828))) (and($s(16) $s(3) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(16)) )
+## determinized formula
+switch( (and($s(16) $s(3) $a(3) ==($s(25) $c(0))) : $c(0)) (and($s(16) $s(3) $a(3) ==($s(25) $c(1))) : $c(0)) (and($s(16) $s(3) $a(3)) : $c(1)) ($c(1) : $s(16)) )
+## hash index
+16
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+2
+## name
+is-target(p15)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(17) $s(4) $a(3) ==($s(26) $c(0))) : Bernoulli($c(0.058949))) (and($s(17) $s(4) $a(3) ==($s(26) $c(1))) : Bernoulli($c(0.308828))) (and($s(17) $s(4) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(17)) )
+## determinized formula
+switch( (and($s(17) $s(4) $a(3) ==($s(26) $c(0))) : $c(0)) (and($s(17) $s(4) $a(3) ==($s(26) $c(1))) : $c(0)) (and($s(17) $s(4) $a(3)) : $c(1)) ($c(1) : $s(17)) )
+## hash index
+17
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+3
+## name
+is-target(p21)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(18) $s(5) $a(3) ==($s(27) $c(0))) : Bernoulli($c(0.058949))) (and($s(18) $s(5) $a(3) ==($s(27) $c(1))) : Bernoulli($c(0.308828))) (and($s(18) $s(5) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(18)) )
+## determinized formula
+switch( (and($s(18) $s(5) $a(3) ==($s(27) $c(0))) : $c(0)) (and($s(18) $s(5) $a(3) ==($s(27) $c(1))) : $c(0)) (and($s(18) $s(5) $a(3)) : $c(1)) ($c(1) : $s(18)) )
+## hash index
+18
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+4
+## name
+is-target(p22)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(19) $s(6) $a(3) ==($s(28) $c(0))) : Bernoulli($c(0.058949))) (and($s(19) $s(6) $a(3) ==($s(28) $c(1))) : Bernoulli($c(0.308828))) (and($s(19) $s(6) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(19)) )
+## determinized formula
+switch( (and($s(19) $s(6) $a(3) ==($s(28) $c(0))) : $c(0)) (and($s(19) $s(6) $a(3) ==($s(28) $c(1))) : $c(0)) (and($s(19) $s(6) $a(3)) : $c(1)) ($c(1) : $s(19)) )
+## hash index
+19
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+5
+## name
+is-target(p23)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(20) $s(7) $a(3) ==($s(29) $c(0))) : Bernoulli($c(0.058949))) (and($s(20) $s(7) $a(3) ==($s(29) $c(1))) : Bernoulli($c(0.308828))) (and($s(20) $s(7) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(20)) )
+## determinized formula
+switch( (and($s(20) $s(7) $a(3) ==($s(29) $c(0))) : $c(0)) (and($s(20) $s(7) $a(3) ==($s(29) $c(1))) : $c(0)) (and($s(20) $s(7) $a(3)) : $c(1)) ($c(1) : $s(20)) )
+## hash index
+20
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+6
+## name
+is-target(p35)
+## number of values
+2
+## values
+0 false
+1 true
+## formula
+switch( (and($s(21) $s(14) $a(3) ==($s(36) $c(0))) : Bernoulli($c(0.058949))) (and($s(21) $s(14) $a(3) ==($s(36) $c(1))) : Bernoulli($c(0.308828))) (and($s(21) $s(14) $a(3)) : Bernoulli($c(0.681297))) ($c(1) : $s(21)) )
+## determinized formula
+switch( (and($s(21) $s(14) $a(3) ==($s(36) $c(0))) : $c(0)) (and($s(21) $s(14) $a(3) ==($s(36) $c(1))) : $c(0)) (and($s(21) $s(14) $a(3)) : $c(1)) ($c(1) : $s(21)) )
+## hash index
+21
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+24
+0 0 1 0 1
+1 0 1 0 1
+2 0 1 0 1
+3 0 1 0 1
+4 1 1 1 1
+5 1 1 1 1
+6 1 1 1 1
+7 0 2 0 0.941051 1 0.058949
+8 0 1 0 1
+9 0 1 0 1
+10 0 1 0 1
+11 0 1 0 1
+12 1 1 1 1
+13 1 1 1 1
+14 1 1 1 1
+15 0 2 0 0.691172 1 0.308828
+16 0 1 0 1
+17 0 1 0 1
+18 0 1 0 1
+19 0 1 0 1
+20 1 1 1 1
+21 1 1 1 1
+22 1 1 1 1
+23 1 2 0 0.318703 1 0.681297
+## kleene caching type
+VECTOR
+## kleene caching vec size
+126
+## action hash keys
+0 0
+1 0
+2 0
+3 1
+
+## index
+7
+## name
+visibility(p11)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(22) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(22) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(22) $c(0)) : $c(0)) (==($s(22) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+22
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+8
+## name
+visibility(p12)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(23) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(23) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(23) $c(0)) : $c(0)) (==($s(23) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+23
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+9
+## name
+visibility(p13)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(24) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(24) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(24) $c(0)) : $c(0)) (==($s(24) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+24
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+10
+## name
+visibility(p14)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(25) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(25) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(25) $c(0)) : $c(0)) (==($s(25) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+25
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+11
+## name
+visibility(p15)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(26) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(26) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(26) $c(0)) : $c(0)) (==($s(26) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+26
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+12
+## name
+visibility(p21)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(27) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(27) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(27) $c(0)) : $c(0)) (==($s(27) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+27
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+13
+## name
+visibility(p22)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(28) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(28) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(28) $c(0)) : $c(0)) (==($s(28) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+28
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+14
+## name
+visibility(p23)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(29) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(29) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(29) $c(0)) : $c(0)) (==($s(29) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+29
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+15
+## name
+visibility(p24)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(30) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(30) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(30) $c(0)) : $c(0)) (==($s(30) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+30
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+16
+## name
+visibility(p25)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(31) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(31) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(31) $c(0)) : $c(0)) (==($s(31) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+31
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+17
+## name
+visibility(p31)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(32) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(32) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(32) $c(0)) : $c(0)) (==($s(32) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+32
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+18
+## name
+visibility(p32)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(33) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(33) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(33) $c(0)) : $c(0)) (==($s(33) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+33
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+19
+## name
+visibility(p33)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(34) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(34) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(34) $c(0)) : $c(0)) (==($s(34) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+34
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+20
+## name
+visibility(p34)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(35) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(35) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(35) $c(0)) : $c(0)) (==($s(35) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+35
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+## index
+21
+## name
+visibility(p35)
+## number of values
+3
+## values
+0 @high
+1 @medium
+2 @low
+## formula
+switch( (==($s(36) $c(0)) : Discrete( ($c(0) : $c(0.62756)) ($c(2) : $c(0.111811)) ($c(1) : $c(0.260629)) )) (==($s(36) $c(2)) : Discrete( ($c(0) : $c(0.172602)) ($c(2) : $c(0.480753)) ($c(1) : $c(0.346645)) )) ($c(1) : Discrete( ($c(0) : $c(0.362631)) ($c(2) : $c(0.192015)) ($c(1) : $c(0.445354)) )) )
+## determinized formula
+switch( (==($s(36) $c(0)) : $c(0)) (==($s(36) $c(2)) : $c(2)) ($c(1) : $c(1)) )
+## hash index
+36
+## caching type 
+VECTOR
+## precomputed results (key - determinization - size of distribution - value-probability pairs)
+3
+0 0 3 0 0.62756 1 0.260629 2 0.111811
+1 1 3 0 0.362631 1 0.445354 2 0.192015
+2 2 3 0 0.172602 1 0.346645 2 0.480753
+## kleene caching type
+VECTOR
+## kleene caching vec size
+7
+## action hash keys
+0 0
+1 0
+2 0
+3 0
+
+
+
+#####REWARD#####
+## formula
+-(-($c(0) +($s(15) $s(16) $s(17) $s(18) $s(19) $s(20) $s(21))) +($a(1) $a(2) $a(3)))
+## min
+-8
+## max
+0
+## independent from actions
+0
+## hash index
+37
+## caching type
+VECTOR
+## precomputed results
+512
+0 0
+1 -1
+2 -1
+3 -1
+4 -1
+5 -2
+6 -2
+7 -2
+8 -1
+9 -2
+10 -2
+11 -2
+12 -2
+13 -3
+14 -3
+15 -3
+16 -1
+17 -2
+18 -2
+19 -2
+20 -2
+21 -3
+22 -3
+23 -3
+24 -2
+25 -3
+26 -3
+27 -3
+28 -3
+29 -4
+30 -4
+31 -4
+32 -1
+33 -2
+34 -2
+35 -2
+36 -2
+37 -3
+38 -3
+39 -3
+40 -2
+41 -3
+42 -3
+43 -3
+44 -3
+45 -4
+46 -4
+47 -4
+48 -2
+49 -3
+50 -3
+51 -3
+52 -3
+53 -4
+54 -4
+55 -4
+56 -3
+57 -4
+58 -4
+59 -4
+60 -4
+61 -5
+62 -5
+63 -5
+64 -1
+65 -2
+66 -2
+67 -2
+68 -2
+69 -3
+70 -3
+71 -3
+72 -2
+73 -3
+74 -3
+75 -3
+76 -3
+77 -4
+78 -4
+79 -4
+80 -2
+81 -3
+82 -3
+83 -3
+84 -3
+85 -4
+86 -4
+87 -4
+88 -3
+89 -4
+90 -4
+91 -4
+92 -4
+93 -5
+94 -5
+95 -5
+96 -2
+97 -3
+98 -3
+99 -3
+100 -3
+101 -4
+102 -4
+103 -4
+104 -3
+105 -4
+106 -4
+107 -4
+108 -4
+109 -5
+110 -5
+111 -5
+112 -3
+113 -4
+114 -4
+115 -4
+116 -4
+117 -5
+118 -5
+119 -5
+120 -4
+121 -5
+122 -5
+123 -5
+124 -5
+125 -6
+126 -6
+127 -6
+128 -1
+129 -2
+130 -2
+131 -2
+132 -2
+133 -3
+134 -3
+135 -3
+136 -2
+137 -3
+138 -3
+139 -3
+140 -3
+141 -4
+142 -4
+143 -4
+144 -2
+145 -3
+146 -3
+147 -3
+148 -3
+149 -4
+150 -4
+151 -4
+152 -3
+153 -4
+154 -4
+155 -4
+156 -4
+157 -5
+158 -5
+159 -5
+160 -2
+161 -3
+162 -3
+163 -3
+164 -3
+165 -4
+166 -4
+167 -4
+168 -3
+169 -4
+170 -4
+171 -4
+172 -4
+173 -5
+174 -5
+175 -5
+176 -3
+177 -4
+178 -4
+179 -4
+180 -4
+181 -5
+182 -5
+183 -5
+184 -4
+185 -5
+186 -5
+187 -5
+188 -5
+189 -6
+190 -6
+191 -6
+192 -2
+193 -3
+194 -3
+195 -3
+196 -3
+197 -4
+198 -4
+199 -4
+200 -3
+201 -4
+202 -4
+203 -4
+204 -4
+205 -5
+206 -5
+207 -5
+208 -3
+209 -4
+210 -4
+211 -4
+212 -4
+213 -5
+214 -5
+215 -5
+216 -4
+217 -5
+218 -5
+219 -5
+220 -5
+221 -6
+222 -6
+223 -6
+224 -3
+225 -4
+226 -4
+227 -4
+228 -4
+229 -5
+230 -5
+231 -5
+232 -4
+233 -5
+234 -5
+235 -5
+236 -5
+237 -6
+238 -6
+239 -6
+240 -4
+241 -5
+242 -5
+243 -5
+244 -5
+245 -6
+246 -6
+247 -6
+248 -5
+249 -6
+250 -6
+251 -6
+252 -6
+253 -7
+254 -7
+255 -7
+256 -1
+257 -2
+258 -2
+259 -2
+260 -2
+261 -3
+262 -3
+263 -3
+264 -2
+265 -3
+266 -3
+267 -3
+268 -3
+269 -4
+270 -4
+271 -4
+272 -2
+273 -3
+274 -3
+275 -3
+276 -3
+277 -4
+278 -4
+279 -4
+280 -3
+281 -4
+282 -4
+283 -4
+284 -4
+285 -5
+286 -5
+287 -5
+288 -2
+289 -3
+290 -3
+291 -3
+292 -3
+293 -4
+294 -4
+295 -4
+296 -3
+297 -4
+298 -4
+299 -4
+300 -4
+301 -5
+302 -5
+303 -5
+304 -3
+305 -4
+306 -4
+307 -4
+308 -4
+309 -5
+310 -5
+311 -5
+312 -4
+313 -5
+314 -5
+315 -5
+316 -5
+317 -6
+318 -6
+319 -6
+320 -2
+321 -3
+322 -3
+323 -3
+324 -3
+325 -4
+326 -4
+327 -4
+328 -3
+329 -4
+330 -4
+331 -4
+332 -4
+333 -5
+334 -5
+335 -5
+336 -3
+337 -4
+338 -4
+339 -4
+340 -4
+341 -5
+342 -5
+343 -5
+344 -4
+345 -5
+346 -5
+347 -5
+348 -5
+349 -6
+350 -6
+351 -6
+352 -3
+353 -4
+354 -4
+355 -4
+356 -4
+357 -5
+358 -5
+359 -5
+360 -4
+361 -5
+362 -5
+363 -5
+364 -5
+365 -6
+366 -6
+367 -6
+368 -4
+369 -5
+370 -5
+371 -5
+372 -5
+373 -6
+374 -6
+375 -6
+376 -5
+377 -6
+378 -6
+379 -6
+380 -6
+381 -7
+382 -7
+383 -7
+384 -2
+385 -3
+386 -3
+387 -3
+388 -3
+389 -4
+390 -4
+391 -4
+392 -3
+393 -4
+394 -4
+395 -4
+396 -4
+397 -5
+398 -5
+399 -5
+400 -3
+401 -4
+402 -4
+403 -4
+404 -4
+405 -5
+406 -5
+407 -5
+408 -4
+409 -5
+410 -5
+411 -5
+412 -5
+413 -6
+414 -6
+415 -6
+416 -3
+417 -4
+418 -4
+419 -4
+420 -4
+421 -5
+422 -5
+423 -5
+424 -4
+425 -5
+426 -5
+427 -5
+428 -5
+429 -6
+430 -6
+431 -6
+432 -4
+433 -5
+434 -5
+435 -5
+436 -5
+437 -6
+438 -6
+439 -6
+440 -5
+441 -6
+442 -6
+443 -6
+444 -6
+445 -7
+446 -7
+447 -7
+448 -3
+449 -4
+450 -4
+451 -4
+452 -4
+453 -5
+454 -5
+455 -5
+456 -4
+457 -5
+458 -5
+459 -5
+460 -5
+461 -6
+462 -6
+463 -6
+464 -4
+465 -5
+466 -5
+467 -5
+468 -5
+469 -6
+470 -6
+471 -6
+472 -5
+473 -6
+474 -6
+475 -6
+476 -6
+477 -7
+478 -7
+479 -7
+480 -4
+481 -5
+482 -5
+483 -5
+484 -5
+485 -6
+486 -6
+487 -6
+488 -5
+489 -6
+490 -6
+491 -6
+492 -6
+493 -7
+494 -7
+495 -7
+496 -5
+497 -6
+498 -6
+499 -6
+500 -6
+501 -7
+502 -7
+503 -7
+504 -6
+505 -7
+506 -7
+507 -7
+508 -7
+509 -8
+510 -8
+511 -8
+## kleene caching type
+VECTOR
+## kleene caching vec size
+8748
+## action hash keys
+0 1
+1 2
+2 0
+3 3
+
+
+#####PRECONDITIONS#####
+## index
+0
+## formula
+~(and($s(0) $a(2)))
+## hash index
+38
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 1
+1 0
+2 0
+3 0
+
+## index
+1
+## formula
+~(and($s(4) $a(1)))
+## hash index
+39
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 1
+2 0
+3 0
+
+## index
+2
+## formula
+~(and($s(5) $a(2)))
+## hash index
+40
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 1
+1 0
+2 0
+3 0
+
+## index
+3
+## formula
+~(and($s(9) $a(1)))
+## hash index
+41
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 1
+2 0
+3 0
+
+## index
+4
+## formula
+~(and($s(10) $a(2)))
+## hash index
+42
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 1
+1 0
+2 0
+3 0
+
+## index
+5
+## formula
+~(and($s(14) $a(1)))
+## hash index
+43
+## caching type
+VECTOR
+## precomputed results
+4
+0 1
+1 1
+2 1
+3 0
+## kleene caching type
+VECTOR
+## kleene caching vec size
+6
+## action hash keys
+0 0
+1 1
+2 0
+3 0
+
+
+
+#####ACTION STATES#####
+## index
+0
+## state
+0 0 1 0 
+## relevant preconditions
+3
+0 2 4 
+
+## index
+1
+## state
+0 1 0 0 
+## relevant preconditions
+3
+1 3 5 
+
+## index
+2
+## state
+1 0 0 0 
+## relevant preconditions
+0
+
+
+## index
+3
+## state
+1 0 0 1 
+## relevant preconditions
+0
+
+
+
+#####HASH KEYS OF DETERMINISTIC STATE FLUENTS#####
+## index
+0
+
+## state fluent hash keys (first line is the number of keys)
+3
+5 3
+6 3
+38 2
+## kleene state fluent hash keys (first line is the number of keys)
+3
+5 3
+6 3
+38 2
+
+## index
+1
+
+## state fluent hash keys (first line is the number of keys)
+3
+5 6
+6 6
+7 3
+## kleene state fluent hash keys (first line is the number of keys)
+3
+5 9
+6 9
+7 3
+
+## index
+2
+
+## state fluent hash keys (first line is the number of keys)
+4
+6 12
+7 6
+8 3
+15 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+6 27
+7 9
+8 3
+15 2
+
+## index
+3
+
+## state fluent hash keys (first line is the number of keys)
+4
+7 12
+8 6
+9 3
+16 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+7 27
+8 9
+9 3
+16 2
+
+## index
+4
+
+## state fluent hash keys (first line is the number of keys)
+4
+8 12
+9 6
+17 2
+39 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+8 27
+9 9
+17 2
+39 2
+
+## index
+5
+
+## state fluent hash keys (first line is the number of keys)
+4
+10 3
+11 3
+18 2
+40 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+10 3
+11 3
+18 2
+40 2
+
+## index
+6
+
+## state fluent hash keys (first line is the number of keys)
+4
+10 6
+11 6
+12 3
+19 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+10 9
+11 9
+12 3
+19 2
+
+## index
+7
+
+## state fluent hash keys (first line is the number of keys)
+4
+11 12
+12 6
+13 3
+20 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+11 27
+12 9
+13 3
+20 2
+
+## index
+8
+
+## state fluent hash keys (first line is the number of keys)
+3
+12 12
+13 6
+14 3
+## kleene state fluent hash keys (first line is the number of keys)
+3
+12 27
+13 9
+14 3
+
+## index
+9
+
+## state fluent hash keys (first line is the number of keys)
+3
+13 12
+14 6
+41 2
+## kleene state fluent hash keys (first line is the number of keys)
+3
+13 27
+14 9
+41 2
+
+## index
+10
+
+## state fluent hash keys (first line is the number of keys)
+3
+0 3
+1 3
+42 2
+## kleene state fluent hash keys (first line is the number of keys)
+3
+0 3
+1 3
+42 2
+
+## index
+11
+
+## state fluent hash keys (first line is the number of keys)
+3
+0 6
+1 6
+2 3
+## kleene state fluent hash keys (first line is the number of keys)
+3
+0 9
+1 9
+2 3
+
+## index
+12
+
+## state fluent hash keys (first line is the number of keys)
+3
+1 12
+2 6
+3 3
+## kleene state fluent hash keys (first line is the number of keys)
+3
+1 27
+2 9
+3 3
+
+## index
+13
+
+## state fluent hash keys (first line is the number of keys)
+3
+2 12
+3 6
+4 3
+## kleene state fluent hash keys (first line is the number of keys)
+3
+2 27
+3 9
+4 3
+
+## index
+14
+
+## state fluent hash keys (first line is the number of keys)
+4
+3 12
+4 6
+21 2
+43 2
+## kleene state fluent hash keys (first line is the number of keys)
+4
+3 27
+4 9
+21 2
+43 2
+
+
+#####HASH KEYS OF PROBABILISTIC STATE FLUENTS#####
+## index
+0
+
+## state fluent hash keys (first line is the number of keys)
+2
+15 4
+37 4
+## kleene state fluent hash keys (first line is the number of keys)
+2
+15 6
+37 4
+
+## index
+1
+
+## state fluent hash keys (first line is the number of keys)
+2
+16 4
+37 8
+## kleene state fluent hash keys (first line is the number of keys)
+2
+16 6
+37 12
+
+## index
+2
+
+## state fluent hash keys (first line is the number of keys)
+2
+17 4
+37 16
+## kleene state fluent hash keys (first line is the number of keys)
+2
+17 6
+37 36
+
+## index
+3
+
+## state fluent hash keys (first line is the number of keys)
+2
+18 4
+37 32
+## kleene state fluent hash keys (first line is the number of keys)
+2
+18 6
+37 108
+
+## index
+4
+
+## state fluent hash keys (first line is the number of keys)
+2
+19 4
+37 64
+## kleene state fluent hash keys (first line is the number of keys)
+2
+19 6
+37 324
+
+## index
+5
+
+## state fluent hash keys (first line is the number of keys)
+2
+20 4
+37 128
+## kleene state fluent hash keys (first line is the number of keys)
+2
+20 6
+37 972
+
+## index
+6
+
+## state fluent hash keys (first line is the number of keys)
+2
+21 4
+37 256
+## kleene state fluent hash keys (first line is the number of keys)
+2
+21 6
+37 2916
+
+## index
+7
+
+## state fluent hash keys (first line is the number of keys)
+1
+22 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+22 1
+
+## index
+8
+
+## state fluent hash keys (first line is the number of keys)
+1
+23 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+23 1
+
+## index
+9
+
+## state fluent hash keys (first line is the number of keys)
+2
+15 8
+24 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+15 18
+24 1
+
+## index
+10
+
+## state fluent hash keys (first line is the number of keys)
+2
+16 8
+25 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+16 18
+25 1
+
+## index
+11
+
+## state fluent hash keys (first line is the number of keys)
+2
+17 8
+26 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+17 18
+26 1
+
+## index
+12
+
+## state fluent hash keys (first line is the number of keys)
+2
+18 8
+27 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+18 18
+27 1
+
+## index
+13
+
+## state fluent hash keys (first line is the number of keys)
+2
+19 8
+28 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+19 18
+28 1
+
+## index
+14
+
+## state fluent hash keys (first line is the number of keys)
+2
+20 8
+29 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+20 18
+29 1
+
+## index
+15
+
+## state fluent hash keys (first line is the number of keys)
+1
+30 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+30 1
+
+## index
+16
+
+## state fluent hash keys (first line is the number of keys)
+1
+31 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+31 1
+
+## index
+17
+
+## state fluent hash keys (first line is the number of keys)
+1
+32 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+32 1
+
+## index
+18
+
+## state fluent hash keys (first line is the number of keys)
+1
+33 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+33 1
+
+## index
+19
+
+## state fluent hash keys (first line is the number of keys)
+1
+34 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+34 1
+
+## index
+20
+
+## state fluent hash keys (first line is the number of keys)
+1
+35 1
+## kleene state fluent hash keys (first line is the number of keys)
+1
+35 1
+
+## index
+21
+
+## state fluent hash keys (first line is the number of keys)
+2
+21 8
+36 1
+## kleene state fluent hash keys (first line is the number of keys)
+2
+21 18
+36 1
+
+
+
+#####TRAINING SET#####
+200
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 2 0 1 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 2 0 0 1 0 0 1 0 2 1 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 1 2 1 0 1 1 0 1 2 0 2 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 1 0 0 1 1 0 0 0 0 1 2 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 0 0 2 0 0 2 0 0 0 1 0 2 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 1 2 2 1 0 1 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 1 1 0 0 2 1 0 2 0 0 0 2 0 2 1 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 2 1 0 0 2 1 2 0 0 1 2 1 0 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 2 2 2 2 2 2 0 1 2 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 0 0 0 2 1 1 0 0 0 2 1 1 0 2 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 0 0 2 1 0 2 2 1 0 1 0 1 2 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 1 2 2 2 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 1 1 2 2 0 0 1 0 0 2 2 0 0 0 1 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 1 0 0 1 0 0 1 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 2 1 1 0 2 1 0 0 1 0 0 1 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1 1 2 0 0 1 0 2 0 0 2 0 0 1 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 0 0 0 0 1 2 0 2 1 0 1 0 1 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 2 0 1 2 0 0 2 2 0 2 0 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 0 0 0 1 0 0 1 0 1 1 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 0 1 1 1 0 0 1 0 1 0 1 2 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 2 1 1 2 1 2 1 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 1 1 0 0 0 2 0 2 2 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 2 2 0 0 2 1 0 2 1 0 0 0 2 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 2 1 2 1 1 2 1 2 1 0 1 2 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 1 1 1 1 1 2 2 0 0 2 0 2 0 1 2 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 2 0 0 2 1 1 0 0 2 1 0 0 0 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 1 2 0 2 0 0 2 0 2 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 2 0 1 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 2 0 0 2 0 0 0 2 0 0 1 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 1 0 2 1 1 0 2 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 2 1 1 2 0 0 1 1 2 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 0 0 2 1 1 1 1 0 0 0 2 2 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 1 0 0 2 0 1 1 0 0 2 1 2 0 0 0 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 1 0 1 1 1 1 0 1 2 2 2 2 0 0 0 1 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 2 0 2 2 1 1 1 1 0 0 1 1 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 2 0 1 0 2 2 0 1 2 0 0 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 1 1 1 1 1 1 0 0 0 1 1 2 0 1 0 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 1 0 1 0 2 0 0 0 1 1 0 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 1 0 1 2 2 2 1 0 2 1 2 0 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 1 1 1 1 2 1 1 1 0 0 2 0 0 1 1 1 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 1 0 1 1 1 0 2 1 1 1 2 1 1 1 1 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 1 0 0 2 2 1 1 0 2 0 2 1 1 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 2 0 0 2 1 0 0 1 2 0 2 1 1 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 1 0 2 0 2 2 0 1 0 1 1 2 1 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 1 1 1 2 0 0 0 0 0 2 0 2 2 2 1 1 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 2 2 2 0 0 1 0 2 1 2 2 2 1 1 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 2 0 0 0 1 1 1 1 0 0 0 2 1 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 1 0 1 2 1 0 1 0 2 1 1 0 0 2 1 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 1 1 1 1 0 1 1 0 0 0 0 1 1 1 0 2 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 1 2 1 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 2 1 1 2 2 0 2 1 0 2 0 2 2 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 2 0 2 0 1 0 2 1 2 1 0 0 2 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 2 1 1 1 1 0 1 1 0 1 0 2 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 2 0 1 0 2 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 1 0 0 1 0 1 2 0 1 1 1 0 2 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 1 2 1 0 0 2 2 0 0 1 1 2 1 0 2 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 2 0 1 1 1 1 2 1 2 1 0 2 0 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 1 1 2 0 0 2 0 0 2 1 1 1 0 2 0 2 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 0 0 2 1 0 0 1 1 2 2 0 2 0 2 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 2 0 0 0 1 2 0 2 0 0 0 0 1 2 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1 0 0 0 0 0 1 2 2 1 0 0 1 2 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 0 0 0 2 1 1 0 1 0 1 2 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 1 2 1 0 2 0 2 0 1 1 2 0 1 2 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 0 2 1 2 1 2 1 2 2 0 1 1 2 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 1 1 0 0 1 1 2 2 0 1 0 1 2 1 1 2 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 0 1 1 0 2 0 1 1 1 0 1 0 1 1 2 1 2 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 0 2 1 0 2 2 2 0 2 1 2 1 2 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 1 2 1 1 2 0 0 0 0 0 2 2 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 2 2 0 0 1 2 2 1 1 0 1 2 2 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 2 0 0 0 0 2 1 0 0 2 0 1 2 2 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 1 2 0 0 1 0 2 1 0 0 2 1 1 2 2 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 1 1 1 1 2 0 0 1 1 0 0 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 1 1 2 2 0 0 0 1 0 1 1 1 0 0 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1 1 1 0 0 0 2 0 0 1 0 0 2 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 2 1 0 0 2 2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1 0 0 0 0 1 0 2 0 2 1 0 0 0 1 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 2 0 0 0 1 0 1 0 0 1 2 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 2 0 1 0 0 0 0 1 1 1 2 0 0 0 1 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 0 1 1 1 1 0 0 0 1 1 0 0 2 1 2 0 0 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 2 0 0 2 2 2 2 0 1 0 1 0 0 1 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 2 0 0 1 0 0 0 0 1 1 0 1 0 0 1 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 1 1 1 1 0 0 2 0 1 1 0 2 2 2 0 1 0 0 1 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 0 2 0 2 1 1 0 2 2 2 0 1 1 0 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 2 1 1 1 1 2 0 2 0 2 1 0 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 1 1 0 1 0 1 2 1 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 2 0 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 0 1 0 2 0 2 0 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 2 1 2 0 1 0 2 2 0 0 2 2 0 0 1 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 0 0 1 2 1 1 0 1 0 2 2 0 2 2 2 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 1 1 0 0 0 1 1 1 0 1 2 2 2 2 0 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 2 0 0 1 0 1 1 2 0 0 1 0 1 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 2 0 1 2 0 1 1 0 1 1 0 1 1 0 1 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 2 1 1 1 2 0 1 1 0 1 1 1 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 1 2 0 1 0 0 1 1 0 2 1 1 1 1 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 1 0 1 0 0 2 1 1 1 0 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 1 1 0 2 1 1 2 2 2 1 1 0 2 1 1 1 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1 1 1 2 1 2 0 0 1 0 0 1 2 1 1 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 2 1 1 0 0 1 1 2 1 1 0 1 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 2 0 0 1 2 1 1 0 2 1 2 1 1 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 2 0 1 1 0 2 2 1 2 1 1 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 2 0 1 0 2 0 1 0 1 0 0 2 1 0 1 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 1 0 1 1 0 1 1 1 2 0 0 2 1 0 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 0 0 2 1 0 2 0 0 0 1 0 0 2 2 1 0 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1 1 0 1 1 0 0 0 2 2 2 2 1 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 2 0 1 1 0 2 2 2 0 2 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 2 0 1 0 1 2 1 2 0 2 1 2 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 1 1 1 2 0 0 0 2 2 1 1 0 0 0 2 2 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0 2 2 0 0 1 0 0 1 0 2 2 2 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 2 2 0 0 0 0 0 0 0 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 1 1 1 1 2 0 0 2 2 0 0 0 1 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 2 1 0 2 0 1 1 0 0 0 2 0 0 1 1 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 2 0 2 0 0 0 0 0 1 1 1 1 0 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 0 0 1 1 0 1 2 0 1 0 2 1 0 2 0 1 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 2 0 1 0 1 2 0 1 1 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 2 0 0 0 0 1 1 1 1 2 0 1 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 1 1 1 1 2 1 1 1 0 0 2 0 2 1 2 0 1 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 0 0 1 1 0 2 0 2 0 0 0 0 1 2 2 0 1 1 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 1 1 1 1 0 1 2 0 1 0 0 0 0 0 1 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 1 1 0 1 2 1 0 2 1 0 1 1 0 2 0 0 1 1 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1 2 0 0 0 1 1 0 0 0 0 1 0 1 1 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 0 0 2 0 1 1 0 1 1 1 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 2 1 0 1 1 2 2 0 1 1 1 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 2 2 0 0 0 1 0 2 1 1 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 1 0 1 0 0 2 1 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 1 0 2 1 0 1 0 0 1 0 2 1 1 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 2 2 1 0 0 1 0 2 0 2 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 1 1 2 1 1 0 0 0 1 0 1 1 1 2 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 1 1 0 2 0 1 1 0 1 1 1 2 1 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 1 0 0 2 2 1 0 0 1 0 2 1 1 2 1 1 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 1 2 0 0 1 0 2 2 1 2 1 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 2 1 1 2 0 0 0 0 0 0 2 1 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 1 2 1 2 1 1 0 0 0 2 1 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 1 2 1 0 2 0 0 2 0 0 0 2 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 0 0 0 2 0 0 1 2 2 0 0 0 2 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 2 2 1 0 1 2 0 1 1 1 0 0 2 1 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 2 0 0 0 2 0 0 2 1 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 2 1 0 0 1 2 0 1 1 2 0 0 2 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 0 1 0 1 0 2 0 2 1 2 2 1 0 1 0 2 1 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 2 2 1 1 0 2 0 1 0 0 0 2 0 2 1 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 0 1 1 0 0 2 2 2 1 1 0 1 1 0 2 0 2 1 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1 0 1 1 0 0 0 1 1 2 0 1 1 2 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 0 1 1 0 0 2 1 1 2 0 2 0 2 1 2 1 2 1 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 1 0 0 2 2 2 0 2 2 1 2 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 0 1 1 1 0 0 1 1 0 1 2 0 0 1 2 2 1 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 2 1 1 0 0 1 0 2 2 0 1 1 2 2 1 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 0 0 1 2 1 2 1 2 1 2 1 0 0 0 2 2 2 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 1 1 2 1 0 1 1 2 1 2 0 1 2 2 2 1 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 2 2 1 1 2 0 0 0 0 2 0 0 0 0 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 2 0 0 0 0 1 1 0 1 2 0 0 0 2 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 2 2 0 0 1 1 0 0 0 0 1 0 0 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 1 0 0 2 0 1 0 1 1 0 1 0 0 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 2 0 2 0 1 1 0 2 0 1 1 0 0 2 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 1 1 0 0 0 2 0 0 0 0 0 0 1 2 0 0 2 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 1 1 1 0 1 0 1 1 0 1 0 2 1 2 0 0 2 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 2 1 0 0 2 2 0 0 1 0 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 0 2 0 0 2 0 2 2 0 0 1 0 2 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 2 1 2 0 1 0 1 0 0 1 1 1 0 2 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 2 1 0 0 1 2 0 1 0 0 1 1 1 0 2 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 2 1 0 2 1 0 0 1 1 0 2 1 0 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 1 1 2 0 1 2 0 2 2 2 0 0 2 2 1 0 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 2 2 0 0 0 2 0 1 0 0 2 0 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 0 1 1 0 2 0 0 0 1 1 0 0 2 1 0 2 0 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 1 2 0 0 0 1 1 1 0 0 1 2 0 2 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 2 2 1 2 2 0 1 0 1 0 0 0 0 1 2 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 2 0 0 0 0 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 1 1 1 0 0 2 0 1 2 1 1 2 0 0 1 2 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 0 1 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 1 1 1 1 2 1 1 2 1 0 2 0 2 2 0 1 0 1 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 2 1 0 0 2 1 2 0 2 1 1 1 0 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 1 1 1 0 1 0 0 0 0 2 1 2 1 0 1 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 2 0 1 1 0 2 2 1 0 1 2 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 2 0 1 0 1 0 1 1 2 0 1 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 0 2 0 0 0 0 0 0 0 1 0 0 0 1 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 0 1 1 2 1 1 0 0 2 0 1 0 0 0 1 1 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 1 1 0 1 1 0 0 1 2 0 0 1 1 0 0 0 1 1 2 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 2 0 0 2 0 2 0 0 2 0 1 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 0 0 0 2 1 2 0 0 1 1 0 0 0 1 1 1 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 1 1 2 1 2 2 1 2 1 1 1 1 0 0 2 1 2 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 2 1 0 1 0 2 1 1 2 0 1 0 2 1 2 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 0 1 1 2 1 0 1 2 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 1 0 0 1 0 0 1 1 1 2 0 1 2 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1 0 2 0 1 0 2 1 0 1 0 0 2 2 1 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 1 0 2 0 1 2 2 0 0 2 2 1 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 1 1 0 2 1 0 1 0 0 0 2 2 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 2 0 1 2 1 1 0 0 0 2 2 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 2 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 2 1 1 1 1 0 0 2 2 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 2 0 1 0 1 0 1 1 0 1 0 1 0 2 2 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 2 2 2 0 0 1 0 1 1 1 1 0 2 2 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1 0 0 2 2 1 1 0 0 1 1 1 1 1 1 0 2 2 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 0 2 0 1 1 1 1 1 2 0 1 1 2 2 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 1 2 2 1 0 0 2 0 1 1 1 2 2 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 0 1 0 1 0 1 0 2 2 1 2 0 2 1 1 2 2 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 2 0 1 0 0 0 1 1 0 1 1 2 2 2 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 2 1 0 2 0 2 2 2 1 2 2 2 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 2 0 0 0 0 0 1 0 2 2 2 2 

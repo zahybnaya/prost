@@ -1,0 +1,39 @@
+domain tamarisk_mdp {
+  requirements = {
+  };
+  types {
+    reach : object;
+    slot : object;
+  };
+  pvariables {
+    COMPETITION-WIN-RATE-NATIVE : {non-fluent, real, default = 0.2};
+    DOWNSTREAM-SPREAD-RATE : {non-fluent, real, default = 0.6};
+    native-at(slot) : {state-fluent, bool, default = false};
+    COST-PER-EMPTY-SLOT : {non-fluent, real, default = 0.25};
+    RESTORATION-RATE : {non-fluent, real, default = 0.9};
+    DEATH-RATE-NATIVE : {non-fluent, real, default = 0.05};
+    DOWNSTREAM-REACH(reach, reach) : {non-fluent, bool, default = false};
+    COST-PER-INVADED-REACH : {non-fluent, real, default = 5.0};
+    ERADICATION-RATE : {non-fluent, real, default = 0.9};
+    EXOGENOUS-PROD-RATE-TAMARISK : {non-fluent, real, default = 0.1};
+    ERADICATION-COST : {non-fluent, real, default = 0.49};
+    DEATH-RATE-TAMARISK : {non-fluent, real, default = 0.05};
+    eradicate(reach) : {action-fluent, bool, default = false};
+    RESTORATION-COST : {non-fluent, real, default = 0.9};
+    COMPETITION-WIN-RATE-TAMARISK : {non-fluent, real, default = 0.8};
+    COST-PER-TREE : {non-fluent, real, default = 0.5};
+    RESTORATION-COST-FOR-INVADED-SLOT : {non-fluent, real, default = 0.8};
+    SLOT-AT-REACH(slot, reach) : {non-fluent, bool, default = false};
+    restore(reach) : {action-fluent, bool, default = false};
+    EXOGENOUS-PROD-RATE-NATIVE : {non-fluent, real, default = 0.1};
+    RESTORATION-COST-FOR-EMPTY-SLOT : {non-fluent, real, default = 0.4};
+    UPSTREAM-SPREAD-RATE : {non-fluent, real, default = 0.15};
+    tamarisk-at(slot) : {state-fluent, bool, default = false};
+  };
+  cpfs {
+    (native-at' ?s) = (if (^ (tamarisk-at ?s) (native-at ?s) ) then (Bernoulli (COMPETITION-WIN-RATE-NATIVE)) else (if (^ (~ (tamarisk-at ?s)) (native-at ?s) (exists ( (?r : reach) ) (^ (SLOT-AT-REACH ?s ?r) (restore ?r) )) ) then true else (if (^ (~ (tamarisk-at ?s)) (~ (native-at ?s)) (exists ( (?r : reach) ) (^ (SLOT-AT-REACH ?s ?r) (restore ?r) )) ) then (Bernoulli (RESTORATION-RATE)) else (if (native-at ?s) then (Bernoulli (- 1.0 (DEATH-RATE-NATIVE))) else (if (^ (~ (tamarisk-at ?s)) (~ (native-at ?s)) ) then (Bernoulli (EXOGENOUS-PROD-RATE-NATIVE)) else (native-at ?s))))));
+    (tamarisk-at' ?s) = (if (^ (tamarisk-at ?s) (native-at ?s) ) then (Bernoulli (COMPETITION-WIN-RATE-TAMARISK)) else (if (^ (~ (tamarisk-at ?s)) (exists ( (?r : reach) ) (^ (SLOT-AT-REACH ?s ?r) (eradicate ?r) (~ (forall ( (?s2 : slot) ) (^ (SLOT-AT-REACH ?s2 ?r) (tamarisk-at ?s2) ))) )) ) then false else (if (^ (tamarisk-at ?s) (exists ( (?r : reach) ) (^ (SLOT-AT-REACH ?s ?r) (eradicate ?r) (~ (forall ( (?s2 : slot) ) (^ (SLOT-AT-REACH ?s2 ?r) (tamarisk-at ?s2) ))) )) ) then (Bernoulli (- 1.0 (ERADICATION-RATE))) else (if (tamarisk-at ?s) then (Bernoulli (- 1.0 (DEATH-RATE-TAMARISK))) else (if (^ (~ (tamarisk-at ?s)) (~ (native-at ?s)) ) then (Bernoulli (+ (EXOGENOUS-PROD-RATE-TAMARISK) (* (- 1 (EXOGENOUS-PROD-RATE-TAMARISK)) (- 1.0 (* (* (prod ( (?r : reach) (?s2 : slot) ) (if (^ (SLOT-AT-REACH ?s ?r) (SLOT-AT-REACH ?s2 ?r) (~= ?s ?s2) (tamarisk-at ?s2) ) then (- 1.0 (DOWNSTREAM-SPREAD-RATE)) else 1.0)) (prod ( (?r : reach) (?r2 : reach) (?s2 : slot) ) (if (^ (SLOT-AT-REACH ?s ?r) (DOWNSTREAM-REACH ?r ?r2) (SLOT-AT-REACH ?s2 ?r2) (tamarisk-at ?s2) ) then (- 1.0 (DOWNSTREAM-SPREAD-RATE)) else 1.0))) (prod ( (?r : reach) (?r2 : reach) (?s2 : slot) ) (if (^ (SLOT-AT-REACH ?s ?r) (DOWNSTREAM-REACH ?r2 ?r) (SLOT-AT-REACH ?s2 ?r2) (tamarisk-at ?s2) ) then (- 1.0 (UPSTREAM-SPREAD-RATE)) else 1.0))))))) else (tamarisk-at ?s))))));
+  };
+  reward = (+ (+ (+ (+ (+ (sum ( (?r : reach) ) (* (- 0 (COST-PER-INVADED-REACH)) (exists ( (?s : slot) ) (^ (SLOT-AT-REACH ?s ?r) (tamarisk-at ?s) )))) (sum ( (?s : slot) ) (* (- 0 (COST-PER-TREE)) (tamarisk-at ?s)))) (sum ( (?s : slot) ) (* (- 0 (COST-PER-EMPTY-SLOT)) (^ (~ (tamarisk-at ?s)) (~ (native-at ?s)) )))) (sum ( (?r : reach) ) (* (- 0 (ERADICATION-COST)) (eradicate ?r)))) (sum ( (?r : reach) ) (* (- 0 (RESTORATION-COST)) (restore ?r)))) (sum ( (?r : reach) (?s : slot) ) (* (- 0 (RESTORATION-COST-FOR-EMPTY-SLOT)) (^ (restore ?r) (SLOT-AT-REACH ?s ?r) (~ (tamarisk-at ?s)) (~ (native-at ?s)) ))));
+}
+
