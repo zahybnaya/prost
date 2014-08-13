@@ -1,0 +1,9 @@
+
+This is our adaptation to PROST 
+You can checkout only this testbed folder on the cs machines. 
+
+1. Make sure the rddslim server can be executed
+2. Build the prost planner (src/search) and copy it to here
+3. use r.sh to distribute the experiments (get a <readyServers> file ) 
+
+
