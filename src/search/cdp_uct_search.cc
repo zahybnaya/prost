@@ -135,7 +135,7 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     node->M2 += pow(((immReward+futReward)- node->expectedRewardEstimate),2);
     node->ci = node->M2/ std::max(node->numberOfVisits-1,1);
     //cout<<"CDP: oldfuturereward: "<<oldFutureReward << " oldimmediatereward:" << oldImmediateReward <<" expectedreward:"<<node->expectedRewardEstimate<<" ci:"<<node->ci<<" M2:"<<node->M2<<endl;
-    //node->expectedRewardEstimate=-std::numeric_limits<double>::max();
+    node->expectedRewardEstimate=-std::numeric_limits<double>::max();
     for (unsigned int childIndex = 0; childIndex < node->children.size();
          ++childIndex) {
         if (node->children[childIndex]) {
@@ -143,7 +143,6 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 	  //  cout<<"child-ci: " <<node->children[childIndex]->ci << " child reward: "<<node->children[childIndex]->getExpectedRewardEstimate();
             if (//node->children[childIndex]->ci <= node->ci &&
                     node->children[childIndex]->getExpectedRewardEstimate()> node->getExpectedRewardEstimate() - oldImmediateReward){
-	//	    cout<<"*UPDATE*"<<endl;
 		    node->ci = node->children[childIndex]->getCi();
 		    node->expectedRewardEstimate = oldImmediateReward + node->children[childIndex]->getExpectedRewardEstimate();
             }

@@ -117,13 +117,10 @@ void DPUCTSearch::backupDecisionNode(DPUCTNode* node,
                                      double const& immReward,
                                      double const& /*futReward*/) {
     assert(!node->children.empty());
-
     node->immediateReward = immReward;
-
     if (selectedActionIndex() != -1) {
         ++node->numberOfVisits;
     }
-
     if (backupLock) {
         ++skippedBackups;
         return;
