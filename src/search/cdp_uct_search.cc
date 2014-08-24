@@ -14,13 +14,13 @@ void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
                                                 (double)
                                                 remainingConsideredSteps() *
                                                 initialQValue;
-    node->children[actionIndex]->expectedRewardEstimate = node->children[actionIndex]->futureReward ;
+    node->children[actionIndex]->expectedRewardEstimate = node->children[actionIndex]->futureReward;
     node->children[actionIndex]->numberOfVisits = numberOfInitialVisits;
  
     node->numberOfVisits += numberOfInitialVisits;
     node->futureReward =
         std::max(node->futureReward,
-                 node->children[actionIndex]->getExpectedRewardEstimate());
+                 node->children[actionIndex]->getExpectedRewardEstimate()); //TODO this is done because in DP you take the max, so if the initial value is higher then take it... here in CDP it should be something else...
 
     node->expectedRewardEstimate = node->futureReward;
     //cout<<"CDP initializeDecisionNode  node->futureReward:"<<node->futureReward<< " node->expected"<<node->getExpectedRewardEstimate()<<endl;
@@ -122,29 +122,34 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     if (selectedActionIndex() != -1) {
         ++node->numberOfVisits;
     }
+
     if (backupLock) {
         ++skippedBackups;
         return;
     }
+
     node->immediateReward += immReward; 
     node->futureReward += futReward;
-    double oldFutureReward = node->futureReward/double(node->numberOfVisits);
-    double oldImmediateReward = node->immediateReward/double(node->numberOfVisits);
-    node->expectedRewardEstimate = oldFutureReward + oldImmediateReward;
+    double oldFutureReward = node->futureReward / double(node->numberOfVisits);
+    //double oldImmediateReward = node->immediateReward / double(node->numberOfVisits);
+    //node->expectedRewardEstimate = oldFutureReward + oldImmediateReward;
+    node->expectedRewardEstimate = oldFutureReward; //TODO not sure if to add immidiate reward; currently trying to immitate DP-UCT
     node->solved = true;
-    node->M2 += pow(((immReward+futReward)- node->expectedRewardEstimate),2);
-    node->ci = node->M2/ std::max(node->numberOfVisits-1,1);
+    node->M2 += pow(((immReward + futReward) - node->expectedRewardEstimate), 2);
+    node->ci = node->M2 / std::max(node->numberOfVisits - 1, 1);
+
     //cout<<"CDP: oldfuturereward: "<<oldFutureReward << " oldimmediatereward:" << oldImmediateReward <<" expectedreward:"<<node->expectedRewardEstimate<<" ci:"<<node->ci<<" M2:"<<node->M2<<endl;
-    node->expectedRewardEstimate=-std::numeric_limits<double>::max();
-    for (unsigned int childIndex = 0; childIndex < node->children.size();
-         ++childIndex) {
+
+   node->expectedRewardEstimate = -std::numeric_limits<double>::max() + oldImmediateReward;
+    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
             node->solved &= node->children[childIndex]->solved;
 	  //  cout<<"child-ci: " <<node->children[childIndex]->ci << " child reward: "<<node->children[childIndex]->getExpectedRewardEstimate();
             if (//node->children[childIndex]->ci <= node->ci &&
-                    node->children[childIndex]->getExpectedRewardEstimate()> node->getExpectedRewardEstimate() - oldImmediateReward){
+                    node->children[childIndex]->getExpectedRewardEstimate() > node->getExpectedRewardEstimate() - oldImmediateReward) {
 		    node->ci = node->children[childIndex]->getCi();
-		    node->expectedRewardEstimate = oldImmediateReward + node->children[childIndex]->getExpectedRewardEstimate();
+		    //node->expectedRewardEstimate = oldImmediateReward + node->children[childIndex]->getExpectedRewardEstimate();
+		    node->expectedRewardEstimate = immReward + node->children[childIndex]->getExpectedRewardEstimate(); //TODO delete this line and uncomment the one above; this is just to try and imitate DP-UCT
             }
 	    else{
 	//	    cout<<endl;
@@ -179,7 +184,7 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
     node->futureReward = 0.0;
     double solvedSum = 0.0;
     double probSum = 0.0;
-    int validChildren=0;
+    int validChildren = 0;
 
     for (unsigned int i = 0; i < node->children.size(); ++i) {
         if (node->children[i]) {
