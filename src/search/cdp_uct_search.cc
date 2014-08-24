@@ -131,7 +131,7 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     node->immediateReward += immReward; 
     node->futureReward += futReward;
     double oldFutureReward = node->futureReward / double(node->numberOfVisits);
-    //double oldImmediateReward = node->immediateReward / double(node->numberOfVisits);
+    double oldImmediateReward = node->immediateReward / double(node->numberOfVisits);
     //node->expectedRewardEstimate = oldFutureReward + oldImmediateReward;
     node->expectedRewardEstimate = oldFutureReward; //TODO not sure if to add immidiate reward; currently trying to immitate DP-UCT
     node->solved = true;
