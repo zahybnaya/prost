@@ -17,8 +17,8 @@ public:
         immediateReward(0.0),
 	M2(0.0),
         futureReward(-std::numeric_limits<double>::max()),
+	futureRewardSum(0.0),
 	ci(std::numeric_limits<double>::max()),
-	expectedRewardEstimate(-std::numeric_limits<double>::max()),
         numberOfVisits(0),
         prob(0.0),
         solved(false),
@@ -38,17 +38,17 @@ public:
         children.clear();
         immediateReward = 0.0;
         futureReward = -std::numeric_limits<double>::max();
+	futureRewardSum = 0.0;
         numberOfVisits = 0;
         prob = 0.0;
         M2 = 0.0;
-	expectedRewardEstimate = -std::numeric_limits<double>::max();
         solved = false;
         rewardLock = false;
 	ci = std::numeric_limits<double>::max();
     }
 
     double getExpectedRewardEstimate() const {
-        return expectedRewardEstimate;
+        return futureReward + immediateReward;
     }
 
     double getCi() {
@@ -91,8 +91,8 @@ private:
     double immediateReward;
     double M2;
     double futureReward;
+    double futureRewardSum;
     double ci;
-    double expectedRewardEstimate;
     int numberOfVisits;
 
     double prob;

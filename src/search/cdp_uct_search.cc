@@ -20,9 +20,8 @@ void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
     node->numberOfVisits += numberOfInitialVisits;
     node->futureReward =
         std::max(node->futureReward,
-                 node->children[actionIndex]->getExpectedRewardEstimate()); //TODO this is done because in DP you take the max, so if the initial value is higher then take it... here in CDP it should be something else...
+                 node->children[actionIndex]->getExpectedRewardEstimate()); 
 
-    node->expectedRewardEstimate = node->futureReward;
     //cout<<"CDP initializeDecisionNode  node->futureReward:"<<node->futureReward<< " node->expected"<<node->getExpectedRewardEstimate()<<endl;
     // cout << "initialized child ";
     // SearchEngine::actionStates[actionIndex].printCompact(cout);
@@ -119,52 +118,39 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
                                      double const& immReward,
                                      double const& futReward) {
     assert(!node->children.empty());
-    if (selectedActionIndex() != -1) {
-        ++node->numberOfVisits;
-    }
 
-    if (backupLock) {
-        ++skippedBackups;
-        return;
-    }
+    node->immediateReward = immReward;
+if (selectedActionIndex() != -1) {
+    int n = node->numberOfVisits;
+    double mean = node->futureRewardSum / (double) n;
+    double delta = futReward - mean;
+    n++;
+    mean = mean + delta / (double)n;
+    node->M2 += delta * (futReward - mean);
+    node->numberOfVisits = n;
+    node->futureRewardSum += futReward;
+}
 
-    node->immediateReward += immReward; 
-    node->futureReward += futReward;
-    double oldFutureReward = node->futureReward / double(node->numberOfVisits);
-    double oldImmediateReward = node->immediateReward / double(node->numberOfVisits);
-    //node->expectedRewardEstimate = oldFutureReward + oldImmediateReward;
-    node->expectedRewardEstimate = oldFutureReward; //TODO not sure if to add immidiate reward; currently trying to immitate DP-UCT
+    double oldCI = node->M2 / std::max(node->numberOfVisits - 1, 1);
+    node->ci = oldCI;
+    // Propagate values from best child
+//    node->futureReward = -std::numeric_limits<double>::max();
+    node->futureReward = node->futureRewardSum / (double) node->numberOfVisits;
     node->solved = true;
-    node->M2 += pow(((immReward + futReward) - node->expectedRewardEstimate), 2);
-    node->ci = node->M2 / std::max(node->numberOfVisits - 1, 1);
-
-    //cout<<"CDP: oldfuturereward: "<<oldFutureReward << " oldimmediatereward:" << oldImmediateReward <<" expectedreward:"<<node->expectedRewardEstimate<<" ci:"<<node->ci<<" M2:"<<node->M2<<endl;
-
-   node->expectedRewardEstimate = -std::numeric_limits<double>::max() + oldImmediateReward;
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
             node->solved &= node->children[childIndex]->solved;
-	  //  cout<<"child-ci: " <<node->children[childIndex]->ci << " child reward: "<<node->children[childIndex]->getExpectedRewardEstimate();
-            if (//node->children[childIndex]->ci <= node->ci &&
-                    node->children[childIndex]->getExpectedRewardEstimate() > node->getExpectedRewardEstimate() - oldImmediateReward) {
-		    node->ci = node->children[childIndex]->getCi();
-		    //node->expectedRewardEstimate = oldImmediateReward + node->children[childIndex]->getExpectedRewardEstimate();
-		    node->expectedRewardEstimate = immReward + node->children[childIndex]->getExpectedRewardEstimate(); //TODO delete this line and uncomment the one above; this is just to try and imitate DP-UCT
-            }
-	    else{
-	//	    cout<<endl;
-	    }
+	    
+   	    if (MathUtils::doubleIsSmaller(node->children[childIndex]->ci, oldCI) &&
+		MathUtils::doubleIsGreater(node->children[childIndex]->getExpectedRewardEstimate(), node->futureReward)) {
+
+		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
+		node->ci = node->children[childIndex]->getCi();
+	    }    
         }
     }
-    // If the future reward did not change we did not find a better node and
-    // therefore do not need to update the rewards in preceding parents.
-    if (!node->solved &&
-        (remainingConsideredSteps() > maxLockDepth) &&
-        MathUtils::doubleIsEqual(oldFutureReward, node->futureReward)) {
-        backupLock = true;
-    }
 
-    //cout<<"CDP:backupDecisionNode expectedreward:"<<node->getExpectedRewardEstimate()<<endl;
+    // cout<<"CDP: backupDecisionNode expectedreward:"<<node->getExpectedRewardEstimate()<<endl;
     // cout << "updated dec node with immediate reward " << immReward << endl;
     // node->print(cout);
     // cout << endl;
