@@ -19,6 +19,7 @@ public:
         futureReward(-std::numeric_limits<double>::max()),
 	futureRewardSum(0.0),
 	ci(std::numeric_limits<double>::max()),
+//ci(0),
         numberOfVisits(0),
         prob(0.0),
         solved(false),
@@ -45,6 +46,7 @@ public:
         solved = false;
         rewardLock = false;
 	ci = std::numeric_limits<double>::max();
+//ci = 0;
     }
 
     double getExpectedRewardEstimate() const {
@@ -120,6 +122,11 @@ public:
     virtual void setHeuristicWeight(double _heuristicWeight) {
         heuristicWeight = _heuristicWeight;
     }
+
+/*
+virtual void assignCI(CDPUCTNode* node, CDPUCTNode* child) {
+	child->ci = node->ci;
+}*/
 
 protected:
     // Initialization of nodes

@@ -14,9 +14,9 @@ void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
                                                 (double)
                                                 remainingConsideredSteps() *
                                                 initialQValue;
-    node->children[actionIndex]->expectedRewardEstimate = node->children[actionIndex]->futureReward;
     node->children[actionIndex]->numberOfVisits = numberOfInitialVisits;
- 
+//node->children[actionIndex]->ci = node->ci;
+
     node->numberOfVisits += numberOfInitialVisits;
     node->futureReward =
         std::max(node->futureReward,
@@ -102,16 +102,11 @@ void CDPUCTSearch::backupDecisionNodeLeaf(CDPUCTNode* node,
                                          double const& immReward,
                                          double const& futReward) {
     node->children.clear();
-
     node->immediateReward = immReward;
     node->futureReward = futReward;
     node->solved = true;
     node->ci = 0;
     ++node->numberOfVisits;
-    //cout<<"CDP:	leaf. node->expectedReward" << node->getExpectedRewardEstimate()<<endl;
-    // cout << "updated dec node leaf with immediate reward " << immReward << endl;
-    // node->print(cout);
-    // cout << endl;
 }
 
 void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
@@ -120,22 +115,31 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     assert(!node->children.empty());
 
     node->immediateReward = immReward;
-if (selectedActionIndex() != -1) {
-    int n = node->numberOfVisits;
-    double mean = node->futureRewardSum / (double) n;
-    double delta = futReward - mean;
-    n++;
-    mean = mean + delta / (double)n;
-    node->M2 += delta * (futReward - mean);
-    node->numberOfVisits = n;
-    node->futureRewardSum += futReward;
-}
+    if (selectedActionIndex() != -1) {
+	    int n = node->numberOfVisits;
+	    double mean = node->futureRewardSum / (double) n;
+	    double delta = futReward - mean;
+	    n++;
+	    mean = mean + delta / (double)n;
+	    node->M2 += delta * (futReward - mean);
+	    node->numberOfVisits = n;
+	    node->futureRewardSum += futReward;
+    }
 
-    double oldCI = node->M2 / std::max(node->numberOfVisits - 1, 1);
-    node->ci = oldCI;
+    double weightedAvg = 0.0;
+    double oldCI = 0.0;
+    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
+    	if (node->children[childIndex]) {
+		weightedAvg += node->children[childIndex]->getExpectedRewardEstimate() * (double) node->children[childIndex]->numberOfVisits;
+		oldCI += ((double)pow(node->children[childIndex]->numberOfVisits, 2) * node->children[childIndex]->ci); 
+        }
+    }
+    weightedAvg /= (double)node->numberOfVisits;
+    oldCI /= (double)pow(max(node->numberOfVisits - 1, 1), 2);
+
     // Propagate values from best child
-//    node->futureReward = -std::numeric_limits<double>::max();
-    node->futureReward = node->futureRewardSum / (double) node->numberOfVisits;
+    node->futureReward = weightedAvg;
+    node->ci = oldCI;
     node->solved = true;
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
@@ -145,15 +149,12 @@ if (selectedActionIndex() != -1) {
 		MathUtils::doubleIsGreater(node->children[childIndex]->getExpectedRewardEstimate(), node->futureReward)) {
 
 		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
-		node->ci = node->children[childIndex]->getCi();
-	    }    
+		node->ci = node->children[childIndex]->ci;
+	    }   else {
+//cout << "old CI " << oldCI << " child ci " << node->children[childIndex]->ci << " future reward " << node->futureReward << " child future reward " << node->children[childIndex]->getExpectedRewardEstimate() << endl;
+} 
         }
     }
-
-    // cout<<"CDP: backupDecisionNode expectedreward:"<<node->getExpectedRewardEstimate()<<endl;
-    // cout << "updated dec node with immediate reward " << immReward << endl;
-    // node->print(cout);
-    // cout << endl;
 }
 
 void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
@@ -161,36 +162,25 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
     assert(MathUtils::doubleIsEqual(node->immediateReward, 0.0));
 
     ++node->numberOfVisits;
-    if (backupLock) {
-        ++skippedBackups;
-        return;
-    }
 
     // Propagate values from children
     node->futureReward = 0.0;
     double solvedSum = 0.0;
     double probSum = 0.0;
-    int validChildren = 0;
 
     for (unsigned int i = 0; i < node->children.size(); ++i) {
         if (node->children[i]) {
             node->futureReward += (node->children[i]->prob *
                                    node->children[i]->getExpectedRewardEstimate());
             probSum += node->children[i]->prob;
-	    node->ci+= node->children[i]->ci; 
-	    validChildren++;
+	    node->ci += (pow(node->children[i]->prob, 2) * node->children[i]->ci); 
+
             if (node->children[i]->solved) {
                 solvedSum += node->children[i]->prob;
             }
         }
     }
 
-    node->ci /= validChildren;
     node->futureReward /= probSum;
-    node->expectedRewardEstimate = node->futureReward; 
     node->solved = MathUtils::doubleIsEqual(solvedSum, 1.0);
-    //cout<<"CDP: backupChanceNode expectedreward:"<<node->getExpectedRewardEstimate()<<endl;
-    // cout << "updated chance node:" << endl;
-    // node->print(cout);
-    // cout << endl;
 }
