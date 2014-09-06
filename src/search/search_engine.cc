@@ -7,6 +7,7 @@
 #include "dp_uct_search.h"
 #include "cdp_uct_search.h"
 #include "breadth_first_search.h"
+#include "f_uct_search.h"
 
 #include "iterative_deepening_search.h"
 #include "depth_first_search.h"
@@ -111,6 +112,9 @@ SearchEngine* SearchEngine::fromString(string& desc) {
     if (desc.find("MC-UCT") == 0) {
         desc = desc.substr(6, desc.size());
         result = new MCUCTSearch();
+    } else if (desc.find("FUCT") == 0) {
+        desc = desc.substr(4, desc.size());
+        result = new FUCTSearch();
     } else if (desc.find("MaxMC-UCT") == 0) {
         desc = desc.substr(9, desc.size());
         result = new MaxMCUCTSearch();

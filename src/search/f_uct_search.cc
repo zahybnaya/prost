@@ -1,15 +1,15 @@
-#include "cdp_uct_search.h"
+#include "f_uct_search.h"
 
 using namespace std;
 
 /******************************************************************
                      Initialization of Nodes
-*******************************************************************/
+******************************************************************/
 
-void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
+void FUCTSearch::initializeDecisionNodeChild(FUCTNode* node,
                                               unsigned int const& actionIndex,
                                               double const& initialQValue) {
-    node->children[actionIndex] = getCDPUCTNode(1.0);
+    node->children[actionIndex] = getFUCTNode(1.0);
     node->children[actionIndex]->futureReward = heuristicWeight *
                                                 (double)
                                                 remainingConsideredSteps() *
@@ -34,7 +34,7 @@ void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
                          Outcome selection
 ******************************************************************/
 
-CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
+FUCTNode* FUCTSearch::selectOutcome(FUCTNode* node,
                                       PDState& nextState,
                                       int& varIndex) {
     DiscretePD& pd = nextState.probabilisticStateFluentAsPD(varIndex);
@@ -44,9 +44,7 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
     int childIndex = 0;
 
     if (node->children.empty()) {
-        node->children.resize(
-                SearchEngine::probabilisticCPFs[varIndex]->getDomainSize(),
-                NULL);
+        node->children.resize(SearchEngine::probabilisticCPFs[varIndex]->getDomainSize(), NULL);
     } else {
         // Determine the sum of the probabilities of unsolved outcomes
         for (unsigned int i = 0; i < pd.size(); ++i) {
@@ -57,6 +55,7 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
             }
         }
     }
+
     assert(MathUtils::doubleIsGreater(probSum, 0.0) && 
            MathUtils::doubleIsSmallerOrEqual(probSum, 1.0));
 
@@ -84,7 +83,7 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
     assert((childIndex >= 0) && childIndex < node->children.size());
 
     if (!node->children[childIndex]) {
-        node->children[childIndex] = getCDPUCTNode(childProb);
+        node->children[childIndex] = getFUCTNode(childProb);
     }
 
     assert(!node->children[childIndex]->isSolved());
@@ -97,91 +96,55 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
                           Backup Functions
 ******************************************************************/
 
-void CDPUCTSearch::backupDecisionNodeLeaf(CDPUCTNode* node,
+void FUCTSearch::backupDecisionNodeLeaf(FUCTNode* node,
                                          double const& immReward,
                                          double const& futReward) {
     node->children.clear();
     node->immediateReward = immReward;
     node->futureReward = futReward;
-    node->firstReward = futReward;
     node->solved = true;
-    node->ci = 0;
     ++node->numberOfVisits;
 }
 
-void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
+void FUCTSearch::backupDecisionNode(FUCTNode* node,
                                      double const& immReward,
-                                     double const& /*futReward*/) {
+                                     double const& futReward) {
     assert(!node->children.empty());
 
     node->immediateReward = immReward;
     if (selectedActionIndex() != -1) {
-	    ++node->numberOfVisits;
-	    /*if (node->firstReward == -numeric_limits<double>::max())
-	    	node->firstReward = futReward;
-
-	    int n = node->numberOfVisits;
-	    double mean = node->futureRewardSum / (double) n;
-	    double delta = futReward - mean;
-	    n++;
-	    mean = mean + delta / (double)n;
-	    node->M2 += delta * (futReward - mean);
-	    node->numberOfVisits = n;
-	    node->futureRewardSum += futReward;*/
+	    node->numberOfVisits++;
+	    node->futureRewardSum += futReward;
     }
 
-    //double weightedAvg = node->firstReward;
-    double weightedAvg = 0.0;
-    double oldCI = 0.0;
-    double maxValue = -numeric_limits<double>::max();
-    int visits = 0;
-    node->solved = true;
+    int maxValueIndex = -1;
+    double maxValue = -std::numeric_limits<double>::max();
+    int maxVisitsIndex = -1;
+    int maxVisits = 0;
+
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
     	if (node->children[childIndex]) {
 		node->solved &= node->children[childIndex]->solved;
-		weightedAvg += node->children[childIndex]->getExpectedRewardEstimate() * (double) node->children[childIndex]->numberOfVisits;
-		oldCI += ((double)pow(node->children[childIndex]->numberOfVisits, 2) * node->children[childIndex]->ci); 
-		maxValue = max(node->children[childIndex]->getExpectedRewardEstimate(), maxValue);
-		visits += node->children[childIndex]->numberOfVisits;
+		if (node->children[childIndex]->getExpectedRewardEstimate() >= maxValue) {
+			maxValue = node->children[childIndex]->getExpectedRewardEstimate();
+			maxValueIndex = childIndex;
+		}
+		if (node->children[childIndex]->numberOfVisits >= maxVisits) {
+			maxVisits = node->children[childIndex]->numberOfVisits;
+			maxVisitsIndex = childIndex;
+		}
         }
     }
 
-    if (node->solved) {
+    assert(maxValueIndex != -1 && maxVisitsIndex != -1);
+    if (maxValueIndex == maxVisitsIndex || node->solved)
 	node->futureReward = maxValue;
-	node->ci = 0;
-	return;
-    }
+    else
+	node->futureReward = node->futureRewardSum / (double)node->numberOfVisits;
 
-    //weightedAvg /= (double)max(node->numberOfVisits - 1, 1); //without first reward
-    //weightedAvg /= (double)node->numberOfVisits; //with first reward
-    //oldCI /= (double)pow(max(node->numberOfVisits - 1, 1), 2);
-
-    weightedAvg /= (double)max(visits, 1);
-    oldCI /= (double)pow(max(visits, 1), 2);
-
-    // Propagate values from best child
-    node->futureReward = weightedAvg;
-    node->ci = oldCI;
-    //bool updated = false;
-    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
-        if (node->children[childIndex]) {
-
-	    if (MathUtils::doubleIsGreater(node->children[childIndex]->getExpectedRewardEstimate(), node->futureReward) &&
-		MathUtils::doubleIsSmaller(node->children[childIndex]->ci, oldCI)) {
-
-		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
-		node->ci = node->children[childIndex]->ci;
-		//updated = true;
-	    }
-        }
-    }
-    /*
-    tests++;
-    if (updated)
-	updates++;*/
 }
 
-void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
+void FUCTSearch::backupChanceNode(FUCTNode* node,
                                    double const& /*futReward*/) {
     assert(MathUtils::doubleIsEqual(node->immediateReward, 0.0));
 
@@ -189,7 +152,6 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
 
     // Propagate values from children
     node->futureReward = 0.0;
-    node->ci = 0.0;
     double solvedSum = 0.0;
     double probSum = 0.0;
 
@@ -198,7 +160,6 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
             node->futureReward += (node->children[i]->prob *
                                    node->children[i]->getExpectedRewardEstimate());
             probSum += node->children[i]->prob;
-	    node->ci += ((double)pow(node->children[i]->prob, 2) * node->children[i]->ci); 
 
             if (node->children[i]->solved) {
                 solvedSum += node->children[i]->prob;
@@ -206,7 +167,6 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
         }
     }
 
-    node->ci /= (double)pow(probSum, 2);
     node->futureReward /= probSum;
     node->solved = MathUtils::doubleIsEqual(solvedSum, 1.0);
 }

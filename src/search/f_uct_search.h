@@ -1,31 +1,21 @@
-#ifndef CDP_UCT_SEARCH_H
-#define CDP_UCT_SEARCH_H
-
-// CDPUCTSearch is used for two of the UCT variants described in the
-// ICAPS 2013 paper by Keller and Helmert. If called with IDS as
-// initializers, it corresponds to the search engine labelled CDP-UCT
-// in that paper which uses Partial Bellman backups and Monte-Carlo
-// sampling for outcome selection. If the number of new decision nodes
-// is limited to 1, it is UCT*.
+#ifndef F_UCT_SEARCH_H
+#define F_UCT_SEARCH_H
 
 #include "uct_base.h"
 
-class CDPUCTNode {
+class FUCTNode {
 public:
-    CDPUCTNode() :
+    FUCTNode() :
         children(),
         immediateReward(0.0),
-	M2(0.0),
         futureReward(-std::numeric_limits<double>::max()),
 	futureRewardSum(0.0),
-	firstReward(-std::numeric_limits<double>::max()),
-	ci(std::numeric_limits<double>::max()),
         numberOfVisits(0),
         prob(0.0),
         solved(false),
         rewardLock(false) {}
 
-    ~CDPUCTNode() {
+    ~FUCTNode() {
         for (unsigned int i = 0; i < children.size(); ++i) {
             if (children[i]) {
                 delete children[i];
@@ -33,7 +23,7 @@ public:
         }
     }
 
-    friend class CDPUCTSearch;
+    friend class FUCTSearch;
 
     void reset() {
         children.clear();
@@ -42,19 +32,12 @@ public:
 	futureRewardSum = 0.0;
         numberOfVisits = 0;
         prob = 0.0;
-        M2 = 0.0;
-	firstReward = -std::numeric_limits<double>::max();
         solved = false;
         rewardLock = false;
-	ci = std::numeric_limits<double>::max();
     }
 
     double getExpectedRewardEstimate() const {
         return futureReward + immediateReward;
-    }
-
-    double getCi() {
-	return ci;
     }
 
     double getExpectedFutureRewardEstimate() const {
@@ -87,15 +70,12 @@ public:
         }
     }
 
-    std::vector<CDPUCTNode*> children;
+    std::vector<FUCTNode*> children;
 
 private:
     double immediateReward;
-    double M2;
     double futureReward;
     double futureRewardSum;
-    double firstReward;
-    double ci;
     int numberOfVisits;
 
     double prob;
@@ -103,12 +83,10 @@ private:
     bool rewardLock;
 };
 
-class CDPUCTSearch : public UCTBase<CDPUCTNode> {
+class FUCTSearch : public UCTBase<FUCTNode> {
 public:
-    CDPUCTSearch() :
-        UCTBase<CDPUCTNode>("CDP-UCT"),
-	//tests(0),
-	//updates(0),
+    FUCTSearch() :
+        UCTBase<FUCTNode>("FUCT"),
         heuristicWeight(0.5) {}
 
     // Set parameters from command line
@@ -118,7 +96,7 @@ public:
             return true;
         }
 
-        return UCTBase<CDPUCTNode>::setValueFromString(param, value);
+        return UCTBase<FUCTNode>::setValueFromString(param, value);
     }
 
     // Parameter setter
@@ -126,46 +104,33 @@ public:
         heuristicWeight = _heuristicWeight;
     }
 
-   /* virtual void getUpdateRate() {
-	double rate = (double)updates / (double)tests;
-	updates = 0;
-	tests = 0;
-
-	std::cout << "Update rate: " << rate << std::endl;
-    }*/
-
 protected:
     // Initialization of nodes
-    void initializeDecisionNodeChild(CDPUCTNode* node,
+    void initializeDecisionNodeChild(FUCTNode* node,
             unsigned int const& actionIndex,
             double const& initialQValue);
 
     // Outcome selection
-    CDPUCTNode* selectOutcome(CDPUCTNode* node, PDState& nextState, int& varIndex);
+    FUCTNode* selectOutcome(FUCTNode* node, PDState& nextState, int& varIndex);
 
     // Backup functions
-    void backupDecisionNodeLeaf(CDPUCTNode* node, double const& immReward,
-            double const& futReward);
-    void backupDecisionNode(CDPUCTNode* node, double const& immReward,
-            double const& futReward);
-    void backupChanceNode(CDPUCTNode* node, double const& futReward);
+    void backupDecisionNodeLeaf(FUCTNode* node, double const& immReward, double const& futReward);
+    void backupDecisionNode(FUCTNode* node, double const& immReward, double const& futReward);
+    void backupChanceNode(FUCTNode* node, double const& futReward);
 
     // Memory management
-    CDPUCTNode* getRootNode() {
-        return getCDPUCTNode(1.0);
+    FUCTNode* getRootNode() {
+        return getFUCTNode(1.0);
     }
 
-    CDPUCTNode* getDummyNode() {
-        return getCDPUCTNode(1.0);
+    FUCTNode* getDummyNode() {
+        return getFUCTNode(1.0);
     }
 
 private:
-     //int tests;
-     //int updates;
-
     // Memory management
-    CDPUCTNode* getCDPUCTNode(double const& prob) {
-        CDPUCTNode* res = UCTBase<CDPUCTNode>::getSearchNode();
+    FUCTNode* getFUCTNode(double const& prob) {
+        FUCTNode* res = UCTBase<FUCTNode>::getSearchNode();
         res->prob = prob;
         return res;
     }

@@ -7,6 +7,7 @@ HEADERS = parser.h \
 	  max_mc_uct_search.h \
 	  dp_uct_search.h \
 	  cdp_uct_search.h \
+	  f_uct_search.h \
 	  depth_first_search.h \
 	  iterative_deepening_search.h \
 	  minimal_lookahead_search.h \
@@ -22,6 +23,7 @@ HEADERS = parser.h \
 	  utils/string_utils.h \
 	  utils/system_utils.h \
 	  utils/math_utils.h \
+
 
 SOURCES = main.cc $(HEADERS:%.h=%.cc)
 
