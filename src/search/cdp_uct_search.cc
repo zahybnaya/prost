@@ -103,7 +103,6 @@ void CDPUCTSearch::backupDecisionNodeLeaf(CDPUCTNode* node,
     node->children.clear();
     node->immediateReward = immReward;
     node->futureReward = futReward;
-    node->firstReward = futReward;
     node->solved = true;
     node->ci = 0;
     ++node->numberOfVisits;
@@ -117,20 +116,14 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     node->immediateReward = immReward;
     if (selectedActionIndex() != -1) {
 	    ++node->numberOfVisits;
-	    /*if (node->firstReward == -numeric_limits<double>::max())
-	    	node->firstReward = futReward;
-
-	    int n = node->numberOfVisits;
-	    double mean = node->futureRewardSum / (double) n;
-	    double delta = futReward - mean;
-	    n++;
-	    mean = mean + delta / (double)n;
-	    node->M2 += delta * (futReward - mean);
-	    node->numberOfVisits = n;
-	    node->futureRewardSum += futReward;*/
+    }
+    if (backupLock) {
+        ++skippedBackups;
+        return;
     }
 
-    //double weightedAvg = node->firstReward;
+    //Calculate the weighted average and confidence of the childrens rewards.
+    //Also check if this node is solved, and if so assign it the maximum expected child reward.
     double weightedAvg = 0.0;
     double oldCI = 0.0;
     double maxValue = -numeric_limits<double>::max();
@@ -152,17 +145,16 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 	return;
     }
 
-    //weightedAvg /= (double)max(node->numberOfVisits - 1, 1); //without first reward
-    //weightedAvg /= (double)node->numberOfVisits; //with first reward
-    //oldCI /= (double)pow(max(node->numberOfVisits - 1, 1), 2);
-
     weightedAvg /= (double)max(visits, 1);
     oldCI /= (double)pow(max(visits, 1), 2);
+
+    //Save the old reward for backup lock
+    double oldFutureReward = node->futureReward;
 
     // Propagate values from best child
     node->futureReward = weightedAvg;
     node->ci = oldCI;
-    //bool updated = false;
+    bool updated = false;
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
 
@@ -171,14 +163,21 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 
 		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
 		node->ci = node->children[childIndex]->ci;
-		//updated = true;
+		updated = true;
 	    }
         }
     }
-    /*
+    
     tests++;
     if (updated)
-	updates++;*/
+	updates++;
+
+    // If the future reward did not change we did not find a better node and
+    // therefore do not need to update the rewards in preceding parents.
+    if ((remainingConsideredSteps() > maxLockDepth) &&
+        MathUtils::doubleIsEqual(oldFutureReward, node->futureReward)) {
+        backupLock = true;
+    }
 }
 
 void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
