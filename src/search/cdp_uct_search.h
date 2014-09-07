@@ -16,7 +16,7 @@ public:
         children(),
         immediateReward(0.0),
         futureReward(-std::numeric_limits<double>::max()),
-	ci(std::numeric_limits<double>::max()),
+	ci(std::numeric_limits<double>::infinity()),
         numberOfVisits(0),
         prob(0.0),
         solved(false),
@@ -40,7 +40,7 @@ public:
         prob = 0.0;
         solved = false;
         rewardLock = false;
-	ci = std::numeric_limits<double>::max();
+	ci = std::numeric_limits<double>::infinity();
     }
 
     double getExpectedRewardEstimate() const {
@@ -94,8 +94,8 @@ class CDPUCTSearch : public UCTBase<CDPUCTNode> {
 public:
     CDPUCTSearch() :
         UCTBase<CDPUCTNode>("CDP-UCT"),
-	tests(0),
-	updates(0),
+	//tests(0),
+	//updates(0),
         heuristicWeight(0.5) {}
 
     // Set parameters from command line
@@ -112,14 +112,14 @@ public:
     virtual void setHeuristicWeight(double _heuristicWeight) {
         heuristicWeight = _heuristicWeight;
     }
-
+/*
     virtual void getUpdateRate() {
 	double rate = (double)updates / (double)tests;
 	updates = 0;
 	tests = 0;
 
 	std::cout << "Update rate: " << rate << std::endl;
-    }
+    }*/
 
 protected:
     // Initialization of nodes
@@ -147,8 +147,8 @@ protected:
     }
 
 private:
-    int tests;
-    int updates;
+    //int tests;
+    //int updates;
 
     // Memory management
     CDPUCTNode* getCDPUCTNode(double const& prob) {

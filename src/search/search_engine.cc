@@ -3,6 +3,7 @@
 #include "prost_planner.h"
 
 #include "mc_uct_search.h"
+#include "wmc_uct_search.h"
 #include "max_mc_uct_search.h"
 #include "dp_uct_search.h"
 #include "cdp_uct_search.h"
@@ -112,6 +113,9 @@ SearchEngine* SearchEngine::fromString(string& desc) {
     if (desc.find("MC-UCT") == 0) {
         desc = desc.substr(6, desc.size());
         result = new MCUCTSearch();
+    } else if (desc.find("WMC-UCT") == 0) {
+        desc = desc.substr(7, desc.size());
+        result = new WMCUCTSearch();
     } else if (desc.find("FUCT") == 0) {
         desc = desc.substr(4, desc.size());
         result = new FUCTSearch();

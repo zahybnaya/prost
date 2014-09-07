@@ -136,6 +136,9 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 		oldCI += ((double)pow(node->children[childIndex]->numberOfVisits, 2) * node->children[childIndex]->ci); 
 		maxValue = max(node->children[childIndex]->getExpectedRewardEstimate(), maxValue);
 		visits += node->children[childIndex]->numberOfVisits;
+
+		//std::cout << "ci " << node->children[childIndex]->ci << " visits " << node->children[childIndex]->numberOfVisits << std::endl;
+
         }
     }
 
@@ -154,7 +157,8 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     // Propagate values from best child
     node->futureReward = weightedAvg;
     node->ci = oldCI;
-    bool updated = false;
+   // bool updated = false;
+//std::cout << weightedAvg << " wAVG " << oldCI << " CI " << node->children.size() << " num children" << std::endl;
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
 
@@ -163,14 +167,23 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 
 		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
 		node->ci = node->children[childIndex]->ci;
-		updated = true;
+		//updated = true;
 	    }
         }
     }
     
-    tests++;
-    if (updated)
+    /*tests++;
+    if (updated) {
 	updates++;
+	//std::cout << "first updated" << std::endl;
+} else {
+	//std::cout << "first not updated" << std::endl;
+}
+
+int foo = 1;
+int bar = 0;
+if (tests == 2)
+std::cout << foo / bar;*/
 
     // If the future reward did not change we did not find a better node and
     // therefore do not need to update the rewards in preceding parents.
@@ -185,6 +198,10 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
     assert(MathUtils::doubleIsEqual(node->immediateReward, 0.0));
 
     ++node->numberOfVisits;
+    if (backupLock) {
+        ++skippedBackups;
+        return;
+    }
 
     // Propagate values from children
     node->futureReward = 0.0;
