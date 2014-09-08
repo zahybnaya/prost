@@ -1,7 +1,7 @@
-#ifndef CDP_UCT_SEARCH_H
-#define CDP_UCT_SEARCH_H
+#ifndef WMC_UCT_SEARCH_H
+#define WMC_UCT_SEARCH_H
 
-// CDPUCTSearch is used for two of the UCT variants described in the
+// WMCUCTSearch is used for two of the UCT variants described in the
 // ICAPS 2013 paper by Keller and Helmert. If called with IDS as
 // initializers, it corresponds to the search engine labelled CDP-UCT
 // in that paper which uses Partial Bellman backups and Monte-Carlo
@@ -10,20 +10,19 @@
 
 #include "uct_base.h"
 
-class CDPUCTNode {
+class WMCUCTNode {
 public:
-    CDPUCTNode() :
+    WMCUCTNode() :
         children(),
         immediateReward(0.0),
         futureReward(-std::numeric_limits<double>::max()),
-	firstReward(std::numeric_limits<double>::infinity()),
-	ci(std::numeric_limits<double>::infinity()),
-        numberOfVisits(0),
+	//firstReward(std::numeric_limits<double>::infinity()),
+	numberOfVisits(0),
         prob(0.0),
         solved(false),
         rewardLock(false) {}
 
-    ~CDPUCTNode() {
+    ~WMCUCTNode() {
         for (unsigned int i = 0; i < children.size(); ++i) {
             if (children[i]) {
                 delete children[i];
@@ -31,18 +30,17 @@ public:
         }
     }
 
-    friend class CDPUCTSearch;
+    friend class WMCUCTSearch;
 
     void reset() {
         children.clear();
         immediateReward = 0.0;
         futureReward = -std::numeric_limits<double>::max();
-	firstReward = std::numeric_limits<double>::infinity();
+	//firstReward = std::numeric_limits<double>::infinity();
         numberOfVisits = 0;
         prob = 0.0;
         solved = false;
         rewardLock = false;
-	ci = std::numeric_limits<double>::infinity();
     }
 
     double getExpectedRewardEstimate() const {
@@ -79,13 +77,12 @@ public:
         }
     }
 
-    std::vector<CDPUCTNode*> children;
+    std::vector<WMCUCTNode*> children;
 
 private:
     double immediateReward;
     double futureReward;
     double firstReward;
-    double ci;
     int numberOfVisits;
 
     double prob;
@@ -93,12 +90,10 @@ private:
     bool rewardLock;
 };
 
-class CDPUCTSearch : public UCTBase<CDPUCTNode> {
+class WMCUCTSearch : public UCTBase<WMCUCTNode> {
 public:
-    CDPUCTSearch() :
-        UCTBase<CDPUCTNode>("CDP-UCT"),
-	tests(0),
-	updates(0),
+    WMCUCTSearch() :
+        UCTBase<WMCUCTNode>("WMC-UCT"),
         heuristicWeight(0.5) {}
 
     // Set parameters from command line
@@ -108,7 +103,7 @@ public:
             return true;
         }
 
-        return UCTBase<CDPUCTNode>::setValueFromString(param, value);
+        return UCTBase<WMCUCTNode>::setValueFromString(param, value);
     }
 
     // Parameter setter
@@ -116,46 +111,35 @@ public:
         heuristicWeight = _heuristicWeight;
     }
 
-    virtual void getUpdateRate() {
-	double rate = (double)updates / (double)tests;
-	updates = 0;
-	tests = 0;
-
-	std::cout << "Update rate: " << rate << std::endl;
-    }
-
 protected:
     // Initialization of nodes
-    void initializeDecisionNodeChild(CDPUCTNode* node,
+    void initializeDecisionNodeChild(WMCUCTNode* node,
             unsigned int const& actionIndex,
             double const& initialQValue);
 
     // Outcome selection
-    CDPUCTNode* selectOutcome(CDPUCTNode* node, PDState& nextState, int& varIndex);
+    WMCUCTNode* selectOutcome(WMCUCTNode* node, PDState& nextState, int& varIndex);
 
     // Backup functions
-    void backupDecisionNodeLeaf(CDPUCTNode* node, double const& immReward,
+    void backupDecisionNodeLeaf(WMCUCTNode* node, double const& immReward,
             double const& futReward);
-    void backupDecisionNode(CDPUCTNode* node, double const& immReward,
+    void backupDecisionNode(WMCUCTNode* node, double const& immReward,
             double const& futReward);
-    void backupChanceNode(CDPUCTNode* node, double const& futReward);
+    void backupChanceNode(WMCUCTNode* node, double const& futReward);
 
     // Memory management
-    CDPUCTNode* getRootNode() {
-        return getCDPUCTNode(1.0);
+    WMCUCTNode* getRootNode() {
+        return getWMCUCTNode(1.0);
     }
 
-    CDPUCTNode* getDummyNode() {
-        return getCDPUCTNode(1.0);
+    WMCUCTNode* getDummyNode() {
+        return getWMCUCTNode(1.0);
     }
 
 private:
-    int tests;
-    int updates;
-
     // Memory management
-    CDPUCTNode* getCDPUCTNode(double const& prob) {
-        CDPUCTNode* res = UCTBase<CDPUCTNode>::getSearchNode();
+    WMCUCTNode* getWMCUCTNode(double const& prob) {
+        WMCUCTNode* res = UCTBase<WMCUCTNode>::getSearchNode();
         res->prob = prob;
         return res;
     }

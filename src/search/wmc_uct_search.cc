@@ -1,4 +1,4 @@
-#include "cdp_uct_search.h"
+#include "wmc_uct_search.h"
 
 using namespace std;
 
@@ -6,10 +6,10 @@ using namespace std;
                      Initialization of Nodes
 *******************************************************************/
 
-void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
+void WMCUCTSearch::initializeDecisionNodeChild(WMCUCTNode* node,
                                               unsigned int const& actionIndex,
                                               double const& initialQValue) {
-    node->children[actionIndex] = getCDPUCTNode(1.0);
+    node->children[actionIndex] = getWMCUCTNode(1.0);
     node->children[actionIndex]->futureReward = heuristicWeight *
                                                 (double)
                                                 remainingConsideredSteps() *
@@ -34,7 +34,7 @@ void CDPUCTSearch::initializeDecisionNodeChild(CDPUCTNode* node,
                          Outcome selection
 ******************************************************************/
 
-CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
+WMCUCTNode* WMCUCTSearch::selectOutcome(WMCUCTNode* node,
                                       PDState& nextState,
                                       int& varIndex) {
     DiscretePD& pd = nextState.probabilisticStateFluentAsPD(varIndex);
@@ -84,7 +84,7 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
     assert((childIndex >= 0) && childIndex < node->children.size());
 
     if (!node->children[childIndex]) {
-        node->children[childIndex] = getCDPUCTNode(childProb);
+        node->children[childIndex] = getWMCUCTNode(childProb);
     }
 
     assert(!node->children[childIndex]->isSolved());
@@ -97,7 +97,7 @@ CDPUCTNode* CDPUCTSearch::selectOutcome(CDPUCTNode* node,
                           Backup Functions
 ******************************************************************/
 
-void CDPUCTSearch::backupDecisionNodeLeaf(CDPUCTNode* node,
+void WMCUCTSearch::backupDecisionNodeLeaf(WMCUCTNode* node,
                                          double const& immReward,
                                          double const& futReward) {
     node->children.clear();
@@ -105,118 +105,51 @@ void CDPUCTSearch::backupDecisionNodeLeaf(CDPUCTNode* node,
     node->futureReward = futReward;
     node->firstReward = futReward;
     node->solved = true;
-    node->ci = 0;
     ++node->numberOfVisits;
 }
 
-void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
+void WMCUCTSearch::backupDecisionNode(WMCUCTNode* node,
                                      double const& immReward,
-                                     double const& futReward) {
+                                     double const& /*futReward*/) {
     assert(!node->children.empty());
-
     node->immediateReward = immReward;
     if (selectedActionIndex() != -1) {
-	if (numeric_limits<double>::max() < node->firstReward)
-		node->firstReward = futReward;
-	    ++node->numberOfVisits;
+	//if (numeric_limits<double>::max() < node->firstReward)
+	//	node->firstReward = futReward;
+
+        ++node->numberOfVisits;
     }
-    if (backupLock) {
-        ++skippedBackups;
-        return;
-    }
-
-    //Calculate the weighted average and confidence of the childrens rewards.
-    //Also check if this node is solved, and if so assign it the maximum expected child reward.
-    double weightedAvg = numeric_limits<double>::max() < node->firstReward ? 0.0 : node->firstReward;
-    int visits = numeric_limits<double>::max() < node->firstReward ? 0 : 1;
-    double oldCI = 0.0;
-    double maxValue = -numeric_limits<double>::max();
-    node->solved = true;
-    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
-    	if (node->children[childIndex]) {
-		node->solved &= node->children[childIndex]->solved;
-		weightedAvg += node->children[childIndex]->getExpectedRewardEstimate() * (double) node->children[childIndex]->numberOfVisits;
-		//oldCI += ((double)pow(node->children[childIndex]->numberOfVisits, 2) * node->children[childIndex]->ci); 
-		
-		maxValue = max(node->children[childIndex]->getExpectedRewardEstimate(), maxValue);
-		visits += node->children[childIndex]->numberOfVisits;
-
-		//std::cout << "ci " << node->children[childIndex]->ci << " visits " << node->children[childIndex]->numberOfVisits << std::endl;
-
-        }
-    }
-
-    if (node->solved) {
-	node->futureReward = maxValue;
-	node->ci = 0;
-	return;
-    }
-
-    weightedAvg /= (double)max(visits, 1);
-    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
-    	if (node->children[childIndex]) {
-		double distance = node->children[childIndex]->getExpectedRewardEstimate() - weightedAvg;
-		oldCI += (double)node->children[childIndex]->numberOfVisits * (double)pow(distance, 2);
-	}
-    }
-
-    oldCI /= (double)max(visits, 1);
-
-    //Save the old reward for backup lock
-    double oldFutureReward = node->futureReward;
 
     // Propagate values from best child
-    node->futureReward = weightedAvg;
-    node->ci = oldCI;
-    bool updated = false;
-//std::cout << weightedAvg << " wAVG " << oldCI << " CI " << node->children.size() << " num children" << std::endl;
+    //node->futureReward = numeric_limits<double>::max() < node->firstReward ? 0.0 : node->firstReward;
+    //int visits = numeric_limits<double>::max() < node->firstReward ? 0 : 1;
+    node->futureReward = 0.0;
+    int visits = 0;
+    node->solved = true;
+    double maxValue = -numeric_limits<double>::max();
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
         if (node->children[childIndex]) {
-
-	    if (MathUtils::doubleIsGreater(node->children[childIndex]->getExpectedRewardEstimate(), node->futureReward) &&
-		MathUtils::doubleIsSmaller(node->children[childIndex]->ci, oldCI)) {
-
-		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
-		node->ci = node->children[childIndex]->ci;
-		updated = true;
-	    }
+            node->solved &= node->children[childIndex]->solved;
+            node->futureReward += node->children[childIndex]->getExpectedRewardEstimate() * (double) node->children[childIndex]->numberOfVisits;
+	    visits += node->children[childIndex]->numberOfVisits;
+	    maxValue = max(node->children[childIndex]->getExpectedRewardEstimate(), maxValue);
         }
     }
-    
-    tests++;
-    if (updated) //{
-	updates++;
-	/*//std::cout << "first updated" << std::endl;
-} else {
-	//std::cout << "first not updated" << std::endl;
+
+    if (node->solved)
+	node->futureReward = maxValue;
+    else
+    	node->futureReward /= visits;
 }
 
-int foo = 1;
-int bar = 0;
-if (tests == 2)
-std::cout << foo / bar;*/
-
-    // If the future reward did not change we did not find a better node and
-    // therefore do not need to update the rewards in preceding parents.
-    if ((remainingConsideredSteps() > maxLockDepth) &&
-        MathUtils::doubleIsEqual(oldFutureReward, node->futureReward)) {
-        backupLock = true;
-    }
-}
-
-void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
+void WMCUCTSearch::backupChanceNode(WMCUCTNode* node,
                                    double const& /*futReward*/) {
     assert(MathUtils::doubleIsEqual(node->immediateReward, 0.0));
 
     ++node->numberOfVisits;
-    if (backupLock) {
-        ++skippedBackups;
-        return;
-    }
 
     // Propagate values from children
     node->futureReward = 0.0;
-    node->ci = 0.0;
     double solvedSum = 0.0;
     double probSum = 0.0;
 
@@ -225,7 +158,6 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
             node->futureReward += (node->children[i]->prob *
                                    node->children[i]->getExpectedRewardEstimate());
             probSum += node->children[i]->prob;
-	    node->ci += ((double)pow(node->children[i]->prob, 2) * node->children[i]->ci); 
 
             if (node->children[i]->solved) {
                 solvedSum += node->children[i]->prob;
@@ -233,7 +165,6 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
         }
     }
 
-    node->ci /= (double)pow(probSum, 2);
     node->futureReward /= probSum;
     node->solved = MathUtils::doubleIsEqual(solvedSum, 1.0);
 }
