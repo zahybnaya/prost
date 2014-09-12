@@ -18,7 +18,7 @@ void MCUCTSearch::initializeDecisionNodeChild(MCUCTNode* node,
     node->numberOfVisits += numberOfInitialVisits;
     node->futureReward =
         std::max(node->futureReward, node->children[actionIndex]->futureReward);
-    cout<<"MC futReward:" <<node->futureReward<<endl;
+    //cout<<"MC futReward:" <<node->futureReward<<endl;
     // cout << "initialized child ";
     // SearchEngine::actionStates[actionIndex].printCompact(cout);
     // cout << " with remaining steps " << remainingConsideredSteps() << " and initialQValue " << initialQValue << endl;
