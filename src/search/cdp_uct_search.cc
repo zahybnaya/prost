@@ -113,30 +113,70 @@ bool isInfinity(double n) {
 	return numeric_limits<double>::max() < n;
 }
 
+void killNan(double d) {
+	if (std::isnan(d)) {
+		int a = 1;
+		int b = 0;
+		std::cout << a / b;
+		cout << "killed nan" << endl;
+	}
+}
+
+void killNegative(double d) {
+	if (d < 0) {
+		int a = 1;
+		int b = 0;
+		cout << "killed negative" << endl;
+		std::cout << a / b;
+	}
+}
+
 //Preform a one-tail t-test to determine wether node2's mean is higher than node1's.
+//Actually called a Welch test for comparing means of unequal sample size and variance.
 bool CDPUCTSearch::oneTailTTest(CDPUCTNode* node1, CDPUCTNode* node2) {
 	double mean1 = node1->getExpectedRewardEstimate();
+cout << endl << "mean 1 " << mean1 <<endl;
 	double mean2 = node2->getExpectedRewardEstimate();
-
-	double var1 = pow(node1->ci, 2);
-	double var2 = pow(node2->ci, 2);
-
+cout << "mean 2 " << mean2 <<endl;
+	double var1 = node1->ci;
+cout << "var 1 " << var1 <<endl;
+	double var2 = node2->ci;
+cout << "var 2 " << var2 <<endl;
 	double n1 = (double)node1->numberOfVisits;
 	double n2 = (double)node2->numberOfVisits;
+killNan(mean1);
+killNan(mean2);
+killNan(var1);
+killNan(var2);
+killNan(n1);
+killNan(n1);
+	if (var1 == 0 && var2 == 0)
+		return mean1 < mean2;
 
+cout << "n 1 " << n1 <<endl;
+cout << "n 2 " << n2 <<endl;
 	double t = (n1 - 1.0) * var1 + (n2 - 1.0) * var2;
+killNan(t);
 	t /= n1 + n2 - 2.0;
+killNan(t);
 	t *= ((1 / n1) + (1 / n2));
+killNan(t);
+cout << "t before sqrt " << t <<endl;
 	t = (mean1 - mean2) / sqrt(t);
-
+killNan(t);
+cout << "t after sqrt " << t <<endl;
 	double degree = (1 / (n1 - 1)) * pow(var1 / n1, 2);
+killNan(degree);
 	degree += (1 / (n2 - 1)) * pow(var2 / n2, 2);
+killNan(degree);
 	degree = pow((var1 / n1) + (var2 / n2), 2) / degree;
-
+killNan(degree);
+cout << " degree " << degree << endl;
 	int df = (int)round(degree);
 	if (df > 999)
 		df = 999;
-	
+cout<<"df " <<df <<endl;
+cout<<"t < t_values[df] " <<(t < t_values[df]) <<endl;
 	return t < t_values[df];
 }
 
@@ -144,7 +184,7 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
                                      double const& immReward,
                                      double const& /*futReward*/) {
     assert(!node->children.empty());
-
+cout << " decision node " << endl;
     node->immediateReward = immReward;
     if (selectedActionIndex() != -1) {
 	//if (isInfinity(node->firstReward))
@@ -180,7 +220,11 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
 
 		node->solved &= node->children[childIndex]->solved;
 		weightedAvg += childFutureRewards * (double)childVisits;
+killNan(weightedAvg);
 		oldCI += (double)(childVisits - 1) * childCI + (double)childVisits * pow(childFutureRewards, 2); 
+killNan(oldCI);
+cout << "accumulating CI " << oldCI << endl;
+killNegative(oldCI);
 		maxValue = max(childFutureRewards, maxValue);
 		visits += childVisits;
         }
@@ -193,56 +237,94 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
     }
 
     weightedAvg /= (double)max(visits, 1);
+killNan(weightedAvg);
     oldCI = oldCI - (double)visits * pow(weightedAvg, 2);
+cout << "oldCI after subtraction " << oldCI << endl;
+killNan(oldCI);
+//killNegative(oldCI); //We know this could possibly result in a negative
     oldCI = MathUtils::doubleIsEqual(oldCI, 0.0) ? 0.0 : oldCI;
-    oldCI = oldCI / max(visits - 1.0, 1.0);
-
+    oldCI = (oldCI < 0) ? 0.0 : oldCI;
+killNan(oldCI);
+killNegative(oldCI);
+    oldCI = oldCI / (double)max(visits - 1.0, 1.0);
+killNegative(oldCI);
+killNan(oldCI);
     //If the number of visits is under the threshold, stay with the wiegthed average.
-    if (visits < node->children.size()) {
+    /*if (visits < node->children.size()) {
 	node->futureReward = weightedAvg;
         node->ci = oldCI;
 	return;
-    }
+    }*/
 
     //Save the old reward for backup lock
     double oldFutureReward = node->futureReward;
-/*
-    //Keep for reassigning after all tests are done.
-    //T-test requiers that the number of visits match the sampled populations.
-    int oldVisits = node->numberOfVisits;
-*/
+
     // Propagate values from best child
-    node->futureReward = weightedAvg;
-    node->ci = oldCI;
-    //bool updated = false;
-    for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
-        if (node->children[childIndex]) {
-
-	    if (MathUtils::doubleIsGreater(node->children[childIndex]->getExpectedRewardEstimate(), node->futureReward) &&
-		MathUtils::doubleIsSmaller(node->children[childIndex]->ci, oldCI)) {
-	    //if (oneTailTTest(node, node->children[childIndex])) {
-
-		node->futureReward = node->children[childIndex]->getExpectedRewardEstimate();
-		node->ci = node->children[childIndex]->ci;
-		//node->numberOfVisits = node->children[childIndex]->numberOfVisits; for t test
-		//updated = true;
-	    }
-        }
+    CDPUCTNode **nPlus = new CDPUCTNode*[node->children.size()];
+cout << " size of children vector " << node->children.size() << endl;
+    for (unsigned int i = 0; i < node->children.size(); ++i) {
+       nPlus[i] = 0; //initialization
+       if (node->children[i] && node->children[i]->numberOfVisits > 1) {
+cout << "child " << i;
+	       nPlus[i] = node->children[i];
+	       for (unsigned int j = 0; j < node->children.size(); ++j) {
+			if (i != j && node->children[j] && node->children[j]->numberOfVisits > 1) {
+cout << " compared with " << j;
+			    if (oneTailTTest(node->children[i], node->children[j])) {
+				nPlus[i] = 0;
+			    }
+			}
+	       }
+cout << endl;
+       }
     }
 
-//    node->numberOfVisits = oldVisits; for t test
-    
-/*    tests++;
-    if (updated)
-	updates++;*/
-/*
-if (std::isnan(node->ci)) {
-double vis = 6000000;
-double val = -15.5833333333333;
-double sum = 0.0;
-std::cout << "vis " << vis << " val " << val << " sum " << sum << std::endl;
-sum += vis * val;
-std::cout << "this is just a tribute " <<  sum << std::endl;
+    double nPlusSum = 0.0;
+    double nPlusCI = 0.0;
+    int nPlusVisits = 0;
+    bool update = false;
+    for (unsigned int i = 0; i < node->children.size(); ++i) {
+cout << "checking nplus " << i << " " << nPlus[i] << endl;
+	if (nPlus[i] != 0) {
+		update = true;
+cout<<"nPlus  " << i << " visits " << nPlus[i]->numberOfVisits << " value " << nPlus[i]->getExpectedRewardEstimate() << " ci " << nPlus[i]->ci<< endl;
+		nPlusSum += (double)nPlus[i]->numberOfVisits * nPlus[i]->getExpectedRewardEstimate();
+killNan(nPlusSum);
+		nPlusVisits += nPlus[i]->numberOfVisits;
+		nPlusCI += (double)(nPlus[i]->numberOfVisits - 1) * nPlus[i]->ci + (double)nPlus[i]->numberOfVisits * pow(nPlus[i]->getExpectedRewardEstimate(), 2); 
+
+	cout<<"nPlus  " << i << " ci in the works " << nPlusCI << " avg in the works " << nPlusSum << " visits in the works " << nPlusVisits <<endl;
+killNan(nPlusCI);
+killNegative(nPlusCI);
+	}
+    }
+
+    delete(nPlus);
+
+    if (update) {
+	node->futureReward = nPlusSum / (double)max(nPlusVisits, 1);
+killNan(node->futureReward);
+	nPlusCI = nPlusCI - (double)nPlusVisits * pow(node->futureReward, 2);
+cout << "nPlusCI after subtraction " << nPlusCI << endl;
+killNan(nPlusCI);
+//killNegative(nPlusCI); //We know this could possibly be negative
+	nPlusCI = MathUtils::doubleIsEqual(nPlusCI, 0.0) ? 0.0 : nPlusCI;
+	nPlusCI = (nPlusCI < 0.0) ? 0.0 : nPlusCI;
+cout << "nPlusCI after rounding " << nPlusCI << endl;
+killNan(nPlusCI);
+killNegative(nPlusCI);
+	node->ci = nPlusCI / (double)max(nPlusVisits - 1, 1);
+cout << "nPlusCI " << node->ci << " nPlus avg " << node->futureReward << endl<< endl;
+killNan(node->ci);
+killNegative(node->ci);
+    } else {
+	node->futureReward = weightedAvg;
+	node->ci = oldCI;
+cout << "parent ci " << node->ci << " parent value " << node->futureReward << endl<< endl;
+    }
+
+//if (std::isnan(node->ci)) {
+/*if (node->numberOfVisits > 20) {
 int a = 1;
 int b = 0;
 std::cout << a / b;
@@ -264,7 +346,7 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
         ++skippedBackups;
         return;
     }
-
+cout << " chance node " << endl;
     // Propagate values from children
     node->futureReward = 0.0;
     node->ci = 0.0;
@@ -281,6 +363,9 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
 	    visits += childVisits;
             node->futureReward += childVisits * childFutureRewards;
 	    node->ci += (childVisits - 1) * childCI + childVisits * pow(childFutureRewards, 2);
+cout << "ci in the works " << node->ci << endl;
+killNegative(node->ci);
+
             probSum += childProb;
 
             if (node->children[i]->solved)
@@ -289,8 +374,15 @@ void CDPUCTSearch::backupChanceNode(CDPUCTNode* node,
     }
 
     node->futureReward /= visits;
+cout << "node->ci " << node->ci << " visits * pow(node->futureReward, 2) "  << (visits * pow(node->futureReward, 2)) << endl;
     node->ci = node->ci - visits * pow(node->futureReward, 2);
+cout << "ci after subtraction " << node->ci << endl;
+//killNegative(node->ci); //We know this could possibly be negative
     node->ci = MathUtils::doubleIsEqual(node->ci, 0.0) ? 0.0 : node->ci;
+    node->ci = (node->ci < 0) ? 0.0 : node->ci;
+cout << "ci after rounding fix " << node->ci << endl;
+killNegative(node->ci);
     node->ci = node->ci / (visits - 1.0); 
+killNegative(node->ci);
     node->solved = MathUtils::doubleIsEqual(solvedSum, 1.0);
 }

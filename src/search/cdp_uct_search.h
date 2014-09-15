@@ -94,8 +94,8 @@ class CDPUCTSearch : public UCTBase<CDPUCTNode> {
 public:
     CDPUCTSearch() :
         UCTBase<CDPUCTNode>("CDP-UCT"),
-	//tests(0),
-	//updates(0),
+	tests(0),
+	updates(0),
 	//visitsThreshold(0),
         heuristicWeight(0.5) {}
 
@@ -148,8 +148,8 @@ protected:
     }
 
 private:
-   // int tests;
-   // int updates;
+   int tests;
+   int updates;
    // int visitsThreshold;
 
     // Memory management
