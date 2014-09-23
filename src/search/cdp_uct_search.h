@@ -96,6 +96,7 @@ public:
         UCTBase<CDPUCTNode>("CDP-UCT"),
 	tests(0),
 	updates(0),
+	debugMessage(false),
 	//visitsThreshold(0),
         heuristicWeight(0.5) {}
 
@@ -150,6 +151,7 @@ protected:
 private:
    int tests;
    int updates;
+   bool debugMessage;
    // int visitsThreshold;
 
     // Memory management
@@ -163,7 +165,7 @@ private:
     double heuristicWeight;
 
     //Helper math functions
-    bool oneTailTTest(CDPUCTNode* node1, CDPUCTNode* node2);
+    int oneTailTTest(CDPUCTNode* node1, CDPUCTNode* node2);
 };
 
 #endif
