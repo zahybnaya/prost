@@ -33,6 +33,7 @@ void IPPCClient::run(string const& problemName) {
         while (true) {
             planner->initStep(nextState, remainingTime);
             vector<string> nextActions = planner->plan();
+//std::cout << "number of actions returned by the planner " << nextActions.size() << std::endl;
             if (!submitAction(nextActions, nextState, immediateReward)) {
                 break;
             }
@@ -126,7 +127,7 @@ void IPPCClient::initSession(string const& rddlProblem) {
     remainingTime = atoi(s.c_str());
 
     delete serverResponse;
-
+//[--num-trials NUM]
     planner->initSession(numberOfRounds, remainingTime);
 }
 void IPPCClient::finishSession() {
@@ -160,11 +161,13 @@ void IPPCClient::initRound(vector<double>& initialState, double& immediateReward
     XMLNode const* serverResponse = XMLNode::readNode(socket);
 
     if (!serverResponse || serverResponse->getName() != "round-init") {
+//std::cout << "server response is null or the msg didnt include round-init " << std::endl;
         SystemUtils::abort("Error: round-request response insufficient.");
     }
 
     string s;
     if (!serverResponse->dissect("time-left", s)) {
+//std::cout << "server response didn't include time-left " << std::endl;
         SystemUtils::abort("Error: round-request response insufficient.");
     }
     remainingTime = atoi(s.c_str());
@@ -230,14 +233,20 @@ bool IPPCClient::submitAction(vector<string>& actions,
     }
     os << "</actions>" << '\0';
     if (write(socket, os.str().c_str(), os.str().length()) == -1) {
+//std::cout << "couldn't write to server socket " << std::endl;
         return false;
     }
+
     XMLNode const* serverResponse = XMLNode::readNode(socket);
 
     bool roundContinues = true;
     if (serverResponse->getName() == "round-end") {
         finishRound(serverResponse, immediateReward);
         roundContinues = false;
+/*std::cout << "got a round end msg from the server " << std::endl;
+string timeLeft;
+serverResponse->dissect("time-left", timeLeft);
+std::cout<< "with " << timeLeft << " time left " << std::endl;*/
     } else {
         readState(serverResponse, nextState, immediateReward);
     }
