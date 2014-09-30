@@ -121,10 +121,14 @@ void FUCTSearch::backupDecisionNode(FUCTNode* node,
     double maxValue = -std::numeric_limits<double>::max();
     int maxVisitsIndex = -1;
     int maxVisits = 0;
-
+    double wAVG = 0.0;
+    int visits = 0;
+    node->solved = true;
     for (unsigned int childIndex = 0; childIndex < node->children.size(); ++childIndex) {
     	if (node->children[childIndex]) {
 		node->solved &= node->children[childIndex]->solved;
+		wAVG += (double)node->children[childIndex]->numberOfVisits * node->children[childIndex]->getExpectedRewardEstimate();
+		visits += node->children[childIndex]->numberOfVisits;
 		if (node->children[childIndex]->getExpectedRewardEstimate() >= maxValue) {
 			maxValue = node->children[childIndex]->getExpectedRewardEstimate();
 			maxValueIndex = childIndex;
@@ -136,11 +140,15 @@ void FUCTSearch::backupDecisionNode(FUCTNode* node,
         }
     }
 
+    wAVG /= (double)visits;
     assert(maxValueIndex != -1 && maxVisitsIndex != -1);
     if (maxValueIndex == maxVisitsIndex || node->solved)
 	node->futureReward = maxValue;
     else
-	node->futureReward = node->futureRewardSum / (double)node->numberOfVisits;
+	node->futureReward = wAVG;
+	//node->futureReward = node->futureRewardSum / (double)node->numberOfVisits;
+
+//std::cout << "blah blah blah " << node->futureReward << std::endl;
 
 }
 

@@ -143,20 +143,7 @@ int CDPUCTSearch::oneTailTTest(CDPUCTNode* node1, CDPUCTNode* node2) {
 
 	double n1 = (double)node1->numberOfVisits;
 	double n2 = (double)node2->numberOfVisits;
-/*if (debugMessage) {
-cout << endl << "mean 1 " << mean1 <<endl;
-cout << "mean 2 " << mean2 <<endl;
-cout << "var 1 " << var1 <<endl;
-cout << "var 2 " << var2 <<endl;
-cout << "n 1 " << n1 <<endl;
-cout << "n 2 " << n2 <<endl;
-killNan(mean1);
-killNan(mean2);
-killNan(var1);
-killNan(var2);
-killNan(n1);
-killNan(n1);
-}*/
+
 	double delta = mean1 - mean2;
 	delta = MathUtils::doubleIsEqual(delta, 0.0) ? 0.0 : delta;
 
@@ -169,42 +156,26 @@ killNan(n1);
 			return 0;
 	}
 
-	double t = (n1 - 1.0) * var1 + (n2 - 1.0) * var2;
-//if (debugMessage) { killNan(t); }
-	t /= n1 + n2 - 2.0;
-//if (debugMessage) { killNan(t); }
+	double t = max(n1 - 1.0, 1.0) * var1 + max(n2 - 1.0, 1.0) * var2;
+//	double t = (n1 - 1.0) * var1 + (n2 - 1.0) * var2; //this goes when not comparing samples of size one
+	t /= max(n1 + n2 - 2.0, 1.0);
+//	t /= n1 + n2 - 2.0; //this goes when not comparing samples of size one
 	t *= ((1 / n1) + (1 / n2));
-/*if (debugMessage) { 
-cout << "t before sqrt " << t <<endl;
-killNan(t);
-}*/
 
 	t = delta / sqrt(t);
-/*if (debugMessage) { 
-cout << "t after sqrt " << t <<endl;
-killNan(t);
-}*/
-	double degree = (1 / (n1 - 1)) * pow(var1 / n1, 2);
-/*if (debugMessage) { 
-killNan(degree);
-}*/
-	degree += (1 / (n2 - 1)) * pow(var2 / n2, 2);
-/*if (debugMessage) { 
-killNan(degree);
-}*/
+	double degree = (1.0 / max(n1 - 1.0, 1.0)) * pow(var1 / n1, 2);
+//	double degree = (1 / (n1 - 1)) * pow(var1 / n1, 2); //this goes when not comparing samples of size one
+	degree += (1.0 / max(n2 - 1.0, 1.0)) * pow(var2 / n2, 2);
+//	degree += (1 / (n2 - 1)) * pow(var2 / n2, 2);  //this goes when not comparing samples of size one
 	degree = pow((var1 / n1) + (var2 / n2), 2) / degree;
-/*if (debugMessage) { 
-cout << " degree " << degree << endl;
-killNan(degree);
-}*/
+
 	int df = (int)round(degree);
 	if (df > 999)
 		df = 999;
-/*if (debugMessage) { 
-cout<<"df " <<df <<endl;
-cout<<"t < t_values[df] " <<(t < t_values[df]) <<endl;
-}*/
-	double criticalValue = t_values[df];
+
+	//double criticalValue = t95[df];
+	double criticalValue = t70[df];
+//criticalValue = 0; //for sanity check - with this CDP should converge with UCTStar
 	if (MathUtils::doubleIsGreater(t, criticalValue))
 		return 1;
 	else if (MathUtils::doubleIsSmaller(t, -1.0 * criticalValue))
@@ -217,9 +188,7 @@ void CDPUCTSearch::backupDecisionNode(CDPUCTNode* node,
                                      double const& immReward,
                                      double const& /*futReward*/) {
     assert(!node->children.empty());
-/*if (debugMessage) { 
-cout << " decision node " << endl;
-}*/
+
     node->immediateReward = immReward;
     if (selectedActionIndex() != -1) {
 	++node->numberOfVisits;
@@ -253,15 +222,14 @@ cout << " decision node " << endl;
     double oldFutureReward = node->futureReward;
 
     //Perform t-tests to decide which children should not be in nPlus
-//if (debugMessage) { cout << " size of children vector " << node->children.size() << endl; }
     for (unsigned int i = 0; i < node->children.size(); ++i) {
        //Check that a child exists, that it has more then one visits, and that it wasn't found as less significant before.
-       if (node->children[i] && node->children[i]->numberOfVisits > 1 && nPlus[i]) {
-//if (debugMessage) {  cout << "child " << i << endl; }
+       //if (node->children[i] && node->children[i]->numberOfVisits > 1 && nPlus[i]) { //this goes when not comparing samples of size one
+	 if (node->children[i] && nPlus[i]) {
 	       for (unsigned int j = i + 1; j < node->children.size(); ++j) {
 			//Check that that the child exists, that it has more than one visits, and that it wasn't found less significant before.
-			if (node->children[j] && node->children[j]->numberOfVisits > 1 && nPlus[j]) {
-//if (debugMessage) {  cout << " compared with " << j << endl; }
+			//if (node->children[j] && node->children[j]->numberOfVisits > 1 && nPlus[j]) { //this goes when not comparing samples of size one
+			if (node->children[j] && nPlus[j]) {
 			    int res = oneTailTTest(node->children[i], node->children[j]);
 			    if (res == 1) {
 				nPlus[j] = 0;
@@ -271,7 +239,6 @@ cout << " decision node " << endl;
 			    }
 			}
 	       }
-//if (debugMessage) {  cout << endl; }
        }
     }
 

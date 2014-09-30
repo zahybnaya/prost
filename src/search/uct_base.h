@@ -240,6 +240,7 @@ inline void UCTBase<SearchNode>::selectActionBasedOnUCTFormula(SearchNode* node)
         magicConstant = magicConstantScaleFactor *
             std::abs(node->getExpectedFutureRewardEstimate());
     }
+
     assert(node->getNumberOfVisits() > 0);
 
     bestUCTValue = -std::numeric_limits<double>::max();
@@ -264,6 +265,7 @@ inline void UCTBase<SearchNode>::selectActionBasedOnUCTFormula(SearchNode* node)
          ++childIndex) {
         if (node->children[childIndex] &&
             !node->children[childIndex]->isSolved()) {
+
             visitPart = magicConstant * 
                 std::sqrt(parentVisitPart / (double) node->children[childIndex]->getNumberOfVisits());
             UCTValue =
