@@ -4,8 +4,6 @@ HEADERS = parser.h \
 	  thts.h \
 	  uct_base.h \
 	  mc_uct_search.h \
-	  cmc_uct_search.h \
-	  wmc_uct_search.h \
 	  max_mc_uct_search.h \
 	  dp_uct_search.h \
 	  cdp_uct_search.h \

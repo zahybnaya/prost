@@ -162,7 +162,6 @@ vector<string> ProstPlanner::plan() {
 
     // assert(false);
     // SystemUtils::abort("");
-    searchEngine->getUpdateRate();
     return result;
 }
 
