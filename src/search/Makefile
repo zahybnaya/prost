@@ -73,7 +73,7 @@ endif
 CCOPT_RELEASE  = -O3 -fomit-frame-pointer -DNDEBUG
 CCOPT_DEBUG    = -fprofile-arcs -ftest-coverage
 
-LINKOPT_RELEASE  = -O3 #-static -static-libgcc
+LINKOPT_RELEASE  = -O3 -static
 LINKOPT_DEBUG    = 
 
 CCOPT_GTEST += -I../test -DGTEST_HAS_PTHREAD=0

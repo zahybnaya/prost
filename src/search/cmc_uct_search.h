@@ -108,6 +108,9 @@ protected:
 private:
    int tests;
    int updates;    
+
+    //Helper math functions
+    int oneTailTTest(CMCUCTNode* node1, CMCUCTNode* node2);
 };
 
 #endif
