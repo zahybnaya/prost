@@ -1,0 +1,3465 @@
+\documentclass{article}
+\usepackage[a4paper,margin=2.5cm,landscape]{geometry}
+\usepackage{scrtime}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{colortbl}
+\setlength{\parindent}{0cm}
+
+\begin{document}
+\section*{PROST: \today\ \thistime}
+
+\subsection*{Rewards: elevators}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$-66.57$}
+& \multicolumn{2}{c}{$-57.7$}
+& \multicolumn{2}{c}{$-71.7$}
+& \multicolumn{2}{c}{$-105.0$}
+& \multicolumn{2}{c}{$-111.8$}
+& \multicolumn{2}{c}{$-124.37$}
+& \multicolumn{2}{c}{$-134.53$}
+& \multicolumn{2}{c}{$-152.4$}
+& \multicolumn{2}{c}{$-163.03$}
+& \multicolumn{2}{c|}{$-126.93$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-44.23$}
+& \multicolumn{2}{c}{$-18.59$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-54.58}}}
+& \multicolumn{2}{c}{$-58.11$}
+& \multicolumn{2}{c}{$-54.23$}
+& \multicolumn{2}{c}{$-68.04$}
+& \multicolumn{2}{c}{$-82.94$}
+& \multicolumn{2}{c}{$-77.2$}
+& \multicolumn{2}{c}{$-91.69$}
+& \multicolumn{2}{c|}{$-67.61$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{$-44.33$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-16.32}}}
+& \multicolumn{2}{c}{$-55.84$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-56.31}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-50.5}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-66.61}}}
+& \multicolumn{2}{c}{$-86.5$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-73.3}}}
+& \multicolumn{2}{c}{$-94.77$}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{-67.16}}}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-44.15$}
+& \multicolumn{2}{c}{$-18.41$}
+& \multicolumn{2}{c}{$-56.83$}
+& \multicolumn{2}{c}{$-59.34$}
+& \multicolumn{2}{c}{$-54.69$}
+& \multicolumn{2}{c}{$-74.69$}
+& \multicolumn{2}{c}{$-83.13$}
+& \multicolumn{2}{c}{$-80.61$}
+& \multicolumn{2}{c}{$-96.09$}
+& \multicolumn{2}{c|}{$-68.95$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-45.93$}
+& \multicolumn{2}{c}{$-17.8$}
+& \multicolumn{2}{c}{$-57.2$}
+& \multicolumn{2}{c}{$-58.02$}
+& \multicolumn{2}{c}{$-55.59$}
+& \multicolumn{2}{c}{$-69.58$}
+& \multicolumn{2}{c}{$-83.34$}
+& \multicolumn{2}{c}{$-77.53$}
+& \multicolumn{2}{c}{$-95.58$}
+& \multicolumn{2}{c|}{$-70.24$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-43.88}}}
+& \multicolumn{2}{c}{$-18.23$}
+& \multicolumn{2}{c}{$-55.7$}
+& \multicolumn{2}{c}{$-58.49$}
+& \multicolumn{2}{c}{$-51.36$}
+& \multicolumn{2}{c}{$-68.21$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-79.67}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-72.93}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-90.66}}}
+& \multicolumn{2}{c|}{$-67.49$}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-68.84$}
+& \multicolumn{2}{c}{$-82.54$}
+& \multicolumn{2}{c}{$-86.04$}
+& \multicolumn{2}{c}{$-92.49$}
+& \multicolumn{2}{c}{$-108.11$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-61.72$}
+& \multicolumn{2}{c}{$-77.27$}
+& \multicolumn{2}{c}{\textbf{$-81.05$}}
+& \multicolumn{2}{c}{$-85.69$}
+& \multicolumn{2}{c}{$-103.28$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-64.08$}
+& \multicolumn{2}{c}{$-73.23$}
+& \multicolumn{2}{c}{\textbf{$-80.22$}}
+& \multicolumn{2}{c}{$-77.12$}
+& \multicolumn{2}{c}{$-101.42$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-65.86$}
+& \multicolumn{2}{c}{$-84.83$}
+& \multicolumn{2}{c}{$-93.69$}
+& \multicolumn{2}{c}{$-94.9$}
+& \multicolumn{2}{c}{$-112.23$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-56.16$}
+& \multicolumn{2}{c}{$-80.78$}
+& \multicolumn{2}{c}{$-85.01$}
+& \multicolumn{2}{c}{$-89.59$}
+& \multicolumn{2}{c}{$-102.79$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-58.04$}
+& \multicolumn{2}{c}{$-75.55$}
+& \multicolumn{2}{c}{$-87.31$}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-107.38$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-67.97$}
+& \multicolumn{2}{c}{$-86.83$}
+& \multicolumn{2}{c}{$-97.09$}
+& \multicolumn{2}{c}{$-89.83$}
+& \multicolumn{2}{c}{$-113.06$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-57.72$}
+& \multicolumn{2}{c}{$-80.97$}
+& \multicolumn{2}{c}{$-86.67$}
+& \multicolumn{2}{c}{$-90.62$}
+& \multicolumn{2}{c}{$-103.31$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-59.33$}
+& \multicolumn{2}{c}{$-73.81$}
+& \multicolumn{2}{c}{$-86.18$}
+& \multicolumn{2}{c}{$-81.83$}
+& \multicolumn{2}{c}{$-102.42$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: elevators}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c|}{0.99}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{0.97}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c|}{0.95}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.99}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.78}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{\textbf{0.99}}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.68}
+& \multicolumn{2}{c}{0.74}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.79}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.65}
+& \multicolumn{2}{c}{0.68}
+& \multicolumn{2}{c}{0.79}
+& \multicolumn{2}{c}{0.69}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{0.78}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: sysadmin}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$210.18$}
+& \multicolumn{2}{c}{$166.68$}
+& \multicolumn{2}{c}{$345.4$}
+& \multicolumn{2}{c}{$311.79$}
+& \multicolumn{2}{c}{$443.05$}
+& \multicolumn{2}{c}{$407.16$}
+& \multicolumn{2}{c}{$513.74$}
+& \multicolumn{2}{c}{$426.46$}
+& \multicolumn{2}{c}{$612.06$}
+& \multicolumn{2}{c|}{$471.1$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{$335.8$}
+& \multicolumn{2}{c}{$300.88$}
+& \multicolumn{2}{c}{$480.62$}
+& \multicolumn{2}{c}{$430.04$}
+& \multicolumn{2}{c}{$503.32$}
+& \multicolumn{2}{c}{$456.47$}
+& \multicolumn{2}{c}{$573.08$}
+& \multicolumn{2}{c}{$470.94$}
+& \multicolumn{2}{c}{$693.74$}
+& \multicolumn{2}{c|}{$513.43$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{339.52}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{308.95}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{561.05}}}
+& \multicolumn{2}{c}{$476.83$}
+& \multicolumn{2}{c}{$555.34$}
+& \multicolumn{2}{c}{$499.81$}
+& \multicolumn{2}{c}{$600.0$}
+& \multicolumn{2}{c}{$481.77$}
+& \multicolumn{2}{c}{$719.3$}
+& \multicolumn{2}{c|}{$522.84$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$337.34$}
+& \multicolumn{2}{c}{$305.46$}
+& \multicolumn{2}{c}{$518.66$}
+& \multicolumn{2}{c}{$462.01$}
+& \multicolumn{2}{c}{$513.71$}
+& \multicolumn{2}{c}{$465.53$}
+& \multicolumn{2}{c}{$564.56$}
+& \multicolumn{2}{c}{$453.04$}
+& \multicolumn{2}{c}{$687.1$}
+& \multicolumn{2}{c|}{$501.79$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$333.15$}
+& \multicolumn{2}{c}{$301.56$}
+& \multicolumn{2}{c}{$502.52$}
+& \multicolumn{2}{c}{$435.21$}
+& \multicolumn{2}{c}{$515.4$}
+& \multicolumn{2}{c}{$473.01$}
+& \multicolumn{2}{c}{$583.43$}
+& \multicolumn{2}{c}{$478.6$}
+& \multicolumn{2}{c}{$711.3$}
+& \multicolumn{2}{c|}{$527.19$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{$336.94$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{308.84}}}
+& \multicolumn{2}{c}{$554.88$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{492.28}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{581.93}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{517.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{609.03}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{500.92}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{720.02}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{551.1}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: sysadmin}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.43}
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.62}
+& \multicolumn{2}{c}{0.6}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c|}{0.53}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.81}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.74}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c|}{0.65}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{0.51}
+& \multicolumn{2}{c}{0.53}
+& \multicolumn{2}{c}{0.53}
+& \multicolumn{2}{c}{0.36}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c|}{0.38}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.73}
+& \multicolumn{2}{c}{0.68}
+& \multicolumn{2}{c}{0.52}
+& \multicolumn{2}{c}{0.6}
+& \multicolumn{2}{c}{0.73}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{0.7}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: recon}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c}{$0.0$}
+& \multicolumn{2}{c|}{$0.0$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{$3.46$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{3.16}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.1}}}
+& \multicolumn{2}{c}{$2.54$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.63}}}
+& \multicolumn{2}{c}{$8.58$}
+& \multicolumn{2}{c}{$4.22$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{10.31}}}
+& \multicolumn{2}{c}{$7.54$}
+& \multicolumn{2}{c|}{$4.67$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{$3.43$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{3.16}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.09}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{2.71}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.65}}}
+& \multicolumn{2}{c}{$10.17$}
+& \multicolumn{2}{c}{$5.22$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{10.31}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{9.59}}}
+& \multicolumn{2}{c|}{$5.97$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{3.49}}}
+& \multicolumn{2}{c}{$3.14$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.12}}}
+& \multicolumn{2}{c}{$2.68$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.59}}}
+& \multicolumn{2}{c}{$10.23$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{5.25}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{10.33}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{9.55}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{6.01}}}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$3.37$}
+& \multicolumn{2}{c}{$3.12$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.12}}}
+& \multicolumn{2}{c}{$2.54$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.65}}}
+& \multicolumn{2}{c}{$8.45$}
+& \multicolumn{2}{c}{$3.89$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{10.32}}}
+& \multicolumn{2}{c}{$7.42$}
+& \multicolumn{2}{c|}{$4.32$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{$3.28$}
+& \multicolumn{2}{c}{$3.12$}
+& \multicolumn{2}{c}{$13.83$}
+& \multicolumn{2}{c}{$2.65$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{14.64}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{10.33}}}
+& \multicolumn{2}{c}{$5.17$}
+& \multicolumn{2}{c}{$10.1$}
+& \multicolumn{2}{c}{$8.87$}
+& \multicolumn{2}{c|}{$5.61$}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$8.61$}
+& \multicolumn{2}{c}{$6.82$}
+& \multicolumn{2}{c}{$2.43$}
+& \multicolumn{2}{c}{$6.39$}
+& \multicolumn{2}{c}{$4.37$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$9.7$}
+& \multicolumn{2}{c}{$7.11$}
+& \multicolumn{2}{c}{$3.5$}
+& \multicolumn{2}{c}{$6.31$}
+& \multicolumn{2}{c}{$6.05$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$10.53$}
+& \multicolumn{2}{c}{$7.47$}
+& \multicolumn{2}{c}{$3.35$}
+& \multicolumn{2}{c}{$6.53$}
+& \multicolumn{2}{c}{$5.51$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$8.29$}
+& \multicolumn{2}{c}{$6.8$}
+& \multicolumn{2}{c}{$2.45$}
+& \multicolumn{2}{c}{$6.51$}
+& \multicolumn{2}{c}{$4.47$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$9.47$}
+& \multicolumn{2}{c}{$7.36$}
+& \multicolumn{2}{c}{$3.31$}
+& \multicolumn{2}{c}{$6.09$}
+& \multicolumn{2}{c}{$4.89$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$3.96$}
+& \multicolumn{2}{c}{$6.64$}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$8.85$}
+& \multicolumn{2}{c}{$6.55$}
+& \multicolumn{2}{c}{$2.51$}
+& \multicolumn{2}{c}{$5.87$}
+& \multicolumn{2}{c}{$4.21$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$10.08$}
+& \multicolumn{2}{c}{$6.86$}
+& \multicolumn{2}{c}{$3.54$}
+& \multicolumn{2}{c}{$6.26$}
+& \multicolumn{2}{c}{$5.21$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$10.67$}
+& \multicolumn{2}{c}{$7.99$}
+& \multicolumn{2}{c}{$3.98$}
+& \multicolumn{2}{c}{$7.1$}
+& \multicolumn{2}{c}{$5.32$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: recon}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.79}
+& \multicolumn{2}{c|}{0.78}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.99}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.74}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c|}{0.72}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{0.93}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.59}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.46}
+& \multicolumn{2}{c}{0.62}
+& \multicolumn{2}{c}{0.46}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.69}
+& \multicolumn{2}{c}{0.67}
+& \multicolumn{2}{c}{0.61}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.64}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.57}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.57}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.47}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.47}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.65}
+& \multicolumn{2}{c}{0.71}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.59}
+& \multicolumn{2}{c}{0.51}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.64}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.6}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.48}
+& \multicolumn{2}{c}{0.57}
+& \multicolumn{2}{c}{0.44}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.69}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.67}
+& \multicolumn{2}{c}{0.61}
+& \multicolumn{2}{c}{0.54}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.73}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c}{0.69}
+& \multicolumn{2}{c}{0.55}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: game}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$70.53$}
+& \multicolumn{2}{c}{$73.27$}
+& \multicolumn{2}{c}{$107.17$}
+& \multicolumn{2}{c}{$167.23$}
+& \multicolumn{2}{c}{$203.07$}
+& \multicolumn{2}{c}{$224.17$}
+& \multicolumn{2}{c}{$264.97$}
+& \multicolumn{2}{c}{$295.23$}
+& \multicolumn{2}{c}{$311.47$}
+& \multicolumn{2}{c|}{$176.73$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{204.52}}}
+& \multicolumn{2}{c}{$129.34$}
+& \multicolumn{2}{c}{$145.47$}
+& \multicolumn{2}{c}{$342.8$}
+& \multicolumn{2}{c}{$297.77$}
+& \multicolumn{2}{c}{$278.65$}
+& \multicolumn{2}{c}{$471.26$}
+& \multicolumn{2}{c}{$435.02$}
+& \multicolumn{2}{c}{$408.65$}
+& \multicolumn{2}{c|}{$558.32$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{204.21}}}
+& \multicolumn{2}{c}{$130.96$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{148.91}}}
+& \multicolumn{2}{c}{$349.52$}
+& \multicolumn{2}{c}{$310.07$}
+& \multicolumn{2}{c}{$284.31$}
+& \multicolumn{2}{c}{$468.83$}
+& \multicolumn{2}{c}{$434.79$}
+& \multicolumn{2}{c}{$410.23$}
+& \multicolumn{2}{c|}{$562.03$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$200.9$}
+& \multicolumn{2}{c}{$128.85$}
+& \multicolumn{2}{c}{$147.26$}
+& \multicolumn{2}{c}{$345.03$}
+& \multicolumn{2}{c}{$299.89$}
+& \multicolumn{2}{c}{$276.29$}
+& \multicolumn{2}{c}{$469.54$}
+& \multicolumn{2}{c}{$433.09$}
+& \multicolumn{2}{c}{$418.72$}
+& \multicolumn{2}{c|}{$553.3$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$200.87$}
+& \multicolumn{2}{c}{$128.51$}
+& \multicolumn{2}{c}{$148.27$}
+& \multicolumn{2}{c}{$346.82$}
+& \multicolumn{2}{c}{$299.66$}
+& \multicolumn{2}{c}{$278.5$}
+& \multicolumn{2}{c}{$468.56$}
+& \multicolumn{2}{c}{$435.66$}
+& \multicolumn{2}{c}{$419.43$}
+& \multicolumn{2}{c|}{$559.73$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{$202.16$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{134.15}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{149.07}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{365.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{316.24}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{287.54}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{505.96}}}
+& \multicolumn{2}{c}{$449.76$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{422.58}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{591.3}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$294.77$}
+& \multicolumn{2}{c}{$261.43$}
+& \multicolumn{2}{c}{$490.93$}
+& \multicolumn{2}{c}{$438.5$}
+& \multicolumn{2}{c}{$398.87$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$295.87$}
+& \multicolumn{2}{c}{$271.8$}
+& \multicolumn{2}{c}{$494.83$}
+& \multicolumn{2}{c}{$442.53$}
+& \multicolumn{2}{c}{$414.93$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$309.7$}
+& \multicolumn{2}{c}{$275.5$}
+& \multicolumn{2}{c}{\textbf{$504.27$}}
+& \multicolumn{2}{c}{\textbf{$454.47$}}
+& \multicolumn{2}{c}{$410.4$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$289.4$}
+& \multicolumn{2}{c}{$275.4$}
+& \multicolumn{2}{c}{$483.73$}
+& \multicolumn{2}{c}{$438.87$}
+& \multicolumn{2}{c}{$411.53$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$290.23$}
+& \multicolumn{2}{c}{$276.77$}
+& \multicolumn{2}{c}{\textbf{$499.83$}}
+& \multicolumn{2}{c}{$446.7$}
+& \multicolumn{2}{c}{$417.4$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$284.53$}
+& \multicolumn{2}{c}{$271.93$}
+& \multicolumn{2}{c}{$485.73$}
+& \multicolumn{2}{c}{$440.3$}
+& \multicolumn{2}{c}{$403.23$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$300.07$}
+& \multicolumn{2}{c}{$277.0$}
+& \multicolumn{2}{c}{\textbf{$496.33$}}
+& \multicolumn{2}{c}{$446.07$}
+& \multicolumn{2}{c}{$412.27$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$312.43$}}
+& \multicolumn{2}{c}{$272.3$}
+& \multicolumn{2}{c}{\textbf{$500.3$}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{$458.87$}}}
+& \multicolumn{2}{c}{\textbf{$421.13$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: game}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c|}{0.92}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c|}{0.93}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c|}{0.91}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c|}{0.92}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.81}
+& \multicolumn{2}{c}{0.59}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.79}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.81}
+& \multicolumn{2}{c}{\textbf{0.99}}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c}{0.81}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c}{\textbf{0.98}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{0.99}}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: traffic}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$-21.6$}
+& \multicolumn{2}{c}{$-49.2$}
+& \multicolumn{2}{c}{$-63.93$}
+& \multicolumn{2}{c}{$-119.33$}
+& \multicolumn{2}{c}{$-123.03$}
+& \multicolumn{2}{c}{$-158.27$}
+& \multicolumn{2}{c}{$-146.97$}
+& \multicolumn{2}{c}{$-154.37$}
+& \multicolumn{2}{c}{$-108.03$}
+& \multicolumn{2}{c|}{$-255.83$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-7.77$}
+& \multicolumn{2}{c}{$-17.69$}
+& \multicolumn{2}{c}{$-26.2$}
+& \multicolumn{2}{c}{$-59.45$}
+& \multicolumn{2}{c}{$-53.64$}
+& \multicolumn{2}{c}{$-83.05$}
+& \multicolumn{2}{c}{$-50.82$}
+& \multicolumn{2}{c}{$-70.56$}
+& \multicolumn{2}{c}{$-26.75$}
+& \multicolumn{2}{c|}{$-131.58$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.05}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-13.9}}}
+& \multicolumn{2}{c}{$-22.96$}
+& \multicolumn{2}{c}{$-62.05$}
+& \multicolumn{2}{c}{$-52.74$}
+& \multicolumn{2}{c}{$-80.6$}
+& \multicolumn{2}{c}{$-50.97$}
+& \multicolumn{2}{c}{$-63.86$}
+& \multicolumn{2}{c}{$-24.04$}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{-112.98}}}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-5.97$}
+& \multicolumn{2}{c}{$-16.56$}
+& \multicolumn{2}{c}{$-27.06$}
+& \multicolumn{2}{c}{$-69.6$}
+& \multicolumn{2}{c}{$-53.87$}
+& \multicolumn{2}{c}{$-85.42$}
+& \multicolumn{2}{c}{$-51.67$}
+& \multicolumn{2}{c}{$-75.93$}
+& \multicolumn{2}{c}{$-27.59$}
+& \multicolumn{2}{c|}{$-125.44$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-7.94$}
+& \multicolumn{2}{c}{$-18.83$}
+& \multicolumn{2}{c}{$-23.52$}
+& \multicolumn{2}{c}{$-62.18$}
+& \multicolumn{2}{c}{$-52.07$}
+& \multicolumn{2}{c}{$-82.05$}
+& \multicolumn{2}{c}{$-53.87$}
+& \multicolumn{2}{c}{$-66.33$}
+& \multicolumn{2}{c}{$-25.23$}
+& \multicolumn{2}{c|}{$-126.6$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.06}}}
+& \multicolumn{2}{c}{$-14.34$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-15.69}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-48.11}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-46.42}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-73.5}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-44.6}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-58.36}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-23.12}}}
+& \multicolumn{2}{c|}{$-131.1$}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: traffic}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.78}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c|}{0.87}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.85}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c|}{0.91}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c|}{0.9}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.87}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: crossing}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$-34.83$}
+& \multicolumn{2}{c}{$-38.67$}
+& \multicolumn{2}{c}{$-39.03$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-38.97$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-39.47$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{$-40.0$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-4.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.39}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-6.15}}}
+& \multicolumn{2}{c}{$-10.73$}
+& \multicolumn{2}{c}{$-7.53$}
+& \multicolumn{2}{c}{$-10.74$}
+& \multicolumn{2}{c}{$-11.43$}
+& \multicolumn{2}{c}{$-18.38$}
+& \multicolumn{2}{c}{$-11.8$}
+& \multicolumn{2}{c|}{$-18.91$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-4.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.37}}}
+& \multicolumn{2}{c}{$-7.06$}
+& \multicolumn{2}{c}{$-11.85$}
+& \multicolumn{2}{c}{$-8.6$}
+& \multicolumn{2}{c}{$-12.05$}
+& \multicolumn{2}{c}{$-14.3$}
+& \multicolumn{2}{c}{$-28.4$}
+& \multicolumn{2}{c}{$-15.41$}
+& \multicolumn{2}{c|}{$-29.57$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-4.74$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.39}}}
+& \multicolumn{2}{c}{$-6.84$}
+& \multicolumn{2}{c}{$-11.97$}
+& \multicolumn{2}{c}{$-8.17$}
+& \multicolumn{2}{c}{$-11.6$}
+& \multicolumn{2}{c}{$-16.57$}
+& \multicolumn{2}{c}{$-27.97$}
+& \multicolumn{2}{c}{$-16.94$}
+& \multicolumn{2}{c|}{$-29.02$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-4.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-6.29}}}
+& \multicolumn{2}{c}{$-10.51$}
+& \multicolumn{2}{c}{$-7.6$}
+& \multicolumn{2}{c}{$-10.85$}
+& \multicolumn{2}{c}{$-11.43$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-17.67}}}
+& \multicolumn{2}{c}{$-11.83$}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{-18.48}}}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-4.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-5.37}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-6.18}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-10.05}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-7.11}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.74}}}
+& \multicolumn{2}{c}{$-10.11$}
+& \multicolumn{2}{c}{$-22.4$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.5}}}
+& \multicolumn{2}{c|}{$-23.3$}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-19.8$}
+& \multicolumn{2}{c}{$-17.43$}
+& \multicolumn{2}{c}{$-22.73$}
+& \multicolumn{2}{c}{$-13.43$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$-7.87$}}
+& \multicolumn{2}{c}{$-12.57$}
+& \multicolumn{2}{c}{$-11.73$}
+& \multicolumn{2}{c}{$-24.2$}
+& \multicolumn{2}{c}{\textbf{$-10.53$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{$-7.07$}}}
+& \multicolumn{2}{c}{\textbf{$-11.0$}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{$-9.0$}}}
+& \multicolumn{2}{c}{$-22.1$}
+& \multicolumn{2}{c}{\textbf{$-10.57$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-9.33$}
+& \multicolumn{2}{c}{$-18.7$}
+& \multicolumn{2}{c}{$-14.57$}
+& \multicolumn{2}{c}{$-24.1$}
+& \multicolumn{2}{c}{$-14.4$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$-7.43$}}
+& \multicolumn{2}{c}{$-12.77$}
+& \multicolumn{2}{c}{$-11.13$}
+& \multicolumn{2}{c}{$-26.07$}
+& \multicolumn{2}{c}{$-12.03$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$-7.57$}}
+& \multicolumn{2}{c}{$-11.2$}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-22.17$}
+& \multicolumn{2}{c}{$-11.27$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-10.77$}
+& \multicolumn{2}{c}{$-23.6$}
+& \multicolumn{2}{c}{$-18.1$}
+& \multicolumn{2}{c}{$-25.8$}
+& \multicolumn{2}{c}{$-14.97$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$-7.87$}}
+& \multicolumn{2}{c}{\textbf{$-11.03$}}
+& \multicolumn{2}{c}{$-12.5$}
+& \multicolumn{2}{c}{$-26.47$}
+& \multicolumn{2}{c}{$-11.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$-8.2$}}
+& \multicolumn{2}{c}{$-11.7$}
+& \multicolumn{2}{c}{$-10.9$}
+& \multicolumn{2}{c}{$-21.6$}
+& \multicolumn{2}{c}{\textbf{$-10.23$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: crossing}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{0.98}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.83}
+& \multicolumn{2}{c}{0.52}
+& \multicolumn{2}{c}{0.81}
+& \multicolumn{2}{c|}{0.48}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.54}
+& \multicolumn{2}{c}{0.76}
+& \multicolumn{2}{c|}{0.51}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.79}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.78}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.67}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.71}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.71}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.99}}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.62}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.98}}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.8}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.54}
+& \multicolumn{2}{c}{0.7}
+& \multicolumn{2}{c}{0.64}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.97}}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.61}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{\textbf{0.98}}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: skill}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$39.34$}
+& \multicolumn{2}{c}{$33.75$}
+& \multicolumn{2}{c}{$-83.23$}
+& \multicolumn{2}{c}{$-108.73$}
+& \multicolumn{2}{c}{$-285.95$}
+& \multicolumn{2}{c}{$-302.99$}
+& \multicolumn{2}{c}{$-382.86$}
+& \multicolumn{2}{c}{$-541.01$}
+& \multicolumn{2}{c}{$-543.09$}
+& \multicolumn{2}{c|}{$-632.0$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{66.95}}}
+& \multicolumn{2}{c}{$78.8$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{98.2}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{102.62}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{16.57}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{37.11}}}
+& \multicolumn{2}{c}{$-74.5$}
+& \multicolumn{2}{c}{$-168.36$}
+& \multicolumn{2}{c}{$-169.1$}
+& \multicolumn{2}{c|}{$-214.21$}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{$65.8$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{79.11}}}
+& \multicolumn{2}{c}{$87.91$}
+& \multicolumn{2}{c}{$100.23$}
+& \multicolumn{2}{c}{$14.5$}
+& \multicolumn{2}{c}{$4.84$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-35.18}}}
+& \multicolumn{2}{c}{$-152.7$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-156.19}}}
+& \multicolumn{2}{c|}{$-220.43$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{66.91}}}
+& \multicolumn{2}{c}{$78.78$}
+& \multicolumn{2}{c}{$75.28$}
+& \multicolumn{2}{c}{$101.16$}
+& \multicolumn{2}{c}{$4.94$}
+& \multicolumn{2}{c}{$3.69$}
+& \multicolumn{2}{c}{$-67.21$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-148.11}}}
+& \multicolumn{2}{c}{$-175.95$}
+& \multicolumn{2}{c|}{$-199.58$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{67.03}}}
+& \multicolumn{2}{c}{$78.78$}
+& \multicolumn{2}{c}{$80.77$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{103.31}}}
+& \multicolumn{2}{c}{$-11.43$}
+& \multicolumn{2}{c}{$-9.21$}
+& \multicolumn{2}{c}{$-68.54$}
+& \multicolumn{2}{c}{$-200.49$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-156.12}}}
+& \multicolumn{2}{c|}{$-204.92$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{$66.43$}
+& \multicolumn{2}{c}{$78.51$}
+& \multicolumn{2}{c}{$96.43$}
+& \multicolumn{2}{c}{$100.25$}
+& \multicolumn{2}{c}{$-19.01$}
+& \multicolumn{2}{c}{$0.52$}
+& \multicolumn{2}{c}{$-55.9$}
+& \multicolumn{2}{c}{$-169.06$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-155.45}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{-190.09}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-144.15$}
+& \multicolumn{2}{c}{$-188.72$}
+& \multicolumn{2}{c}{$-229.38$}
+& \multicolumn{2}{c}{$-407.84$}
+& \multicolumn{2}{c}{$-408.18$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-114.68$}
+& \multicolumn{2}{c}{$-106.81$}
+& \multicolumn{2}{c}{$-159.21$}
+& \multicolumn{2}{c}{$-383.62$}
+& \multicolumn{2}{c}{$-240.68$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-107.93$}
+& \multicolumn{2}{c}{$-121.81$}
+& \multicolumn{2}{c}{$-326.47$}
+& \multicolumn{2}{c}{\textbf{$-170.77$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-172.06$}
+& \multicolumn{2}{c}{$-161.59$}
+& \multicolumn{2}{c}{$-263.4$}
+& \multicolumn{2}{c}{$-475.67$}
+& \multicolumn{2}{c}{$-409.85$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-110.16$}
+& \multicolumn{2}{c}{$-138.33$}
+& \multicolumn{2}{c}{$-145.05$}
+& \multicolumn{2}{c}{$-293.26$}
+& \multicolumn{2}{c}{$-174.98$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-146.67$}
+& \multicolumn{2}{c}{$-140.94$}
+& \multicolumn{2}{c}{$-315.04$}
+& \multicolumn{2}{c}{$-491.59$}
+& \multicolumn{2}{c}{$-447.56$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-104.52$}
+& \multicolumn{2}{c}{$-84.67$}
+& \multicolumn{2}{c}{$-151.34$}
+& \multicolumn{2}{c}{$-350.57$}
+& \multicolumn{2}{c}{$-268.67$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-81.4$}
+& \multicolumn{2}{c}{$-78.35$}
+& \multicolumn{2}{c}{$-131.88$}
+& \multicolumn{2}{c}{$-364.49$}
+& \multicolumn{2}{c}{$-243.76$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: skill}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c|}{0.95}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.93}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c|}{0.98}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{0.97}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.47}
+& \multicolumn{2}{c}{0.34}
+& \multicolumn{2}{c}{0.44}
+& \multicolumn{2}{c}{0.34}
+& \multicolumn{2}{c}{0.35}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.57}
+& \multicolumn{2}{c}{0.58}
+& \multicolumn{2}{c}{0.64}
+& \multicolumn{2}{c}{0.4}
+& \multicolumn{2}{c}{0.78}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.57}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.55}
+& \multicolumn{2}{c}{\textbf{0.96}}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.38}
+& \multicolumn{2}{c}{0.42}
+& \multicolumn{2}{c}{0.34}
+& \multicolumn{2}{c}{0.17}
+& \multicolumn{2}{c}{0.34}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.58}
+& \multicolumn{2}{c}{0.48}
+& \multicolumn{2}{c}{0.68}
+& \multicolumn{2}{c}{0.63}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.46}
+& \multicolumn{2}{c}{0.48}
+& \multicolumn{2}{c}{0.2}
+& \multicolumn{2}{c}{0.13}
+& \multicolumn{2}{c}{0.25}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.6}
+& \multicolumn{2}{c}{0.64}
+& \multicolumn{2}{c}{0.67}
+& \multicolumn{2}{c}{0.48}
+& \multicolumn{2}{c}{0.71}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.68}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.72}
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.77}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{Rewards: navigation}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{$-37.27$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-39.83$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-38.73$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{$-40.0$}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.28}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-10.3}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-12.16}}}
+& \multicolumn{2}{c}{$-14.89$}
+& \multicolumn{2}{c}{$-20.8$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-21.97}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-23.92}}}
+& \multicolumn{2}{c}{$-31.9$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-35.93}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{-37.96}}}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.29}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-10.33}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-12.26}}}
+& \multicolumn{2}{c}{$-15.97$}
+& \multicolumn{2}{c}{$-22.11$}
+& \multicolumn{2}{c}{$-36.58$}
+& \multicolumn{2}{c}{$-38.99$}
+& \multicolumn{2}{c}{$-33.45$}
+& \multicolumn{2}{c}{$-39.27$}
+& \multicolumn{2}{c|}{$-40.0$}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{$-11.07$}
+& \multicolumn{2}{c}{$-11.51$}
+& \multicolumn{2}{c}{$-13.85$}
+& \multicolumn{2}{c}{$-16.48$}
+& \multicolumn{2}{c}{$-21.19$}
+& \multicolumn{2}{c}{$-22.9$}
+& \multicolumn{2}{c}{$-25.12$}
+& \multicolumn{2}{c}{$-30.79$}
+& \multicolumn{2}{c}{$-37.97$}
+& \multicolumn{2}{c|}{$-38.71$}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.28}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-10.35}}}
+& \multicolumn{2}{c}{$-13.98$}
+& \multicolumn{2}{c}{$-16.67$}
+& \multicolumn{2}{c}{$-25.43$}
+& \multicolumn{2}{c}{$-35.46$}
+& \multicolumn{2}{c}{$-35.83$}
+& \multicolumn{2}{c}{$-39.88$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{$-40.0$}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-9.28}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-10.3}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-12.16}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-14.4}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-20.51}}}
+& \multicolumn{2}{c}{$-23.4$}
+& \multicolumn{2}{c}{$-25.22$}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{-29.1}}}
+& \multicolumn{2}{c}{$-36.34$}
+& \multicolumn{2}{c|}{$-38.25$}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-39.57$}
+& \multicolumn{2}{c}{$-39.93$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-39.97$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-36.4$}
+& \multicolumn{2}{c}{$-39.33$}
+& \multicolumn{2}{c}{$-39.87$}
+& \multicolumn{2}{c}{$-39.9$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-34.77$}
+& \multicolumn{2}{c}{$-37.9$}
+& \multicolumn{2}{c}{$-39.4$}
+& \multicolumn{2}{c}{$-39.3$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-39.2$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-38.1$}
+& \multicolumn{2}{c}{$-39.4$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-39.23$}
+& \multicolumn{2}{c}{$-39.93$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-37.87$}
+& \multicolumn{2}{c}{$-38.97$}
+& \multicolumn{2}{c}{$-39.73$}
+& \multicolumn{2}{c}{$-39.83$}
+& \multicolumn{2}{c}{$-40.0$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{\textbf{$n/a$}}
+& \multicolumn{2}{c}{$-34.3$}
+& \multicolumn{2}{c}{$-37.03$}
+& \multicolumn{2}{c}{$-38.77$}
+& \multicolumn{2}{c}{$-39.93$}
+& \multicolumn{2}{c}{$-39.93$}
+& \multicolumn{2}{c|}{\textbf{$n/a$}}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: navigation}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{1}
+& \multicolumn{2}{c}{2}
+& \multicolumn{2}{c}{3}
+& \multicolumn{2}{c}{4}
+& \multicolumn{2}{c}{5}
+& \multicolumn{2}{c}{6}
+& \multicolumn{2}{c}{7}
+& \multicolumn{2}{c}{8}
+& \multicolumn{2}{c}{9}
+& \multicolumn{2}{c|}{10}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.71}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c|}{\textbf{\textcolor{red}{1.0}}}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.19}
+& \multicolumn{2}{c}{0.06}
+& \multicolumn{2}{c}{0.55}
+& \multicolumn{2}{c}{0.18}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.82}
+& \multicolumn{2}{c}{0.5}
+& \multicolumn{2}{c|}{0.63}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.25}
+& \multicolumn{2}{c}{0.26}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{0.92}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c|}{0.86}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.02}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.18}
+& \multicolumn{2}{c}{0.04}
+& \multicolumn{2}{c}{0.01}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.27}
+& \multicolumn{2}{c}{0.12}
+& \multicolumn{2}{c}{0.04}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.04}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.1}
+& \multicolumn{2}{c}{0.03}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.04}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.11}
+& \multicolumn{2}{c}{0.06}
+& \multicolumn{2}{c}{0.02}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.29}
+& \multicolumn{2}{c}{0.16}
+& \multicolumn{2}{c}{0.08}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.02}
+& \multicolumn{2}{c|}{0.0}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\subsection*{IPPC Scores: Total}
+
+\begin{tabular}{|l|r@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}rr@{$\pm$}r|}
+\hline
+
+& \multicolumn{2}{c}{elevators}
+& \multicolumn{2}{c}{sysadmin}
+& \multicolumn{2}{c}{recon}
+& \multicolumn{2}{c}{game}
+& \multicolumn{2}{c}{traffic}
+& \multicolumn{2}{c}{crossing}
+& \multicolumn{2}{c}{skill}
+& \multicolumn{2}{c}{navigation}
+& \multicolumn{2}{c|}{Total}
+\\
+\hline
+\hline
+min
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.0}
+\\
+rev72 [DP-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.88}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c|}{0.9}
+\\
+rev72 [IPPC2011]
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.58}
+& \multicolumn{2}{c|}{0.89}
+\\
+rev72 [MC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.66}
+& \multicolumn{2}{c}{\textbf{\textcolor{red}{1.0}}}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.87}
+& \multicolumn{2}{c}{0.84}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.86}
+& \multicolumn{2}{c|}{0.88}
+\\
+rev72 [MaxMC-UCT -i [IDS]]
+& \multicolumn{2}{c}{0.93}
+& \multicolumn{2}{c}{0.75}
+& \multicolumn{2}{c}{0.9}
+& \multicolumn{2}{c}{0.91}
+& \multicolumn{2}{c}{0.89}
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.94}
+& \multicolumn{2}{c}{0.51}
+& \multicolumn{2}{c|}{0.85}
+\\
+rev72 [UCTStar -i [IDS]]
+& \multicolumn{2}{c}{0.98}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.97}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.99}
+& \multicolumn{2}{c}{0.95}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c}{0.96}
+& \multicolumn{2}{c|}{0.97}
+\\
+\hline
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS100
+& \multicolumn{2}{c}{0.38}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.28}
+& \multicolumn{2}{c}{0.4}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.3}
+& \multicolumn{2}{c}{0.19}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.54}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS250
+& \multicolumn{2}{c}{0.43}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.33}
+& \multicolumn{2}{c}{0.43}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.3}
+& \multicolumn{2}{c}{0.02}
+& \multicolumn{2}{c|}{0.65}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha60 TRIALS400
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.33}
+& \multicolumn{2}{c}{0.46}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.47}
+& \multicolumn{2}{c}{0.28}
+& \multicolumn{2}{c}{0.04}
+& \multicolumn{2}{c|}{0.7}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS100
+& \multicolumn{2}{c}{0.36}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.28}
+& \multicolumn{2}{c}{0.43}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.4}
+& \multicolumn{2}{c}{0.17}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.54}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS250
+& \multicolumn{2}{c}{0.42}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.31}
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.44}
+& \multicolumn{2}{c}{0.33}
+& \multicolumn{2}{c}{0.01}
+& \multicolumn{2}{c|}{0.65}
+\\
+rev99 [CDP-UCT -i [IDS]] alpha80 TRIALS400
+& \multicolumn{2}{c}{0.34}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.14}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.37}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.77}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS100
+& \multicolumn{2}{c}{0.35}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.27}
+& \multicolumn{2}{c}{0.41}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.36}
+& \multicolumn{2}{c}{0.15}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c|}{0.52}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS250
+& \multicolumn{2}{c}{0.41}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.32}
+& \multicolumn{2}{c}{0.45}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.44}
+& \multicolumn{2}{c}{0.31}
+& \multicolumn{2}{c}{0.02}
+& \multicolumn{2}{c|}{0.65}
+\\
+rev99 [UCTStar -i [IDS]] TRIALS400
+& \multicolumn{2}{c}{0.44}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.35}
+& \multicolumn{2}{c}{0.47}
+& \multicolumn{2}{c}{0.0}
+& \multicolumn{2}{c}{0.46}
+& \multicolumn{2}{c}{0.33}
+& \multicolumn{2}{c}{0.05}
+& \multicolumn{2}{c|}{0.7}
+\\
+\hline
+\end{tabular}%
+
+\bigskip
+
+\end{document}
